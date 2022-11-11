@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Ginger';
+  font-weight: 100 900;
+  font-display: block;
+  font-style: normal;
+  font-named-instance: 'Display';
+  src: url('/fonts/Ginger.woff') format('woff');
+}
+
+@layer base {
+  html {
+    font-family: poppins, sans-serif;
+  }
+  h1 {
+    font-family: Ginger, serif;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#__next {
+  min-height: 100%;
+}
