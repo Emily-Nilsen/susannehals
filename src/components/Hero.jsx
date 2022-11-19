@@ -19,26 +19,33 @@ import logoWired from '@/images/logos/wired.svg'
 
 export function Hero() {
   return (
-    <main className="relative min-h-[70vh]">
-      <div className="py-20 overflow-hidden bg-t sm:py-32 lg:pb-32 xl:pb-32">
+    <main className="relative flex min-h-[70vh]">
+      <div className="flex items-center py-20 overflow-hidden sm:py-32 lg:pb-32 xl:pb-32">
         <Container>
-          <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
-            <div className="relative z-10 max-w-2xl mx-auto mt-40 lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
-              <p className="mb-6 text-lg text-gray-600 uppercase">soprano</p>
-              <h1 className="text-6xl font-medium tracking-tight text-gray-900 sm:text-8xl">
-                Susanne Hals
-              </h1>
+          <motion.div
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            transition={{
+              delay: 3,
+              duration: 0.3,
+              type: 'fade',
+              ease: 'easeIn',
+            }}
+            className="relative z-10 h-full"
+          >
+            <div className="flex flex-col justify-center h-full p-12">
+              <div className="mt-0">
+                <p className="mb-6 text-lg text-gray-600 uppercase">soprano</p>
+                <h1 className="text-6xl font-medium tracking-tight text-gray-900 sm:text-8xl">
+                  Susanne Hals
+                </h1>
+              </div>
             </div>
-            <div className="relative mt-10 sm:mt-20 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6"></div>
-            <div className="relative -mt-4 lg:col-span-7 lg:mt-0 xl:col-span-6">
-              {/* <p className="text-sm font-semibold text-center text-gray-900 lg:text-left">
-              As featured in
-            </p>
-             */}
-              <div className="mt-20">Testimonials?</div>
-            </div>
-          </div>
+          </motion.div>
         </Container>
+      </div>
+      <div>
+        <Container></Container>
       </div>
       <div className="absolute inset-0 w-full h-full">
         <Image
@@ -51,28 +58,28 @@ export function Hero() {
         />
       </div>
       <div
-        whileInView={{ opacity: 0 }}
+        animate={{ opacity: 0 }}
         initial={{ opacity: 1 }}
         transition={{
-          delay: 4,
+          delay: 3,
           duration: 0.3,
           type: 'fade',
           ease: 'easeIn',
         }}
-        className="absolute inset-0 z-50 w-full h-full"
+        className="absolute inset-0 w-full h-full"
       >
         <motion.div
-          whileInView={{ opacity: 0 }}
-          initial={{ opacity: 1 }}
+          animate={{ display: 'none' }}
+          initial={{ display: 'block' }}
           transition={{
-            delay: 4,
+            delay: 3,
             duration: 0.3,
             type: 'fade',
             ease: 'easeIn',
           }}
         >
           <Image
-            src="https://res.cloudinary.com/dt3k2apqd/image/upload/v1668202680/Susanne%20Hals/Susanne_img_2_iu2smq.webp"
+            src="https://res.cloudinary.com/dt3k2apqd/image/upload/v1668236275/Susanne%20Hals/Susanne_img_2_right_b_w_bkee3m.webp"
             alt="Susanne Hals"
             layout="fill"
             objectFit="cover"
@@ -82,43 +89,41 @@ export function Hero() {
         </motion.div>
 
         <motion.div
-          whileInView={{ opacity: 0 }}
-          initial={{ opacity: 1 }}
+          animate={{ y: [1000, 0, 1000] }}
+          initial={{ y: [0, 1000, 0] }}
           transition={{
-            delay: 5.6,
-            duration: 0.3,
-            type: 'fade',
+            delay: 2,
+            duration: 1.5,
+            // type: 'fade',
+
             ease: 'easeIn',
           }}
-          className="absolute w-full h-full overflow-hidden"
+          className="absolute inset-0 overflow-hidden bg-gray-800"
         >
-          <div className="relative z-50 -ml-[25%] flex w-[150%]">
-            <LottieInteract
-              path="https://assets10.lottiefiles.com/packages/lf20_gmds3wm6.json"
-              speed="0.5"
-              autoplay
-              loop="false"
-              delay="2000"
-              aspectRatio="xMidYMid slice"
-            />
-          </div>
+          <div className=""></div>
         </motion.div>
         <motion.div
-          whileInView={{ opacity: 0 }}
+          animate={{ opacity: 0 }}
           initial={{ opacity: 1 }}
           transition={{
-            delay: 3.6,
+            delay: 2.1,
             duration: 0.3,
             type: 'fade',
             ease: 'easeIn',
           }}
           class="absolute inset-0"
         >
-          <div class="flex h-full w-full items-center p-12">
-            <div>
-              <h1 className="text-6xl font-medium tracking-tight text-white sm:text-8xl">
-                Discover
-              </h1>
+          <div class="flex h-full w-full items-center p-32">
+            <div className="relative font-medium tracking-tight text-gray-900 text-7xl sm:text-9xl">
+              <div className="z-0 pl-6 -mb-16">
+                <h1 className="text-gray-900">Discover</h1>
+              </div>
+              <div className="relative z-10 pl-10">
+                <h1 className="text-white">Discover</h1>
+              </div>
+              <div className="z-0 ">
+                <h1 className="-mt-20 text-gray-800">Discover</h1>
+              </div>
             </div>
           </div>
         </motion.div>

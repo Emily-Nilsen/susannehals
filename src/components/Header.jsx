@@ -52,8 +52,18 @@ export function Header() {
   return (
     <header className="absolute w-full">
       <nav>
-        <Container className="relative z-30 flex justify-between py-8">
-          <div className="relative z-10 flex items-center gap-16">
+        <Container className="relative z-50 flex justify-between py-8">
+          <motion.div
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            transition={{
+              delay: 3.8,
+              duration: 0.8,
+              type: 'fade',
+              ease: 'easeIn',
+            }}
+            className="relative flex items-center gap-16"
+          >
             <Link href="/" aria-label="Home">
               <div className="h-full cursor-pointer">
                 <div className="relative w-full h-full pr-1">
@@ -70,7 +80,7 @@ export function Header() {
             <div className="hidden lg:flex lg:gap-10">
               <NavLinks />
             </div>
-          </div>
+          </motion.div>
           <div className="flex items-center gap-6">
             <Popover className="lg:hidden">
               {({ open }) => (
