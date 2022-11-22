@@ -126,21 +126,21 @@ export function Timeline() {
     >
       <ImageClipPaths id={id} />
       <Container>
-        <div className="max-w-2xl mx-auto lg:mx-0">
+        <div className="mx-auto max-w-2xl lg:mx-0">
           <h1
             id="about-title"
-            className="text-6xl font-medium tracking-tighter text-gray-900 font-display sm:text-7xl"
+            className="font-display text-6xl font-medium tracking-tighter text-gray-900 sm:text-7xl"
           >
             About Susanne
           </h1>
-          <div className="text-sm prose prose-lg text-eye-green-dark sm:text-base">
+          <div className="prose prose-lg text-sm text-eye-green-dark sm:text-base">
             <p className="mt-4">
               The young Norwegian soprano, Susanne Hvinden Hals, hails from
               Oslo, Norway. She received her master of music from The Royal
               Danish Academy of Music in Copenhagen.
             </p>
             <p className="mt-2">
-              Susanne has sung roles as Susanna in Mozart's «Le nozze di
+              Susanne has sung roles as Susanna in Mozart’s «Le nozze di
               Figaro», Adele in «Die Fledermaus», J. Strauss, Pamina in «Die
               Zauberflöte», and Lucia in Benjamin Brittens «The rape of
               Lucretia».
@@ -160,12 +160,12 @@ export function Timeline() {
         </div>
         <Tab.Group
           as="div"
-          className="grid items-start grid-cols-1 mt-14 gap-y-8 gap-x-8 sm:mt-16 sm:gap-y-16 lg:mt-24 lg:grid-cols-4"
+          className="mt-14 grid grid-cols-1 items-start gap-y-8 gap-x-8 sm:mt-16 sm:gap-y-16 lg:mt-24 lg:grid-cols-4"
           vertical={tabOrientation === 'vertical'}
         >
-          <div className="relative flex pb-4 -mx-4 overflow-x-auto sm:mx-0 sm:block sm:overflow-visible sm:pb-0">
+          <div className="relative -mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:block sm:overflow-visible sm:pb-0">
             <div className="absolute bottom-0 top-2 left-0.5 hidden w-px bg-gray-200 lg:block" />
-            <Tab.List className="grid justify-start grid-flow-col px-4 auto-cols-auto gap-x-8 gap-y-10 whitespace-nowrap sm:mx-auto sm:max-w-2xl sm:grid-cols-3 sm:px-0 sm:text-center lg:grid-flow-row lg:grid-cols-1 lg:text-left">
+            <Tab.List className="grid auto-cols-auto grid-flow-col justify-start gap-x-8 gap-y-10 whitespace-nowrap px-4 sm:mx-auto sm:max-w-2xl sm:grid-cols-3 sm:px-0 sm:text-center lg:grid-flow-row lg:grid-cols-1 lg:text-left">
               {({ selectedIndex }) =>
                 timeFrames.map((timeframe, timeframeIndex) => (
                   <div key={timeframe.dateTime} className="relative lg:pl-8">
@@ -224,7 +224,7 @@ export function Timeline() {
                         }}
                       >
                         <Image
-                          className="absolute inset-0 object-cover w-full h-full transition duration-300 group-hover:scale-110"
+                          className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110"
                           src={featureImage.image}
                           alt=""
                           layout="fill"

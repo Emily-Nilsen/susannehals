@@ -110,7 +110,7 @@ export function Sisters() {
                       Julekonsert i Ris kirke
                     </p>
                     <p className="mt-1 text-sm text-gray-700">
-                      Scan the QR code to buy tickets to this year's Christmas
+                      Scan the QR code to buy tickets to this year’s Christmas
                       concert on 15 December 2022.
                     </p>
                   </div>

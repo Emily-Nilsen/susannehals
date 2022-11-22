@@ -73,9 +73,9 @@ function SocialLink({ className, href, children, icon: Icon }) {
         href={href}
         target="_blank"
         rel="noreferrer"
-        className="flex items-center text-xs font-medium text-gray-700 transition group hover:text-eye-green-light dark:text-gray-200 dark:hover:text-eye-green-light"
+        className="group flex items-center text-xs font-medium text-gray-700 transition hover:text-eye-green-light dark:text-gray-200 dark:hover:text-eye-green-light"
       >
-        <Icon className="flex-none w-6 h-6 transition fill-gray-500 group-hover:fill-eye-green-light" />
+        <Icon className="h-6 w-6 flex-none fill-gray-500 transition group-hover:fill-eye-green-light" />
         <span className="ml-4">{children}</span>
       </Link>
     </li>
@@ -96,13 +96,13 @@ function MailIcon(props) {
 export function Footer() {
   return (
     <>
-      <footer className="relative py-12 border-t border-gray-200 min-h-96">
+      <footer className="min-h-96 relative border-t border-gray-200 py-12">
         <Container>
-          <div className="relative z-10 flex flex-col items-start justify-between h-full pt-16 pb-6 gap-y-12 lg:flex-row lg:items-center lg:py-16">
-            <div className="absolute top-0 left-0 flex mt-0">
+          <div className="relative z-10 flex h-full flex-col items-start justify-between gap-y-12 pt-16 pb-6 lg:flex-row lg:items-center lg:py-16">
+            <div className="absolute top-0 left-0 mt-0 flex">
               <Link href="/" aria-label="Home">
                 <div className="h-full cursor-pointer">
-                  <div className="relative z-10 w-full h-full pr-1">
+                  <div className="relative z-10 h-full w-full pr-1">
                     <Image
                       src="https://res.cloudinary.com/dt3k2apqd/image/upload/v1668925083/Susanne%20Hals/Susanne_Logo_white_u8p8jb.svg"
                       width={100}
@@ -116,8 +116,8 @@ export function Footer() {
             </div>
             <div className="flex items-end"></div>
             {/* Testimonial */}
-            <div className="hidden my-32 lg:block">
-              <div className="max-w-xs prose prose-lg text-right">
+            <div className="my-32 hidden lg:block">
+              <div className="prose prose-lg max-w-xs text-right">
                 <motion.p
                   whileInView={{ opacity: 1 }}
                   initial={{ opacity: 0 }}
@@ -126,9 +126,9 @@ export function Footer() {
                     duration: 0.8,
                     type: 'fade',
                   }}
-                  className="text-base italic font-light tracking-tight text-white/90 sm:text-lg"
+                  className="text-base font-light italic tracking-tight text-white/90 sm:text-lg"
                 >
-                  Susanne's voice quality is indisputable. She has a high
+                  Susanne’s voice quality is indisputable. She has a high
                   soprano sound, which is clear and pointed out. At the same
                   time, it is warm and rich in colours. She has excellent
                   musical understanding and walks quickly in-depth on the
@@ -142,7 +142,7 @@ export function Footer() {
                     duration: 0.8,
                     type: 'fade',
                   }}
-                  className="w-full pl-12 mt-4 text-xs font-medium text-gray-400 uppercase sm:text-sm"
+                  className="mt-4 w-full pl-12 text-xs font-medium uppercase text-gray-400 sm:text-sm"
                 >
                   Eli K. Hanssveen / Soprano, The Norwegian Opera & Ballet
                 </motion.p>
@@ -158,18 +158,18 @@ export function Footer() {
                 className="text-gray-500 transition duration-300 ease-in-out hover:text-eye-green"
               >
                 <span className="sr-only">{item.name}</span>
-                <item.icon className="w-6 h-6" aria-hidden="true" />
+                <item.icon className="h-6 w-6" aria-hidden="true" />
               </a>
             ))}
           </div>
-          <div className="relative z-10 flex items-center pt-8 pb-12 border-none border-gray-500/50 md:justify-start md:pt-6">
+          <div className="relative z-10 flex items-center border-none border-gray-500/50 pt-8 pb-12 md:justify-start md:pt-6">
             <p className="mt-6 text-xs text-gray-400 sm:text-sm md:mt-0">
               &copy; Copyright Susanne Hals {new Date().getFullYear()}
             </p>
           </div>
         </Container>
         <div className="absolute inset-0">
-          <div className="relative w-full h-full">
+          <div className="relative h-full w-full">
             <Image
               src="https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto,e_art:audrey,e_art:quartz/Susanne%20Hals/Susanne_img_2_iu2smq.webp"
               alt="Susanne Hals"
@@ -182,8 +182,8 @@ export function Footer() {
         </div>
         {/* Animation */}
         <div className="absolute top-0 right-0">
-          <div className="flex justify-center m-12">
-            <div className="w-32 h-32">
+          <div className="m-12 flex justify-center">
+            <div className="h-32 w-32">
               <LottieInteract
                 path="https://res.cloudinary.com/dt3k2apqd/raw/upload/v1668970106/Susanne%20Hals/flower-decoration-850x850_fxzggu.json"
                 interaction="play-on-show"
