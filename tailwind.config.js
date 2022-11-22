@@ -62,7 +62,12 @@ module.exports = {
       maxWidth: {
         '2xl': '40rem',
       },
+      colors: {
+        'eye-green': '#a8a38a',
+        'eye-green-light': '#c2beaa',
+        'eye-green-dark': '#85876F',
+      },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
 }

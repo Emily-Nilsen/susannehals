@@ -1,48 +1,52 @@
 import { Fragment, useEffect, useId, useRef, useState } from 'react'
 import { Tab } from '@headlessui/react'
+import Image from 'next/image'
 import clsx from 'clsx'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useDebouncedCallback } from 'use-debounce'
-
+import { LottieInteract } from '@/components/LottieInteract'
 import { AppScreen } from '@/components/AppScreen'
-import { CircleBackground } from '@/components/CircleBackground'
 import { Container } from '@/components/Container'
 import { PhoneFrame } from '@/components/PhoneFrame'
-import {
-  DiageoLogo,
-  LaravelLogo,
-  MirageLogo,
-  ReversableLogo,
-  StatamicLogo,
-  StaticKitLogo,
-  TransistorLogo,
-  TupleLogo,
-} from '@/components/StockLogos'
 
 const MotionAppScreenHeader = motion(AppScreen.Header)
 const MotionAppScreenBody = motion(AppScreen.Body)
 
 const features = [
   {
-    name: 'Invite friends for better returns',
+    name: 'Copenhagen, Denmark',
     description:
-      'For every friend you invite to Pocket, you get insider notifications 5 seconds sooner. And it’s 10 seconds if you invite an insider.',
+      'Susanne studied a Master of Voice, specialising in opera, at The Royal Danish Academy of Music, from 2016 to 2018.',
     icon: DeviceUserIcon,
-    screen: InviteScreen,
+    screen: Copenhagen,
   },
   {
-    name: 'Notifications on stock dips',
+    name: 'The Oseana Art and Cultural Centre, Os',
     description:
-      'Get a push notification every time we find out something that’s going to lower the share price on your holdings so you can sell before the information hits the public markets.',
-    icon: DeviceNotificationIcon,
-    screen: StocksScreen,
-  },
-  {
-    name: 'Invest what you want',
-    description:
-      'We hide your stock purchases behind thousands of anonymous trading accounts, so suspicious activity can never be traced back to you.',
+      'At the Bergen International Festival in 2013, together with the opera company Opera Omnia, Susanne performed in the opera «Havfest», role-playing «sea creature».',
     icon: DeviceTouchIcon,
-    screen: InvestScreen,
+    screen: Os,
+  },
+  {
+    name: 'Málaga, Spain',
+    description:
+      'In 2019 Susanne performed as a Málaga Clásica Artist at the VII International Chamber Music Festival.',
+    icon: DeviceTouchIcon,
+    screen: Malaga,
+  },
+  {
+    name: 'Montpellier Opera, France',
+    description:
+      'Together with the Norwegian Girls’ Choir, in 2005, Susanne Hals participated in the staging of the opera "Libertad" written by Gabriel Alegria.',
+    icon: DeviceNotificationIcon,
+    screen: Montpellier,
+  },
+  {
+    name: 'Bergen, Norway',
+    description:
+      'Susanne studied a Bachelor of Music, Voice and Opera at the Grieg Academy from 2012 to 2016. During the 2015 and 2016 Bergen International Festivals, she performed solo concerts at the Grieg Hall.',
+    icon: DeviceTouchIcon,
+    screen: Bergen,
   },
 ]
 
@@ -167,190 +171,88 @@ const bodyAnimation = {
   },
 }
 
-function InviteScreen({ custom, animated = false }) {
+function Copenhagen({ custom, animated = false }) {
   return (
-    <AppScreen className="w-full">
-      <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
-        <AppScreen.Title>Invite people</AppScreen.Title>
-        <AppScreen.Subtitle>
-          Get tips <span className="text-white">5s sooner</span> for every
-          invite.
-        </AppScreen.Subtitle>
-      </MotionAppScreenHeader>
-      <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
-        <div className="px-4 py-6">
-          <div className="space-y-6">
-            {[
-              { label: 'Full name', value: 'Albert H. Wiggin' },
-              { label: 'Email address', value: 'awiggin@chase.com' },
-            ].map((field) => (
-              <div key={field.label}>
-                <div className="text-sm text-gray-500">{field.label}</div>
-                <div className="pb-2 mt-2 text-sm text-gray-900 border-b border-gray-200">
-                  {field.value}
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="px-3 py-2 mt-6 text-sm font-semibold text-center text-white rounded-lg bg-cyan-500">
-            Invite person
-          </div>
-        </div>
-      </MotionAppScreenBody>
-    </AppScreen>
+    <div className="absolute inset-0">
+      <div className="relative h-full w-full">
+        <Image
+          src="https://res.cloudinary.com/dt3k2apqd/image/upload/v1668948414/Susanne%20Hals/Copenhagen_2_y9mvtl.jpg"
+          alt="Copenhagen"
+          sizes="100vw"
+          layout="fill"
+          objectPosition="center"
+          objectFit="cover"
+        />
+      </div>
+    </div>
   )
 }
 
-function StocksScreen({ custom, animated = false }) {
+function Os({ custom, animated = false }) {
   return (
-    <AppScreen className="w-full">
-      <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
-        <AppScreen.Title>Stocks</AppScreen.Title>
-        <AppScreen.Subtitle>March 9, 2022</AppScreen.Subtitle>
-      </MotionAppScreenHeader>
-      <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
-        <div className="divide-y divide-gray-100">
-          {[
-            {
-              name: 'Laravel',
-              price: '4,098.01',
-              change: '+4.98%',
-              color: '#F9322C',
-              logo: LaravelLogo,
-            },
-            {
-              name: 'Tuple',
-              price: '5,451.10',
-              change: '-3.38%',
-              color: '#5A67D8',
-              logo: TupleLogo,
-            },
-            {
-              name: 'Transistor',
-              price: '4,098.41',
-              change: '+6.25%',
-              color: '#2A5B94',
-              logo: TransistorLogo,
-            },
-            {
-              name: 'Diageo',
-              price: '250.65',
-              change: '+1.25%',
-              color: '#3320A7',
-              logo: DiageoLogo,
-            },
-            {
-              name: 'StaticKit',
-              price: '250.65',
-              change: '-3.38%',
-              color: '#2A3034',
-              logo: StaticKitLogo,
-            },
-            {
-              name: 'Statamic',
-              price: '5,040.85',
-              change: '-3.11%',
-              color: '#0EA5E9',
-              logo: StatamicLogo,
-            },
-            {
-              name: 'Mirage',
-              price: '140.44',
-              change: '+9.09%',
-              color: '#16A34A',
-              logo: MirageLogo,
-            },
-            {
-              name: 'Reversable',
-              price: '550.60',
-              change: '-1.25%',
-              color: '#8D8D8D',
-              logo: ReversableLogo,
-            },
-          ].map((stock) => (
-            <div key={stock.name} className="flex items-center gap-4 px-4 py-3">
-              <div
-                className="flex-none rounded-full"
-                style={{ backgroundColor: stock.color }}
-              >
-                <stock.logo className="w-10 h-10" />
-              </div>
-              <div className="flex-auto text-sm text-gray-900">
-                {stock.name}
-              </div>
-              <div className="flex-none text-right">
-                <div className="text-sm font-medium text-gray-900">
-                  {stock.price}
-                </div>
-                <div
-                  className={clsx(
-                    'text-xs leading-5',
-                    stock.change.startsWith('+')
-                      ? 'text-cyan-500'
-                      : 'text-gray-500'
-                  )}
-                >
-                  {stock.change}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </MotionAppScreenBody>
-    </AppScreen>
+    <div className="absolute inset-0">
+      <div className="relative h-full w-full">
+        <Image
+          src="https://res.cloudinary.com/dt3k2apqd/image/upload/v1668948414/Susanne%20Hals/os_kulturhus_2_fjdm1p.jpg"
+          alt="Os Kulturhus"
+          sizes="100vw"
+          layout="fill"
+          objectPosition="center"
+          objectFit="cover"
+        />
+      </div>
+    </div>
   )
 }
 
-function InvestScreen({ custom, animated = false }) {
+function Malaga({ custom, animated = false }) {
   return (
-    <AppScreen className="w-full">
-      <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
-        <AppScreen.Title>Buy $LA</AppScreen.Title>
-        <AppScreen.Subtitle>
-          <span className="text-white">$34.28</span> per share
-        </AppScreen.Subtitle>
-      </MotionAppScreenHeader>
-      <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
-        <div className="px-4 py-6">
-          <div className="space-y-4">
-            {[
-              { label: 'Number of shares', value: '100' },
-              {
-                label: 'Current market price',
-                value: (
-                  <div className="flex">
-                    $34.28
-                    <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6">
-                      <path
-                        d="M17 15V7H9M17 7 7 17"
-                        stroke="#06B6D4"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
-                ),
-              },
-              { label: 'Estimated cost', value: '$3,428.00' },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className="flex justify-between pb-4 border-b border-gray-100"
-              >
-                <div className="text-sm text-gray-500">{item.label}</div>
-                <div className="text-sm font-semibold text-gray-900">
-                  {item.value}
-                </div>
-              </div>
-            ))}
-            <div className="px-3 py-2 text-sm font-semibold text-center text-white rounded-lg bg-cyan-500">
-              Buy shares
-            </div>
-          </div>
-        </div>
-      </MotionAppScreenBody>
-    </AppScreen>
+    <div className="absolute inset-0">
+      <div className="relative h-full w-full">
+        <Image
+          src="https://res.cloudinary.com/dt3k2apqd/image/upload/v1668948414/Susanne%20Hals/Malaga_2_junypw.jpg"
+          alt="Malaga, Spain"
+          sizes="100vw"
+          layout="fill"
+          objectPosition="center"
+          objectFit="cover"
+        />
+      </div>
+    </div>
+  )
+}
+
+function Montpellier({ custom, animated = false }) {
+  return (
+    <div className="absolute inset-0">
+      <div className="relative h-full w-full">
+        <Image
+          src="https://res.cloudinary.com/dt3k2apqd/image/upload/v1668948414/Susanne%20Hals/montpellier_opera_2_arnn2l.jpg"
+          alt="Montpellier, France"
+          sizes="100vw"
+          layout="fill"
+          objectPosition="center"
+          objectFit="cover"
+        />
+      </div>
+    </div>
+  )
+}
+
+function Bergen({ custom, animated = false }) {
+  return (
+    <div className="absolute inset-0">
+      <div className="relative h-full w-full">
+        <Image
+          src="https://res.cloudinary.com/dt3k2apqd/image/upload/v1668948414/Susanne%20Hals/Bergen_2_f9cmbp.jpg"
+          alt="Bergen, Norway"
+          sizes="100vw"
+          layout="fill"
+          objectPosition="center"
+          objectFit="cover"
+        />
+      </div>
+    </div>
   )
 }
 
@@ -382,7 +284,7 @@ function FeaturesDesktop() {
   return (
     <Tab.Group
       as="div"
-      className="grid items-center grid-cols-12 gap-8 lg:gap-16 xl:gap-24"
+      className="grid grid-cols-12 items-center gap-8 lg:gap-16 xl:gap-24"
       selectedIndex={selectedIndex}
       onChange={onChange}
       vertical
@@ -391,7 +293,7 @@ function FeaturesDesktop() {
         {features.map((feature, featureIndex) => (
           <div
             key={feature.name}
-            className="relative transition-colors rounded-2xl hover:bg-gray-800/30"
+            className="relative rounded-2xl transition-colors hover:bg-gray-800/30"
           >
             {featureIndex === selectedIndex && (
               <motion.div
@@ -401,8 +303,7 @@ function FeaturesDesktop() {
               />
             )}
             <div className="relative z-10 p-8">
-              <feature.icon className="w-8 h-8" />
-              <h3 className="mt-6 text-lg font-semibold text-white">
+              <h3 className="mt-0 text-lg font-semibold text-white">
                 <Tab className="text-left [&:not(:focus-visible)]:focus:outline-none">
                   <span className="absolute inset-0 rounded-2xl" />
                   {feature.name}
@@ -416,9 +317,6 @@ function FeaturesDesktop() {
         ))}
       </Tab.List>
       <div className="relative col-span-6">
-        <div className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-          <CircleBackground color="#13B5C8" className="animate-spin-slower" />
-        </div>
         <PhoneFrame className="z-10 mx-auto w-full max-w-[366px]">
           <Tab.Panels as={Fragment}>
             <AnimatePresence
@@ -489,21 +387,21 @@ function FeaturesMobile() {
           <div
             key={featureIndex}
             ref={(ref) => (slideRefs.current[featureIndex] = ref)}
-            className="flex-none w-full px-4 snap-center sm:px-6"
+            className="w-full flex-none snap-center px-4 sm:px-6"
           >
-            <div className="relative px-5 py-6 overflow-hidden transform bg-gray-800 rounded-2xl">
-              <div className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
-                <CircleBackground
+            <div className="relative transform overflow-hidden rounded-2xl bg-gray-800 px-5 py-6">
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                {/* <CircleBackground
                   color="#13B5C8"
                   className={featureIndex % 2 === 1 ? 'rotate-180' : undefined}
-                />
+                /> */}
               </div>
               <PhoneFrame className="relative mx-auto w-full max-w-[366px]">
                 <feature.screen />
               </PhoneFrame>
-              <div className="absolute inset-x-0 bottom-0 p-6 bg-gray-800/95 backdrop-blur sm:p-10">
-                <feature.icon className="w-8 h-8" />
-                <h3 className="mt-6 text-sm font-semibold text-white sm:text-lg">
+              <div className="absolute inset-x-0 bottom-0 bg-gray-800/95 p-6 backdrop-blur sm:p-10">
+                {/* <feature.icon className="w-8 h-8" /> */}
+                <h3 className="mt-0 text-sm font-semibold text-white sm:text-lg">
                   {feature.name}
                 </h3>
                 <p className="mt-2 text-sm text-gray-400">
@@ -514,7 +412,7 @@ function FeaturesMobile() {
           </div>
         ))}
       </div>
-      <div className="flex justify-center gap-3 mt-6">
+      <div className="mt-6 flex justify-center gap-3">
         {features.map((_, featureIndex) => (
           <button
             type="button"
@@ -544,18 +442,34 @@ export function PrimaryFeatures() {
     <section
       id="features"
       aria-label="Features for investing all your money"
-      className="bg-[#050505] py-20 sm:py-32"
+      className="relative bg-gray-900 py-20 sm:py-32"
     >
       <Container>
-        <div className="max-w-2xl mx-auto lg:mx-0 lg:max-w-3xl">
-          <h2 className="text-3xl font-medium tracking-tight text-white">
-            Every feature you need to win. Try it for yourself.
-          </h2>
+        <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
+          {/* <p className="mb-6 text-lg text-gray-400 uppercase">about</p> */}
+          <h1 className="mb-6 text-6xl font-medium tracking-tight text-white sm:text-8xl">
+            About Susanne
+          </h1>
           <p className="mt-2 text-lg text-gray-400">
-            Pocket was built for investors like you who play by their own rules
-            and aren’t going to let SEC regulations get in the way of their
-            dreams. If other investing tools are afraid to build it, Pocket has
-            it.
+            The young Norwegian soprano, Susanne Hvinden Hals, hails from Oslo,
+            Norway. She received her master of music from The Royal Danish
+            Academy of Music in Copenhagen.
+          </p>
+          <p className="mt-2 text-lg text-gray-400">
+            Susanne has sung roles as Susanna in Mozart's «Le nozze di Figaro»,
+            Adele in «Die Fledermaus», J. Strauss, Pamina in «Die Zauberflöte»,
+            and Lucia in Benjamin Brittens «The rape of Lucretia».
+          </p>
+          <p className="mt-2 text-lg text-gray-400">
+            In 2003 Susanne Hals made her debut with The Norwegian Girls Choir
+            at Opera Montpellier in France. Her accomplishments and professional
+            singing skills have led to Susanne being a highly sought after
+            soprano in Norway.
+          </p>
+          <p className="mt-2 text-lg text-gray-400">
+            Moreover, she often sings with orchestras in oratorios and has
+            performed at various festivals and concerts, both in Norway and
+            abroad, including Málaga Clásica in Spain.
           </p>
         </div>
       </Container>

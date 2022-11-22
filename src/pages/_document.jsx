@@ -1,8 +1,13 @@
 import { Head, Html, Main, NextScript } from 'next/document'
 
 export default function Document() {
+  const params = {
+    cloudName: 'dt3k2apqd',
+    publicId: 'Susanne Hals/Pamina2021.Malaga_bjnlmi',
+  }
+
   return (
-    <Html className="h-full antialiased bg-gray-50" lang="en">
+    <Html className="h-full bg-gray-50 antialiased" lang="en">
       <Head>
         <link
           rel="icon"
@@ -13,7 +18,7 @@ export default function Document() {
           href="https://use.typekit.net/ccv8xuk.css"
         ></link>
       </Head>
-      <body className="flex flex-col h-full">
+      <body className="flex h-full flex-col">
         <Main />
         <NextScript />
       </body>
