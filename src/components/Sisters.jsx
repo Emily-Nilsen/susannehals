@@ -36,13 +36,14 @@ export function Sisters() {
               <div className="relative mx-auto text-base max-w-prose lg:max-w-none">
                 <figure>
                   <div className="aspect-w-12 aspect-h-7 lg:aspect-none">
-                    <img
-                      className="object-cover object-center"
-                      src="https://res.cloudinary.com/dt3k2apqd/image/upload/v1665483758/S%C3%B8strene%20Hals/goldCutout_fhrxem_ocomnj.webp"
-                      alt="Søstrene Hals - Kathrine og Susanne Hals"
-                      width={1548}
-                      height={2064}
-                    />
+                    <div className="object-cover object-center">
+                      <Image
+                        src="https://res.cloudinary.com/dt3k2apqd/image/upload/v1665483758/S%C3%B8strene%20Hals/goldCutout_fhrxem_ocomnj.webp"
+                        alt="Søstrene Hals - Kathrine og Susanne Hals"
+                        width={1548}
+                        height={2064}
+                      />
+                    </div>
                   </div>
                   <figcaption className="flex justify-end mt-3 text-sm text-gray-500 group">
                     <div className="flex items-center">
@@ -80,7 +81,7 @@ export function Sisters() {
                     Søstrene Hals.
                   </p>
                   <p>
-                    Kathrine studied at the Royal College of Music in London;
+                    Kathrine studied at the Royal College of Music in London,
                     Susanne at the Royal Danish Conservatory of Music in
                     Copenhagen. Based on classical music, the duo can tailor a
                     repertoire, from pure classical to a cross-over between
