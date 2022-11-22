@@ -89,8 +89,8 @@ export function Sisters() {
                   </p>
                   <p>
                     Since 2014, Søstrene Hals have held an extremely popular
-                    Christmas concert at the Majorstuen church, "julekonsert i
-                    Majorstuen kirke".
+                    Christmas concert at the Majorstuen church, “julekonsert i
+                    Majorstuen kirke”.
                   </p>
                 </div>
               </div>
