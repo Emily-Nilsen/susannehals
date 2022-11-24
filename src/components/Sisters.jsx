@@ -20,13 +20,13 @@ export function Sisters() {
     <div className="overflow-hidden bg-white">
       <Container>
         <div className="relative px-4 py-16 mx-auto max-w-7xl sm:px-6 md:py-32 lg:px-8">
-          <div className="absolute top-0 bottom-0 hidden w-screen left-3/4 bg-gray-50 lg:block" />
+          <div className="absolute top-0 bottom-0 hidden w-screen left-3/4 bg-eye-green-light/20 lg:block" />
           <div className="mx-auto text-base max-w-prose lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8">
             <div>
               <h2 className="text-base text-gray-600 uppercase">
                 Duo Performers
               </h2>
-              <h1 className="mt-2 text-6xl font-bold leading-8 tracking-tight text-gray-900 sm:text-7xl">
+              <h1 className="mt-2 text-6xl leading-8 tracking-tight text-gray-900 sm:text-7xl">
                 Søstrene Hals
               </h1>
             </div>

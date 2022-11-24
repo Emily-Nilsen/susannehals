@@ -5,6 +5,7 @@ import { Faqs } from '@/components/Faqs'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
+import { Media } from '@/components/Media'
 import { Offers } from '@/components/Offers'
 import { PrimaryFeatures } from '@/components/PrimaryFeatures'
 // import { Reviews } from '@/components/Reviews'
@@ -48,6 +49,7 @@ export default function Home() {
         />
         {/* <Reviews /> */}
         {/* <Faqs /> */}
+        <Media />
         <Sisters />
       </main>
       <Footer />

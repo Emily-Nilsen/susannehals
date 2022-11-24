@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { Video, CloudinaryContext, Transformation } from 'cloudinary-react'
 
-export function VideoPlayer({ publicId }) {
+export default function VideoPlayer({ publicId }) {
   const videoRef = useRef()
 
   return (
@@ -16,18 +16,7 @@ export function VideoPlayer({ publicId }) {
           controls
           innerRef={videoRef}
           fluid
-          data-cld-colors='{ "base": "#eef9ee", "accent": "#00e64c", "text": "#009688" }'
-          class="cld-video-player cld-video-player-skin-light"
-        >
-          <Transformation
-            audioCodec="none"
-            height="480"
-            quality="auto"
-            videoCodec="auto"
-            width="852"
-            crop="fill"
-          />
-        </Video>
+        ></Video>
       </div>
     </CloudinaryContext>
   )

@@ -1,4 +1,4 @@
-import { VideoPlayer } from './VideoPlayer'
+import VideoPlayer from './VideoPlayer'
 import { VideoFeature } from './VideoFeature'
 import Image from 'next/image'
 
@@ -10,12 +10,12 @@ export function Offers() {
       </div>
       <div className="relative px-4 pt-12 pb-16 sm:px-6 sm:pt-16 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:px-8">
         <div className="z-10 lg:col-start-2 lg:pl-8">
-          <div className="mx-auto max-w-prose text-base lg:ml-auto lg:mr-0 lg:max-w-lg">
+          <div className="mx-auto text-base max-w-prose lg:ml-auto lg:mr-0 lg:max-w-lg">
             <h1 className="mt-2 text-6xl font-bold leading-8 tracking-tight text-gray-900 sm:text-7xl">
               An extensive repertoire
             </h1>
 
-            <div className="prose prose-gray mt-8 text-gray-500">
+            <div className="mt-8 prose text-gray-500 prose-gray">
               <p>
                 Classically trained soprano Susanne Hals enchants audiences with
                 her soaring high voice and performs an extensive repertoire.
@@ -49,19 +49,19 @@ export function Offers() {
           </div>
           {/* <VideoFeature /> */}
           <div className="my-24 ml-16 ">
-            <div className="relative flex h-80 w-full flex-none rounded-xl border-4 border-white shadow-2xl md:h-80">
-              <div className="relative h-full w-full">
-                <div className="absolute flex h-full w-full items-center justify-center overflow-hidden rounded-md">
-                  <VideoPlayer publicId="https://res.cloudinary.com/dt3k2apqd/video/upload/v1668357503/Susanne%20Hals/Pamina2021.Malaga_bjnlmi.mp4" />
+            <div className="w-{852px} relative flex h-[480px] flex-none rounded-xl border-4 border-white shadow-2xl md:h-80">
+              <div className="relative w-full h-full">
+                <div className="absolute flex items-center justify-center w-full h-full overflow-hidden rounded-md">
+                  <VideoPlayer publicId="Susanne Hals/Pamina2021.Malaga_bjnlmi" />
                 </div>
               </div>
             </div>
-            <p className="prose mt-8 text-gray-500 ">Video description</p>
+            <p className="mt-8 prose text-gray-500 ">Video description</p>
           </div>
         </div>
       </div>
-      <div className="absolute inset-0 h-full w-full">
-        <div className="relative h-full w-full">
+      <div className="absolute inset-0 w-full h-full">
+        <div className="relative w-full h-full">
           <Image
             src="https://res.cloudinary.com/dt3k2apqd/image/upload/v1668973698/Susanne%20Hals/susanne_left_side_syd63h.webp"
             alt="Susanne Hals"
