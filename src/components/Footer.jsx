@@ -29,10 +29,10 @@ const navigation = [
     name: 'Facebook',
     href: 'https://www.facebook.com/susanne.hals',
     icon: (props) => (
-      <svg fill="currentColor" viewBox="0 0 512 512" {...props}>
+      <svg fill="currentColor" viewBox="0 0 320 512" {...props}>
         <path
           fillRule="evenodd"
-          d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+          d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
           clipRule="evenodd"
         />
       </svg>
@@ -158,7 +158,7 @@ export function Footer() {
                 className="text-gray-500 transition duration-300 ease-in-out hover:text-eye-green"
               >
                 <span className="sr-only">{item.name}</span>
-                <item.icon className="w-6 h-6" aria-hidden="true" />
+                <item.icon className="w-5 h-5" aria-hidden="true" />
               </a>
             ))}
           </div>

@@ -5,11 +5,11 @@ import { AuthLayout } from '@/components/AuthLayout'
 import { Button } from '@/components/Button'
 import { SelectField, TextField } from '@/components/Fields'
 
-export default function Register() {
+export default function Contact() {
   return (
     <>
       <Head>
-        <title>Sign Up - Pocket</title>
+        <title>Kontakt Susanne Hals</title>
       </Head>
       <AuthLayout
         title="Sign up for an account"
@@ -71,7 +71,7 @@ export default function Register() {
               <option>The “Never Use This” podcast</option>
             </SelectField>
           </div>
-          <Button type="submit" color="cyan" className="mt-8 w-full">
+          <Button type="submit" color="cyan" className="w-full mt-8">
             Get started today
           </Button>
         </form>

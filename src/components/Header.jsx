@@ -66,7 +66,7 @@ export function Header() {
           >
             <Link href="/" aria-label="Home">
               <div className="h-full cursor-pointer">
-                <div className="relative h-full w-full pr-1">
+                <div className="relative w-full h-full pr-1">
                   <Image
                     src={Logo}
                     width={100}
@@ -91,9 +91,9 @@ export function Header() {
                   >
                     {({ open }) =>
                       open ? (
-                        <ChevronUpIcon className="h-6 w-6" />
+                        <ChevronUpIcon className="w-6 h-6" />
                       ) : (
-                        <MenuIcon className="h-6 w-6" />
+                        <MenuIcon className="w-6 h-6" />
                       )
                     }
                   </Popover.Button>
@@ -118,19 +118,17 @@ export function Header() {
                             y: -32,
                             transition: { duration: 0.2 },
                           }}
-                          className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pt-32 pb-6 shadow-2xl shadow-gray-900/20"
+                          className="absolute inset-x-0 top-0 z-0 px-6 pt-32 pb-6 origin-top shadow-2xl rounded-b-2xl bg-gray-50 shadow-gray-900/20"
                         >
                           <div className="space-y-4 uppercase">
-                            <MobileNavLink href="#features">
-                              About
+                            <MobileNavLink href="#about">About</MobileNavLink>
+                            <MobileNavLink href="#media">Media</MobileNavLink>
+                            <MobileNavLink href="#sostrenehals">
+                              Søstrene Hals
                             </MobileNavLink>
-                            <MobileNavLink href="#reviews">
+                            <MobileNavLink href="/contact">
                               Booking
                             </MobileNavLink>
-                            {/* <MobileNavLink href="#pricing">
-                              Pricing
-                            </MobileNavLink> */}
-                            {/* <MobileNavLink href="#faqs">FAQs</MobileNavLink> */}
                           </div>
                           {/* <div className="flex flex-col gap-4 mt-8">
                             <Button href="/login" variant="outline">

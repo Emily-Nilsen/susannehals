@@ -74,21 +74,32 @@ export function Media() {
   return (
     <main>
       <section
-        id="promos"
-        aria-labelledby="promos-title"
-        className="w-full py-20 bg-gray-700 border-t border-gray-200 sm:pt-32 sm:pb-24"
+        id="media"
+        aria-labelledby="media-title"
+        className="relative w-full border-none border-gray-200 bg-gradient-to-br from-gray-800 to-gray-600 py-20 sm:pt-32 sm:pb-24"
       >
+        <div className="absolute inset-0">
+          <div className="relative h-full w-full object-cover object-center">
+            <Image
+              src="https://res.cloudinary.com/dt3k2apqd/image/upload/v1669307832/Susanne%20Hals/elegant_media_bg_ym0c5i.webp"
+              alt="Media background"
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+            />
+          </div>
+        </div>
         <div className="relative z-0">
           <Container>
             {/* Text */}
-            <div className="mx-auto mb-10 max-full sm:text-center lg:mx-0">
+            <div className="max-full mx-auto mb-10 sm:text-center lg:mx-0">
               <h1
                 id="faqs-title"
                 className="mt-2 text-6xl leading-8 tracking-tight text-white sm:text-7xl"
               >
                 Media
               </h1>
-              <p className="max-w-lg mx-auto mt-2 text-lg text-gray-300">
+              <p className="mx-auto mt-2 max-w-lg text-lg text-gray-300">
                 Add some text here
               </p>
             </div>
@@ -96,15 +107,15 @@ export function Media() {
 
           {/* videos below */}
 
-          <div className="flex pb-6 pr-32 ml-3 space-x-3 overflow-x-auto sm:space-x-8 md:space-x-10 md:p-10 lg:max-w-none">
+          <div className="ml-3 flex space-x-3 overflow-x-auto pb-6 pr-32 sm:space-x-8 md:space-x-10 md:p-10 lg:max-w-none">
             {promotions.map((site) => (
               <>
                 <section key={site.id} id={site.id} className="flex-shrink-0">
-                  <div className="relative z-0 grid max-w-xs grid-cols-1 gap-3 rounded-3xl bg-gray-600 p-6 shadow-md shadow-gray-900/5 md:max-w-[40rem] md:gap-8 md:p-8">
+                  <div className="relative z-0 grid max-w-xs grid-cols-1 gap-3 rounded-3xl bg-white bg-opacity-20 p-6 shadow-xl shadow-gray-900/5 backdrop-blur-sm md:max-w-[40rem] md:gap-8 md:p-8">
                     <div className="sm:pt-2 md:pr-6 ">
                       <div className="flex items-center pb-2">
                         <div className="w-full pl-2">
-                          <h2 className="text-base font-semibold text-white capitalize">
+                          <h2 className="text-base font-semibold capitalize text-white">
                             {site.title}
                           </h2>
                           <p className="max-w-xs text-sm leading-6 text-gray-300">
@@ -116,7 +127,7 @@ export function Media() {
 
                     <div className="relative flex w-full rounded-2xl">
                       <div className="relative h-[216px] w-96">
-                        <div className="absolute flex items-center justify-center w-full h-full overflow-hidden rounded-2xl">
+                        <div className="absolute flex h-full w-full items-center justify-center overflow-hidden rounded-2xl">
                           <DynamicVideoPlayer publicId={site.promo} />
                         </div>
                       </div>
@@ -126,18 +137,28 @@ export function Media() {
               </>
             ))}
           </div>
-          <Container>
-            <div className="flex justify-end">
+          {/* <Container> */}
+          <div className="flex justify-end pr-6">
+            <div className="flex items-center">
               <p className="flex items-center text-sm font-normal text-gray-300">
                 Scroll right
-                <WebsiteIcon className="flex-none w-3 h-3 ml-2" />
+                {/* <WebsiteIcon className="flex-none w-3 h-3 ml-2" /> */}
               </p>
+              <div className="ml-1 flex justify-center opacity-100">
+                <div className="h-16 w-16">
+                  <LottieInteract
+                    path="https://res.cloudinary.com/dt3k2apqd/raw/upload/v1669308393/Susanne%20Hals/rightsArrowsThree_wpbe2f.json"
+                    loop
+                    autoplay
+                    speed="1"
+                    delay="500"
+                  />
+                </div>
+              </div>
             </div>
-          </Container>
-          <div className="absolute bottom-0 right-0 z-10 w-6 h-full bg-gradient-to-l from-gray-700 md:w-24"></div>
+          </div>
         </div>
       </section>
-      {/* <PageSeparator /> */}
     </main>
   )
 }
