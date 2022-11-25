@@ -7,10 +7,10 @@ export function Testimonial({ testimonial, author, lottie }) {
   return (
     <section
       id="testimonial"
-      className="relative overflow-hidden bg-eye-green py-20 sm:py-28"
+      className="relative py-20 overflow-hidden bg-eye-green sm:py-28"
     >
       <Container className="relative">
-        <div className="prose prose-lg mx-auto max-w-2xl text-center">
+        <div className="max-w-2xl mx-auto prose prose-lg text-center">
           <motion.h2
             whileInView={{ opacity: 1 }}
             initial={{ opacity: 0 }}
@@ -19,7 +19,7 @@ export function Testimonial({ testimonial, author, lottie }) {
               duration: 0.8,
               type: 'fade',
             }}
-            className="text-2xl font-light italic tracking-tight text-white/90 sm:text-3xl"
+            className="text-2xl italic font-light tracking-tight text-white/90 sm:text-3xl"
           >
             {testimonial}
           </motion.h2>
@@ -35,8 +35,8 @@ export function Testimonial({ testimonial, author, lottie }) {
           >
             {author}
           </motion.p>
-          <div className="mb-16 flex justify-center opacity-90">
-            <div className="h-10 w-3/4">
+          <div className="flex justify-center mb-4 opacity-90 sm:mb-16">
+            <div className="w-3/4 h-10">
               <LottieInteract
                 path={lottie}
                 interaction="play-on-show"

@@ -12,10 +12,6 @@ const DynamicVideoPlayer = dynamic(() => import('./VideoPlayer'), {
   ssr: false,
 })
 
-// const NativeVideo = dynamic(() => import('../components/NativeVideoPlayer'), {
-//   ssr: false,
-// })
-
 function LinkIcon(props) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
@@ -48,25 +44,19 @@ export function Media() {
     {
       id: 'Norinas_Cavatina',
       title: `Norina’s Cavatina`,
-      category: `Don Pasquale by Donizetti`,
+      description: `Don Pasquale by Donizetti`,
       promo: 'Susanne Hals/Norinas_Cavattina_minified_ih69gj',
-    },
-    {
-      id: 'Je_veux_vivre',
-      title: `Ah! Je veux vivre`,
-      category: `Roméo and Juliette by Charles - JW Pepper`,
-      promo: 'Susanne Hals/Je_veux_vivre_minified_anlcov',
     },
     {
       id: 'Deh_vieni',
       title: `Deh vieni, non tardar`,
-      category: `Le Nozze di Figaro by Mozart`,
+      description: `Le Nozze di Figaro by Mozart`,
       promo: 'Susanne Hals/Deh_vieni_-_minified_adnvav',
     },
     {
       id: 'Adinas_arie',
       title: `Adina’s arie`,
-      category: `The Elixir of Love by Donizetti`,
+      description: `The Elixir of Love by Donizetti`,
       promo: 'Susanne Hals/Adinas_arie_-_minified_poiwnf',
     },
   ]
@@ -76,10 +66,10 @@ export function Media() {
       <section
         id="media"
         aria-labelledby="media-title"
-        className="relative w-full border-none border-gray-200 bg-gradient-to-br from-gray-800 to-gray-600 py-20 sm:pt-32 sm:pb-24"
+        className="relative w-full py-20 border-gray-200 border-none bg-gradient-to-br from-gray-800 to-gray-600 sm:pt-32 sm:pb-24"
       >
         <div className="absolute inset-0">
-          <div className="relative h-full w-full object-cover object-center">
+          <div className="relative object-cover object-center w-full h-full">
             <Image
               src="https://res.cloudinary.com/dt3k2apqd/image/upload/v1669307832/Susanne%20Hals/elegant_media_bg_ym0c5i.webp"
               alt="Media background"
@@ -92,42 +82,43 @@ export function Media() {
         <div className="relative z-0">
           <Container>
             {/* Text */}
-            <div className="max-full mx-auto mb-10 sm:text-center lg:mx-0">
+            <div className="mx-auto mb-10 max-full sm:text-center lg:mx-0">
               <h1
                 id="faqs-title"
-                className="mt-2 text-6xl leading-8 tracking-tight text-white sm:text-7xl"
+                className="pb-6 mt-2 text-6xl leading-8 tracking-tight text-white sm:text-7xl"
               >
                 Media
               </h1>
-              <p className="mx-auto mt-2 max-w-lg text-lg text-gray-300">
-                Add some text here
+              <p className="max-w-lg mx-auto mt-2 text-lg text-gray-300">
+                Here is a selection of videos recorded at the Gamle Rådhus Scene
+                with pianist Tore Dindstad.
               </p>
             </div>
           </Container>
 
           {/* videos below */}
 
-          <div className="ml-3 flex space-x-3 overflow-x-auto pb-6 pr-32 sm:space-x-8 md:space-x-10 md:p-10 lg:max-w-none">
+          <div className="flex px-1 pb-6 ml-0 space-x-3 overflow-x-auto sm:space-x-8 md:space-x-10 md:p-10 lg:max-w-none">
             {promotions.map((site) => (
               <>
                 <section key={site.id} id={site.id} className="flex-shrink-0">
-                  <div className="relative z-0 grid max-w-xs grid-cols-1 gap-3 rounded-3xl bg-white bg-opacity-20 p-6 shadow-xl shadow-gray-900/5 backdrop-blur-sm md:max-w-[40rem] md:gap-8 md:p-8">
+                  <div className="relative z-0 grid max-w-[100vw] grid-cols-1 gap-3 rounded-3xl bg-white bg-opacity-20 p-6 shadow-xl shadow-gray-900/5 backdrop-blur-sm md:max-w-[40rem] md:gap-8 md:p-8">
                     <div className="sm:pt-2 md:pr-6 ">
                       <div className="flex items-center pb-2">
                         <div className="w-full pl-2">
-                          <h2 className="text-base font-semibold capitalize text-white">
+                          <h2 className="text-base font-semibold text-white capitalize">
                             {site.title}
                           </h2>
                           <p className="max-w-xs text-sm leading-6 text-gray-300">
-                            {site.category}
+                            {site.description}
                           </p>
                         </div>
                       </div>
                     </div>
 
                     <div className="relative flex w-full rounded-2xl">
-                      <div className="relative h-[216px] w-96">
-                        <div className="absolute flex h-full w-full items-center justify-center overflow-hidden rounded-2xl">
+                      <div className="relative h-[14rem] w-96">
+                        <div className="absolute flex items-center justify-center w-full h-full overflow-hidden rounded-2xl">
                           <DynamicVideoPlayer publicId={site.promo} />
                         </div>
                       </div>
@@ -144,8 +135,8 @@ export function Media() {
                 Scroll right
                 {/* <WebsiteIcon className="flex-none w-3 h-3 ml-2" /> */}
               </p>
-              <div className="ml-1 flex justify-center opacity-100">
-                <div className="h-16 w-16">
+              <div className="flex justify-center ml-1 opacity-100">
+                <div className="w-16 h-16">
                   <LottieInteract
                     path="https://res.cloudinary.com/dt3k2apqd/raw/upload/v1669308393/Susanne%20Hals/rightsArrowsThree_wpbe2f.json"
                     loop

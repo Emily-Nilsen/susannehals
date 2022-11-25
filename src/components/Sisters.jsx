@@ -15,6 +15,17 @@ function QrCodeBorder(props) {
   )
 }
 
+function LinkIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path
+        d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z"
+        fill="currentColor"
+      />
+    </svg>
+  )
+}
+
 export function Sisters() {
   return (
     <main>
@@ -25,10 +36,10 @@ export function Sisters() {
               <div className="absolute top-0 bottom-0 hidden w-screen left-3/4 bg-eye-green-light/20 lg:block" />
               <div className="mx-auto text-base max-w-prose lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8">
                 <div>
-                  <h2 className="text-base text-gray-600 uppercase">
+                  <h2 className="pb-4 text-base text-gray-600 uppercase">
                     Duo Performers
                   </h2>
-                  <h1 className="mt-2 text-6xl leading-8 tracking-tight text-gray-900 sm:text-7xl">
+                  <h1 className="mt-2 text-6xl tracking-tight text-gray-900 sm:text-7xl">
                     Søstrene Hals
                   </h1>
                 </div>
@@ -47,7 +58,7 @@ export function Sisters() {
                           />
                         </div>
                       </div>
-                      <figcaption className="flex justify-end mt-3 text-sm text-gray-500 group">
+                      <figcaption className="flex mt-3 text-sm text-gray-500 group lg:justify-end">
                         <div className="flex items-center">
                           <a
                             href="https://www.sostrenehals.com"
@@ -108,10 +119,23 @@ export function Sisters() {
                         />
                       </div>
                       <div className="ml-8 lg:w-64">
-                        <p className="text-base font-semibold text-gray-900">
+                        <a
+                          className="group"
+                          href="https://www.ticketmaster.no/artist/sostrene-hals-tickets/1213834?gclid=CjwKCAiA7IGcBhA8EiwAFfUDseSyIimMkpNhCgwdnC6WRN4DerYjNaqtVHvU8kqwrwaJ2MhWTjbhrhoC6AMQAvD_BwE&gclsrc=aw.ds&language=en-us&utm_source=TM-google"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <p className="relative z-10 flex text-sm font-normal transition duration-300 ease-in-out text-zinc-500 group-hover:text-eye-green">
+                            <span className="mr-2 text-base font-semibold text-gray-900 group-hover:underline">
+                              Julekonsert i Ris kirke
+                            </span>
+                            <LinkIcon className="flex-none w-6 h-6" />
+                          </p>
+                        </a>
+                        {/* <p className="text-base font-semibold text-gray-900">
                           <span className="absolute inset-0 sm:rounded-2xl" />
                           Julekonsert i Ris kirke
-                        </p>
+                        </p> */}
                         <p className="mt-1 text-sm text-gray-700">
                           Scan the QR code to buy tickets to this year’s
                           Christmas concert on 15 December 2022.
