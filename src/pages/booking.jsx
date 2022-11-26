@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
+import { LottieInteract } from '@/components/LottieInteract'
 import { AuthLayout } from '@/components/AuthLayout'
 import { Button } from '@/components/Button'
 import { SelectField, TextField } from '@/components/Fields'
@@ -114,28 +115,45 @@ export default function Booking() {
           <Button type="submit" color="eyeGreen" className="w-full mt-8">
             Send
           </Button>
-          <div className="py-10 prose">
-            <p>Prefer e-mail?</p>
-            <p>
-              Contact me at{' '}
+          <div className="pt-12 pb-4 mt-16 prose border-t">
+            <p>Alternate contact info</p>
+            <div className="flex items-center">
+              <span className="w-10 h-10">
+                <LottieInteract
+                  path="https://res.cloudinary.com/dt3k2apqd/raw/upload/v1669490649/Susanne%20Hals/email_xkn2j9.json"
+                  loop
+                  autoplay
+                  speed="0.5"
+                  delay="500"
+                />
+              </span>
               <Link
                 href="mailto:susannehvinden@gmail.com"
                 target="_blank"
                 rel="noreferrer"
-                className="font-semibold text-gray-900 hover:underline"
+                className="pl-2 font-semibold text-gray-900 no-underline hover:underline"
               >
                 susannehvinden@gmail.com
-              </Link>{' '}
-              or ring me on{' '}
+              </Link>
+            </div>
+            <div className="flex items-center">
+              <span className="w-10 h-10">
+                <LottieInteract
+                  path="https://res.cloudinary.com/dt3k2apqd/raw/upload/v1669489837/Susanne%20Hals/telephone_rlk8bm.json"
+                  autoplay
+                  loop
+                  speed="0.7"
+                  delay="500"
+                  interaction="play-on-show"
+                />
+              </span>
               <Link
                 href="tel:007445506256"
-                className="font-semibold text-gray-900 hover:underline"
+                className="pl-2 font-semibold text-gray-900 no-underline hover:underline"
               >
-                {' '}
-                455 06 256
+                +47 455 06 256
               </Link>
-              .
-            </p>
+            </div>
           </div>
         </form>
       </AuthLayout>

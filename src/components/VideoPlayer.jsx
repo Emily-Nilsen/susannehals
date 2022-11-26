@@ -17,7 +17,7 @@ export default function VideoPlayer({ publicId }) {
           controls
           innerRef={videoRef}
           fluid
-          poster="https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/Susanne_img_1_c3qttj.webp"
+          // poster="https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/Susanne_img_1_c3qttj.webp"
         >
           {/* <Transformation quality="auto" videoCodec="auto" /> */}
         </Video>

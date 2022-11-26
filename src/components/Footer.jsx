@@ -99,7 +99,7 @@ export function Footer() {
       <footer className="relative min-h-[24rem] border-t border-gray-200 py-6">
         <Container>
           <div className="relative z-10 flex flex-col items-start justify-between h-full lg:flex-row lg:items-center lg:py-16">
-            <div className="absolute top-0 left-0 flex mt-0">
+            <div className="absolute top-0 left-0 flex mt-4">
               <Link href="/" aria-label="Home">
                 <div className="h-full cursor-pointer">
                   <div className="relative z-10 w-full h-full pr-1">

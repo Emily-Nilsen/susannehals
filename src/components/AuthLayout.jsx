@@ -4,7 +4,7 @@ import { Logo } from '@/components/Logo'
 
 export function AuthLayout({ title, question, info, subtitle, children }) {
   return (
-    <main className="flex min-h-screen pt-16 bg-booking-bg sm:py-28">
+    <main className="flex min-h-screen pt-16 bg-booking-bg sm:pb-28">
       <div className="relative z-10 flex flex-col w-full max-w-2xl px-4 mx-auto sm:px-6">
         <Link className="mx-auto" href="/" aria-label="Home">
           <div className="h-full cursor-pointer">
@@ -19,7 +19,7 @@ export function AuthLayout({ title, question, info, subtitle, children }) {
             </div>
           </div>
         </Link>
-        <div className="relative mt-6 prose sm:mt-12">
+        <div className="relative mt-12 mb-12 prose sm:mb-6">
           <h1 className="text-5xl font-medium tracking-tight text-center text-white sm:text-6xl">
             {title}
           </h1>

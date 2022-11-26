@@ -1,5 +1,6 @@
 import VideoPlayer from './VideoPlayer'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export function Offers() {
   return (
@@ -27,7 +28,8 @@ export function Offers() {
               </p>
               <p>
                 Whether you are thinking of booking Susanne Hals for a wedding,
-                corporate event, party or funeral service, please get in touch.
+                corporate event, party or funeral service, please{' '}
+                <Link href="/booking">get in touch</Link>.
               </p>
               <p>
                 Susanne is also available for tailored, private singing lessons
