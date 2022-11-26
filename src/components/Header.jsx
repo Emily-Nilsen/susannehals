@@ -136,7 +136,7 @@ export function Header() {
                             <MobileNavLink href="#sostrenehals">
                               Søstrene Hals
                             </MobileNavLink>
-                            <MobileNavLink href="/contact">
+                            <MobileNavLink href="/booking">
                               Booking
                             </MobileNavLink>
                           </div>

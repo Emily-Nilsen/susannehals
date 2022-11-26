@@ -9,7 +9,7 @@ export function NavLinks() {
     ['About', '#about'],
     ['Media', '#media'],
     ['Søstrene Hals', '#sostrenehals'],
-    ['Booking', '/contact'],
+    ['Booking', '/booking'],
   ].map(([label, href], index) => (
     <Link
       key={label}

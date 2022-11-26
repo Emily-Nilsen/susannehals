@@ -71,7 +71,7 @@ export function Media() {
         <div className="absolute inset-0">
           <div className="relative object-cover object-center w-full h-full">
             <Image
-              src="https://res.cloudinary.com/dt3k2apqd/image/upload/v1669307832/Susanne%20Hals/elegant_media_bg_ym0c5i.webp"
+              src="https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/abstract_background_grey_undeh8.webp"
               alt="Media background"
               layout="fill"
               objectFit="cover"
@@ -90,8 +90,8 @@ export function Media() {
                 Media
               </h1>
               <p className="max-w-lg mx-auto mt-2 text-lg text-gray-300">
-                Here is a selection of videos recorded at the Gamle Rådhus Scene
-                with pianist Tore Dindstad.
+                A selection of videos recorded at the Gamle Rådhus Scene with
+                pianist Tore Dindstad.
               </p>
             </div>
           </Container>
