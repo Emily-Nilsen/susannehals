@@ -19,7 +19,7 @@ export default function VideoPlayer({ publicId }) {
           fluid
           poster="https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/Susanne_img_1_c3qttj.webp"
         >
-          <Transformation quality="auto" videoCodec="auto" />
+          {/* <Transformation quality="auto" videoCodec="auto" /> */}
         </Video>
       </div>
     </CloudinaryContext>

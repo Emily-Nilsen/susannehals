@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 
 const formClasses =
-  'block w-full appearance-none rounded-lg border border-gray-200 bg-white py-[calc(theme(spacing.2)-1px)] px-[calc(theme(spacing.3)-1px)] text-gray-900 placeholder:text-gray-400 focus:border-eye-green focus:outline-none focus:ring-eye-green sm:text-sm'
+  'block w-full min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-none shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-eye-green focus:outline-none focus:ring-4 focus:ring-eye-green/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-eye-green-light dark:focus:ring-eye-green-light/10 sm:text-sm'
 
 function Label({ id, children }) {
   return (
