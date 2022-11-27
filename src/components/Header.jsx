@@ -7,6 +7,7 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { LogoSH } from '@/components/LogoSH'
 import { NavLinks } from '@/components/NavLinks'
+import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 
 import Logo from '@/images/logos/logoSH.svg'
 
@@ -52,12 +53,12 @@ export function Header() {
   return (
     <header className="absolute w-full">
       <nav>
-        <Container className="relative z-50 flex justify-between py-8">
+        <Container className="relative z-50 flex py-8 lg:justify-between">
           <motion.div
             animate={{ opacity: 1 }}
             initial={{ opacity: 0 }}
             transition={{
-              delay: 3.2,
+              delay: 2.5,
               duration: 0.8,
               type: 'fade',
               ease: 'easeIn',
@@ -92,7 +93,7 @@ export function Header() {
             }}
             className="flex items-center gap-6"
           >
-            <Popover className="lg:hidden">
+            <Popover className="pl-6 lg:hidden">
               {({ open }) => (
                 <>
                   <Popover.Button
@@ -101,7 +102,9 @@ export function Header() {
                   >
                     {({ open }) =>
                       open ? (
-                        <ChevronUpIcon className="w-6 h-6" />
+                        <>
+                          <ChevronUpIcon className="w-6 h-6" />
+                        </>
                       ) : (
                         <MenuIcon className="w-6 h-6" />
                       )
@@ -140,12 +143,11 @@ export function Header() {
                               Booking
                             </MobileNavLink>
                           </div>
-                          {/* <div className="flex flex-col gap-4 mt-8">
-                            <Button href="/login" variant="outline">
-                              Log in
-                            </Button>
-                            <Button href="#">Download the app</Button>
-                          </div> */}
+                          <div className="flex justify-center gap-4 mt-8">
+                            <div className="">
+                              <LanguageSwitcher />
+                            </div>
+                          </div>
                         </Popover.Panel>
                       </>
                     )}
@@ -153,12 +155,9 @@ export function Header() {
                 </>
               )}
             </Popover>
-            {/* <Button href="/login" variant="outline" className="hidden lg:block">
-              Log in
-            </Button> */}
-            {/* <Button href="#" className="hidden lg:block">
-              Download
-            </Button> */}
+            <div className="hidden lg:block">
+              <LanguageSwitcher />
+            </div>
           </motion.div>
         </Container>
       </nav>

@@ -5,6 +5,7 @@ import clsx from 'clsx'
 import { motion, useInView, useMotionValue } from 'framer-motion'
 
 import { LottieInteract } from '@/components/LottieInteract'
+import { Lottie } from '@/components/Lottie'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
@@ -20,7 +21,7 @@ import logoWired from '@/images/logos/wired.svg'
 
 export function Hero() {
   return (
-    <main className="relative flex min-h-[70vh] overflow-hidden">
+    <main className="relative flex h-[70vh] overflow-hidden">
       {/* Mobile hero text */}
       <div className="absolute inset-0 overflow-hidden md:hidden">
         <motion.div
@@ -34,8 +35,8 @@ export function Hero() {
           }}
           className="relative z-10 w-full h-full"
         >
-          <div className="flex items-start justify-start w-full h-full">
-            <div className="flex flex-col p-6 mt-44">
+          <div className="flex items-center justify-start w-full h-full">
+            <div className="flex flex-col p-6">
               <div className="z-20">
                 <p className="mb-4 text-base text-gray-600 uppercase sm:mb-6">
                   soprano
@@ -57,7 +58,7 @@ export function Hero() {
             animate={{ opacity: 1 }}
             initial={{ opacity: 0 }}
             transition={{
-              delay: 3.3,
+              delay: 1.9,
               duration: 0.5,
               type: 'fade',
               ease: 'easeIn',
@@ -111,7 +112,7 @@ export function Hero() {
         animate={{ opacity: 0 }}
         initial={{ opacity: 1 }}
         transition={{
-          delay: 2.8,
+          delay: 1.6,
           duration: 0.1,
           type: 'fade',
           ease: 'easeIn',
@@ -122,7 +123,7 @@ export function Hero() {
           animate={{ display: 'none' }}
           initial={{ display: 'block' }}
           transition={{
-            delay: 2.8,
+            delay: 1.6,
             duration: 0.1,
             type: 'fade',
             ease: 'easeIn',
@@ -137,26 +138,13 @@ export function Hero() {
             objectFit="cover"
           />
         </motion.div>
-
-        <motion.div
-          animate={{ y: [1000, 0, 1000] }}
-          initial={{ y: [0, 1000, 0] }}
-          transition={{
-            delay: 2,
-            duration: 1.5,
-
-            ease: 'easeIn',
-          }}
-          className="absolute inset-0 overflow-hidden
-            bg-[#161211]"
-        ></motion.div>
       </div>
       {/* Desktop image */}
       <div
         animate={{ opacity: 0 }}
         initial={{ opacity: 1 }}
         transition={{
-          delay: 2.8,
+          delay: 1.6,
           duration: 0.1,
           type: 'fade',
           ease: 'easeIn',
@@ -167,7 +155,7 @@ export function Hero() {
           animate={{ display: 'none' }}
           initial={{ display: 'block' }}
           transition={{
-            delay: 2.8,
+            delay: 1.6,
             duration: 0.1,
             type: 'fade',
             ease: 'easeIn',
@@ -183,7 +171,20 @@ export function Hero() {
           />
         </motion.div>
 
-        <motion.div
+        {/* Transition animation desktop */}
+        <div className="absolute inset-0 hidden overflow-hidden md:block">
+          <div className="h-full w-[200%] lg:w-[177%]">
+            <LottieInteract
+              path="https://res.cloudinary.com/dt3k2apqd/raw/upload/v1669546413/Susanne%20Hals/gray900Transition1920x1080_tmsc0u.json"
+              autoplay
+              speed="1"
+              delay="1500"
+              interaction="play-on-show"
+            />
+          </div>
+        </div>
+
+        {/* <motion.div
           animate={{ y: [1000, 0, 1000] }}
           initial={{ y: [0, 1000, 0] }}
           transition={{
@@ -194,14 +195,14 @@ export function Hero() {
           }}
           className="absolute inset-0 overflow-hidden
             bg-[#161211]"
-        ></motion.div>
+        ></motion.div> */}
       </div>
       {/* Desktop dicover text */}
       <motion.div
         animate={{ opacity: 0 }}
         initial={{ opacity: 1 }}
         transition={{
-          delay: 2,
+          delay: 1.5,
           duration: 0.3,
           type: 'fade',
           ease: 'easeIn',
@@ -227,14 +228,14 @@ export function Hero() {
         animate={{ opacity: 0 }}
         initial={{ opacity: 1 }}
         transition={{
-          delay: 2.3,
+          delay: 1.6,
           duration: 0.3,
           type: 'fade',
           ease: 'easeIn',
         }}
         class="absolute inset-0 h-full w-full"
       >
-        <div class="mt-56 flex h-full w-full p-6 md:hidden">
+        <div class="mt-52 flex h-full w-full p-6 md:hidden">
           <div className="relative text-5xl font-medium tracking-tight sm:text-6xl">
             <div className="z-0 pl-6 -mb-5">
               <h1 className="text-gray-600">Discover</h1>
@@ -248,6 +249,18 @@ export function Hero() {
           </div>
         </div>
       </motion.div>
+      {/* Transition animation mobile */}
+      <div className="absolute inset-0 overflow-hidden md:hidden">
+        <div className="h-full w-[300%]">
+          <LottieInteract
+            path="https://res.cloudinary.com/dt3k2apqd/raw/upload/v1669546413/Susanne%20Hals/gray900Transition1920x1080_tmsc0u.json"
+            autoplay
+            speed="1"
+            delay="1500"
+            interaction="play-on-show"
+          />
+        </div>
+      </div>
     </main>
   )
 }

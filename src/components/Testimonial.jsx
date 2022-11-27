@@ -7,7 +7,7 @@ export function Testimonial({ testimonial, author, lottie }) {
   return (
     <section
       id="testimonial"
-      className="relative py-20 overflow-hidden bg-eye-green sm:py-28"
+      className="relative py-12 overflow-hidden bg-eye-green sm:py-16 md:py-24"
     >
       <Container className="relative">
         <div className="max-w-2xl mx-auto prose prose-lg text-center">
@@ -19,7 +19,7 @@ export function Testimonial({ testimonial, author, lottie }) {
               duration: 0.8,
               type: 'fade',
             }}
-            className="text-2xl italic font-light tracking-tight text-white/90 sm:text-3xl"
+            className="text-xl italic font-light tracking-tight text-white/90 sm:text-2xl md:text-3xl"
           >
             {testimonial}
           </motion.h2>
@@ -31,7 +31,7 @@ export function Testimonial({ testimonial, author, lottie }) {
               duration: 0.8,
               type: 'fade',
             }}
-            className="mt-4 text-sm font-semibold uppercase text-black/80 sm:text-base"
+            className="mt-4 text-xs font-semibold uppercase text-black/80 sm:text-sm md:text-base"
           >
             {author}
           </motion.p>

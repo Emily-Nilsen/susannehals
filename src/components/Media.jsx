@@ -66,10 +66,10 @@ export function Media() {
       <section
         id="media"
         aria-labelledby="media-title"
-        className="relative w-full border-none border-gray-200 bg-gradient-to-br from-gray-800 to-gray-600 py-20 sm:pt-32 sm:pb-24"
+        className="relative w-full py-20 border-gray-200 border-none bg-gradient-to-br from-gray-800 to-gray-600 sm:pt-32 sm:pb-24"
       >
         <div className="absolute inset-0">
-          <div className="relative h-full w-full object-cover object-center">
+          <div className="relative object-cover object-center w-full h-full">
             <Image
               src="https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/abstract_background_grey_undeh8.webp"
               alt="Media background"
@@ -82,14 +82,14 @@ export function Media() {
         <div className="relative z-0">
           <Container>
             {/* Text */}
-            <div className="max-full mx-auto mb-10 sm:text-center lg:mx-0">
+            <div className="mx-auto mb-10 max-full sm:text-center lg:mx-0">
               <h1
                 id="faqs-title"
-                className="mt-2 pb-6 text-6xl leading-8 tracking-tight text-white sm:text-7xl"
+                className="pb-6 mt-2 text-6xl leading-8 tracking-tight text-white sm:text-7xl"
               >
                 Media
               </h1>
-              <p className="mx-auto mt-2 max-w-lg text-lg text-gray-300">
+              <p className="max-w-lg mx-auto mt-2 text-lg text-gray-300">
                 A selection of videos recorded at the Gamle Rådhus Scene with
                 pianist Tore Dindstad.
               </p>
@@ -98,7 +98,7 @@ export function Media() {
 
           {/* videos below */}
 
-          <div className="ml-0 flex space-x-3 overflow-x-auto px-1 pb-6 sm:space-x-8 md:space-x-10 md:p-10 lg:max-w-none">
+          <div className="flex px-1 pb-6 ml-0 space-x-3 overflow-x-auto sm:space-x-8 md:space-x-10 md:p-10 lg:max-w-none">
             {promotions.map((site) => (
               <>
                 <section key={site.id} id={site.id} className="flex-shrink-0">
@@ -106,7 +106,7 @@ export function Media() {
                     <div className="sm:pt-2 md:pr-6 ">
                       <div className="flex items-center pb-2">
                         <div className="w-full pl-2">
-                          <h2 className="text-base font-semibold capitalize text-white">
+                          <h2 className="text-base font-semibold text-white capitalize">
                             {site.title}
                           </h2>
                           <p className="max-w-xs text-sm leading-6 text-gray-300">
@@ -118,7 +118,7 @@ export function Media() {
 
                     <div className="relative flex w-full rounded-2xl">
                       <div className="relative h-[14rem] w-96">
-                        <div className="absolute flex h-full w-full items-center justify-center overflow-hidden rounded-2xl">
+                        <div className="absolute flex items-center justify-center w-full h-full overflow-hidden rounded-2xl">
                           <DynamicVideoPlayer publicId={site.promo} />
                         </div>
                       </div>
@@ -133,10 +133,9 @@ export function Media() {
             <div className="flex items-center">
               <p className="flex items-center text-sm font-normal text-gray-300">
                 Scroll right
-                {/* <WebsiteIcon className="flex-none w-3 h-3 ml-2" /> */}
               </p>
-              <div className="ml-1 flex justify-center opacity-100">
-                <div className="h-16 w-16">
+              <div className="flex justify-center ml-1 opacity-100">
+                <div className="w-16 h-16">
                   <LottieInteract
                     path="https://res.cloudinary.com/dt3k2apqd/raw/upload/v1669308393/Susanne%20Hals/rightsArrowsThree_wpbe2f.json"
                     loop
