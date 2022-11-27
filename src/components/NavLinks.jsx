@@ -1,12 +1,15 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { AnimatePresence, motion } from 'framer-motion'
+import useTranslation from 'next-translate/useTranslation'
 
 export function NavLinks() {
+  const { t } = useTranslation()
+
   let [hoveredIndex, setHoveredIndex] = useState(null)
 
   return [
-    ['About', '#about'],
+    [`${t('common:about')}`, '#about'],
     ['Media', '#media'],
     ['Søstrene Hals', '#sostrenehals'],
     ['Booking', '/booking'],

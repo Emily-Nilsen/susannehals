@@ -10,19 +10,7 @@ import { Container } from '@/components/Container'
 import { TextField } from '@/components/Fields'
 import { Logomark } from '@/components/Logo'
 import { NavLinks } from '@/components/NavLinks'
-import qrCode from '@/images/QR-kode-julekonsert.svg'
-
-function QrCodeBorder(props) {
-  return (
-    <svg viewBox="0 0 96 96" fill="none" aria-hidden="true" {...props}>
-      <path
-        d="M1 17V9a8 8 0 0 1 8-8h8M95 17V9a8 8 0 0 0-8-8h-8M1 79v8a8 8 0 0 0 8 8h8M95 79v8a8 8 0 0 1-8 8h-8"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-    </svg>
-  )
-}
+import useTranslation from 'next-translate/useTranslation'
 
 const navigation = [
   {
@@ -94,6 +82,8 @@ function MailIcon(props) {
 }
 
 export function Footer() {
+  const { t } = useTranslation()
+
   return (
     <>
       <footer className="relative min-h-[24rem] border-t border-gray-200 py-6">
@@ -128,11 +118,7 @@ export function Footer() {
                   }}
                   className="italic font-light tracking-tight text-white/90 lg:text-base lg:leading-relaxed xl:text-lg"
                 >
-                  Susanne’s voice quality is indisputable. She has a high
-                  soprano sound, which is clear and pointed out. At the same
-                  time, it is warm and rich in colours. She has excellent
-                  musical understanding and walks quickly in-depth on the
-                  composite personalities of the opera repertoire.
+                  {t('home:testimonial04')}
                 </motion.p>
                 <motion.p
                   whileInView={{ opacity: 1 }}
@@ -144,7 +130,7 @@ export function Footer() {
                   }}
                   className="w-full pl-12 mt-4 text-xs font-medium text-gray-400 uppercase sm:text-sm"
                 >
-                  Eli K. Hanssveen / Soprano, The Norwegian Opera & Ballet
+                  Eli K. Hanssveen / {t('home:author04')}
                 </motion.p>
               </div>
             </div>

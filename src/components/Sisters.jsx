@@ -2,6 +2,7 @@ import { Container } from '@/components/Container'
 import Link from 'next/link'
 import Image from 'next/image'
 import qrCode from '@/images/QR-kode-julekonsert.svg'
+import useTranslation from 'next-translate/useTranslation'
 
 function QrCodeBorder(props) {
   return (
@@ -27,6 +28,8 @@ function LinkIcon(props) {
 }
 
 export function Sisters() {
+  const { t } = useTranslation()
+
   return (
     <main>
       <section id="sostrenehals" aria-labelledby="sostrenehals-title">
@@ -37,7 +40,7 @@ export function Sisters() {
               <div className="mx-auto text-base max-w-prose lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8">
                 <div>
                   <h2 className="pb-4 text-base text-gray-600 uppercase">
-                    Duo Performers
+                    {t('home:duoPerformers')}
                   </h2>
                   <h1 className="mt-2 text-6xl tracking-tight text-gray-900 sm:text-7xl">
                     Søstrene Hals
@@ -89,22 +92,9 @@ export function Sisters() {
                 <div className="grid mt-8 place-content-between lg:mt-0">
                   <div className="mx-auto mt-0 prose text-gray-500 prose-gray lg:col-start-1 lg:row-start-1 lg:max-w-none">
                     <div>
-                      <p>
-                        Susanne and her sister Kathrine Hvinden Hals form the
-                        duo Søstrene Hals.
-                      </p>
-                      <p>
-                        Kathrine studied at the Royal College of Music in
-                        London, Susanne at the Royal Danish Conservatory of
-                        Music in Copenhagen. Based on classical music, the duo
-                        can tailor a repertoire, from pure classical to a
-                        cross-over between classical and popular music.
-                      </p>
-                      <p>
-                        Since 2014, Søstrene Hals have held an extremely popular
-                        Christmas concert at the Majorstuen church, “julekonsert
-                        i Majorstuen kirke”.
-                      </p>
+                      <p>{t('home:sistersSent01')}</p>
+                      <p>{t('home:sistersSent02')}</p>
+                      <p>{t('home:sistersSent03')}</p>
                     </div>
                   </div>
                   <div>
@@ -127,18 +117,14 @@ export function Sisters() {
                         >
                           <p className="relative z-10 flex text-sm font-normal transition duration-300 ease-in-out text-zinc-500 group-hover:text-eye-green">
                             <span className="mr-2 text-base font-semibold text-gray-900 group-hover:underline">
-                              Julekonsert i Ris kirke
+                              {t('home:julekonsert')}
                             </span>
                             <LinkIcon className="flex-none w-6 h-6" />
                           </p>
                         </a>
-                        {/* <p className="text-base font-semibold text-gray-900">
-                          <span className="absolute inset-0 sm:rounded-2xl" />
-                          Julekonsert i Ris kirke
-                        </p> */}
+
                         <p className="mt-1 text-sm text-gray-700">
-                          Scan the QR code to buy tickets to this year’s
-                          Christmas concert on 15 December 2022.
+                          {t('home:julekonsertInfo')}
                         </p>
                       </div>
                     </div>

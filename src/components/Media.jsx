@@ -40,23 +40,24 @@ export function Media() {
   }
 
   const { t } = useTranslation()
+
   const promotions = [
     {
       id: 'Norinas_Cavatina',
       title: `Norina’s Cavatina`,
-      description: `Don Pasquale by Donizetti`,
+      description: `Don Pasquale ${t('home:by')} Donizetti`,
       promo: 'Susanne Hals/Norinas_Cavattina_minified_ih69gj',
     },
     {
       id: 'Deh_vieni',
       title: `Deh vieni, non tardar`,
-      description: `Le Nozze di Figaro by Mozart`,
+      description: `Le Nozze di Figaro ${t('home:by')} Mozart`,
       promo: 'Susanne Hals/Deh_vieni_-_minified_adnvav',
     },
     {
       id: 'Adinas_arie',
       title: `Adina’s arie`,
-      description: `The Elixir of Love by Donizetti`,
+      description: `The Elixir of Love ${t('home:by')} Donizetti`,
       promo: 'Susanne Hals/Adinas_arie_-_minified_poiwnf',
     },
   ]
@@ -90,8 +91,7 @@ export function Media() {
                 Media
               </h1>
               <p className="max-w-lg mx-auto mt-2 text-lg text-gray-300">
-                A selection of videos recorded at the Gamle Rådhus Scene with
-                pianist Tore Dindstad.
+                {t('home:mediaSubtitle')}
               </p>
             </div>
           </Container>
@@ -132,7 +132,7 @@ export function Media() {
           <div className="flex justify-end pr-6">
             <div className="flex items-center">
               <p className="flex items-center text-sm font-normal text-gray-300">
-                Scroll right
+                {t('home:scrollRight')}
               </p>
               <div className="flex justify-center ml-1 opacity-100">
                 <div className="w-16 h-16">

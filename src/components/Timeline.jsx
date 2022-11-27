@@ -5,81 +5,7 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import { DiamondIcon } from '@/components/DiamondIcon'
-
-const timeFrames = [
-  {
-    name: '2003-2011',
-    dateTime: '2022-04-04',
-    highlights: [
-      {
-        name: 'Montpellier Opera, France',
-        role: 'Together with the Norwegian Girls’ Choir, in 2005, Susanne Hals participated in the staging of the opera "Libertad" written by Gabriel Alegria.',
-        image:
-          'https://res.cloudinary.com/dt3k2apqd/image/upload/v1668948414/Susanne%20Hals/montpellier_opera_2_arnn2l.jpg',
-      },
-      {
-        name: 'The Oseana Art and Cultural Centre, Os',
-        role: 'At the Bergen International Festival in 2013, together with the opera company Opera Omnia, Susanne performed in the opera «Havfest», role-playing «sea creature».',
-        image:
-          'https://res.cloudinary.com/dt3k2apqd/image/upload/v1668948414/Susanne%20Hals/os_kulturhus_2_fjdm1p.jpg',
-      },
-      {
-        name: 'Oslo Opera House, Norway',
-        role: 'Susanne has participated in productions such as La Clemenza di Tito, The rape of Lucretia and Sondheim’s A little night music at the LidalNorth International Opera Workshop.',
-        image:
-          'https://res.cloudinary.com/dt3k2apqd/image/upload/v1668948414/Susanne%20Hals/Oslo_2_gbqgrl.jpg',
-      },
-    ],
-  },
-  {
-    name: '2012-2018',
-    dateTime: '2022-04-05',
-    highlights: [
-      {
-        name: 'Bergen, Norway',
-        role: 'Susanne studied a Bachelor of Music, Voice and Opera at the Grieg Academy from 2012 to 2016. ',
-        image:
-          'https://res.cloudinary.com/dt3k2apqd/image/upload/v1668948414/Susanne%20Hals/Bergen_2_f9cmbp.jpg',
-      },
-      {
-        name: 'The Grieg Hall, Bergen',
-        role: 'During the 2015 and 2016 Bergen International Festivals, Susanne performed solo concerts within the foyer.',
-        image:
-          'https://res.cloudinary.com/dt3k2apqd/image/upload/v1669036829/Susanne%20Hals/Grieghallen_2_ikrolg.jpg',
-      },
-      {
-        name: 'Copenhagen, Denmark',
-        role: 'Susanne studied a Master of Voice, specialising in opera, at The Royal Danish Academy of Music, from 2016 to 2018.',
-        image:
-          'https://res.cloudinary.com/dt3k2apqd/image/upload/v1668948414/Susanne%20Hals/Copenhagen_2_y9mvtl.jpg',
-      },
-    ],
-  },
-  {
-    name: '2019-2022',
-    dateTime: '2022-04-06',
-    highlights: [
-      {
-        name: 'Málaga, Spain',
-        role: 'In 2019 Susanne performed as a Málaga Clásica Artist at the VII International Chamber Music Festival.',
-        image:
-          'https://res.cloudinary.com/dt3k2apqd/image/upload/v1668948414/Susanne%20Hals/Malaga_2_junypw.jpg',
-      },
-      {
-        name: 'Søstrene Hals, Oslo',
-        role: 'Since 2014, Søstrene Hals have held an extremely popular Christmas concert at the Majorstuen church, "julekonsert i Majorstuen kirke".',
-        image:
-          'https://res.cloudinary.com/dt3k2apqd/image/upload/v1669037976/Susanne%20Hals/all_in_pink_qpgf1x.webp',
-      },
-      {
-        name: 'Susanne Hals, Oslo',
-        role: 'Susanne is currently available for tailored, private singing lessons in Oslo.',
-        image:
-          'https://res.cloudinary.com/dt3k2apqd/image/upload/v1668183818/Susanne%20Hals/Susanne_img_1_c3qttj.webp',
-      },
-    ],
-  },
-]
+import useTranslation from 'next-translate/useTranslation'
 
 function ImageClipPaths({ id, ...props }) {
   return (
@@ -100,6 +26,83 @@ function ImageClipPaths({ id, ...props }) {
 }
 
 export function Timeline() {
+  const { t } = useTranslation()
+
+  const timeFrames = [
+    {
+      name: '2003-2011',
+      dateTime: '2022-04-04',
+      highlights: [
+        {
+          name: `${t('home:timelineTitle01')}`,
+          role: `${t('home:timelineDesc01')}`,
+          image:
+            'https://res.cloudinary.com/dt3k2apqd/image/upload/v1668948414/Susanne%20Hals/montpellier_opera_2_arnn2l.jpg',
+        },
+        {
+          name: `${t('home:timelineTitle02')}`,
+          role: `${t('home:timelineDesc02')}`,
+          image:
+            'https://res.cloudinary.com/dt3k2apqd/image/upload/v1668948414/Susanne%20Hals/os_kulturhus_2_fjdm1p.jpg',
+        },
+        {
+          name: `${t('home:timelineTitle03')}`,
+          role: `${t('home:timelineDesc03')}`,
+          image:
+            'https://res.cloudinary.com/dt3k2apqd/image/upload/v1668948414/Susanne%20Hals/Oslo_2_gbqgrl.jpg',
+        },
+      ],
+    },
+    {
+      name: '2012-2018',
+      dateTime: '2022-04-05',
+      highlights: [
+        {
+          name: `${t('home:timelineTitle04')}`,
+          role: `${t('home:timelineDesc04')}`,
+          image:
+            'https://res.cloudinary.com/dt3k2apqd/image/upload/v1668948414/Susanne%20Hals/Bergen_2_f9cmbp.jpg',
+        },
+        {
+          name: `${t('home:timelineTitle05')}`,
+          role: `${t('home:timelineDesc05')}`,
+          image:
+            'https://res.cloudinary.com/dt3k2apqd/image/upload/v1669036829/Susanne%20Hals/Grieghallen_2_ikrolg.jpg',
+        },
+        {
+          name: `${t('home:timelineTitle06')}`,
+          role: `${t('home:timelineDesc06')}`,
+          image:
+            'https://res.cloudinary.com/dt3k2apqd/image/upload/v1668948414/Susanne%20Hals/Copenhagen_2_y9mvtl.jpg',
+        },
+      ],
+    },
+    {
+      name: '2019-2022',
+      dateTime: '2022-04-06',
+      highlights: [
+        {
+          name: `${t('home:timelineTitle07')}`,
+          role: `${t('home:timelineDesc07')}`,
+          image:
+            'https://res.cloudinary.com/dt3k2apqd/image/upload/v1668948414/Susanne%20Hals/Malaga_2_junypw.jpg',
+        },
+        {
+          name: `${t('home:timelineTitle08')}`,
+          role: `${t('home:timelineDesc08')}`,
+          image:
+            'https://res.cloudinary.com/dt3k2apqd/image/upload/v1669037976/Susanne%20Hals/all_in_pink_qpgf1x.webp',
+        },
+        {
+          name: `${t('home:timelineTitle09')}`,
+          role: `${t('home:timelineDesc09')}`,
+          image:
+            'https://res.cloudinary.com/dt3k2apqd/image/upload/v1668183818/Susanne%20Hals/Susanne_img_1_c3qttj.webp',
+        },
+      ],
+    },
+  ]
+
   let id = useId()
   let [tabOrientation, setTabOrientation] = useState('horizontal')
 
@@ -131,31 +134,13 @@ export function Timeline() {
             id="about-title"
             className="text-6xl font-medium tracking-tighter text-gray-900 font-display sm:text-7xl lg:pb-6"
           >
-            About Susanne
+            {t('home:timelineTitle')}
           </h1>
           <div className="prose text-gray-500 lg:prose-lg">
-            <p className="mt-4">
-              The young Norwegian soprano, Susanne Hvinden Hals, hails from
-              Oslo, Norway. She received her master of music from The Royal
-              Danish Academy of Music in Copenhagen.
-            </p>
-            <p className="mt-2">
-              Susanne has sung roles as Susanna in Mozart’s «Le nozze di
-              Figaro», Adele in «Die Fledermaus», J. Strauss, Pamina in «Die
-              Zauberflöte», and Lucia in Benjamin Brittens «The rape of
-              Lucretia».
-            </p>
-            <p className="mt-2">
-              In 2003 Susanne Hals made her debut with The Norwegian Girls Choir
-              at Opera Montpellier in France. Her accomplishments and
-              professional singing skills have led to Susanne being a highly
-              sought after soprano in Norway.
-            </p>
-            <p className="mt-2">
-              Moreover, she often sings with orchestras in oratorios and has
-              performed at various festivals and concerts, both in Norway and
-              abroad, including Málaga Clásica in Spain.
-            </p>
+            <p className="mt-4">{t('home:timelineSent01')}</p>
+            <p className="mt-2">{t('home:timelineSent02')}</p>
+            <p className="mt-2">{t('home:timelineSent03')}</p>
+            <p className="mt-2">{t('home:timelineSent04')}</p>
           </div>
         </div>
         <Tab.Group

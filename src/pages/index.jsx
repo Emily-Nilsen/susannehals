@@ -13,12 +13,15 @@ import { SecondaryFeatures } from '@/components/SecondaryFeatures'
 import { Sisters } from '@/components/Sisters'
 import { Timeline } from '@/components/Timeline'
 import { VideoFeature } from '@/components/VideoFeature'
+import useTranslation from 'next-translate/useTranslation'
 
 export default function Home() {
+  const { t } = useTranslation()
+
   return (
     <>
       <Head>
-        <title>Susanne Hals - Soprano classical singer.</title>
+        <title>{t('common:title')}</title>
         <meta
           name="description"
           content="Add something about Susanne here!!!!"
@@ -28,23 +31,22 @@ export default function Home() {
       <main>
         <Hero />
         <Testimonial
-          testimonial="Susanne has a beautiful voice and possesses a very great and
-              dramatic talent; her timing is natural and on point."
-          author="Idil Alpsøy / opera singer, copenhagen"
+          testimonial={t('home:testimonial01')}
+          author={t('home:author01')}
           lottie="https://res.cloudinary.com/dt3k2apqd/raw/upload/v1668967853/Susanne%20Hals/decorative-border-01_sl1qth.json"
         />
         <Offers />
         {/* <PrimaryFeatures /> */}
         <Testimonial
-          testimonial="Susanne is a charming soprano with a beautiful voice and the personality, musical instincts and commitment to succeed."
+          testimonial={t('home:testimonial02')}
           author="Trish McCaffrey / Voice Studio, New York"
           lottie="https://res.cloudinary.com/dt3k2apqd/raw/upload/v1668967853/Susanne%20Hals/decorative-border-01_sl1qth.json"
         />
         {/* <SecondaryFeatures /> */}
         <Timeline />
         <Testimonial
-          testimonial="Susanne owns a beautiful voice of high quality and exhibits both musical and artistic surplus."
-          author="Marianne Rørholm / Opera Singer, Copenhagen"
+          testimonial={t('home:testimonial03')}
+          author={t('home:author03')}
           lottie="https://res.cloudinary.com/dt3k2apqd/raw/upload/v1668967853/Susanne%20Hals/decorative-border-01_sl1qth.json"
         />
         {/* <Reviews /> */}

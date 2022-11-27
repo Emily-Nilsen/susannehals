@@ -8,6 +8,7 @@ import { Container } from '@/components/Container'
 import { LogoSH } from '@/components/LogoSH'
 import { NavLinks } from '@/components/NavLinks'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
+import useTranslation from 'next-translate/useTranslation'
 
 import Logo from '@/images/logos/logoSH.svg'
 
@@ -50,6 +51,8 @@ function MobileNavLink({ children, ...props }) {
 }
 
 export function Header() {
+  const { t } = useTranslation()
+
   return (
     <header className="absolute w-full">
       <nav>
@@ -67,7 +70,7 @@ export function Header() {
           >
             <Link href="/" aria-label="Home">
               <div className="h-full cursor-pointer">
-                <div className="relative w-full h-full pr-1">
+                <div className="relative h-full w-full pr-1">
                   <Image
                     src={Logo}
                     width={100}
@@ -86,7 +89,7 @@ export function Header() {
             animate={{ opacity: 1 }}
             initial={{ opacity: 0 }}
             transition={{
-              delay: 3.3,
+              delay: 2.8,
               duration: 0.8,
               type: 'fade',
               ease: 'easeIn',
@@ -103,10 +106,10 @@ export function Header() {
                     {({ open }) =>
                       open ? (
                         <>
-                          <ChevronUpIcon className="w-6 h-6" />
+                          <ChevronUpIcon className="h-6 w-6" />
                         </>
                       ) : (
-                        <MenuIcon className="w-6 h-6" />
+                        <MenuIcon className="h-6 w-6" />
                       )
                     }
                   </Popover.Button>
@@ -131,10 +134,12 @@ export function Header() {
                             y: -32,
                             transition: { duration: 0.2 },
                           }}
-                          className="absolute inset-x-0 top-0 z-0 px-6 pt-32 pb-6 origin-top shadow-2xl rounded-b-2xl bg-gray-50 shadow-gray-900/20"
+                          className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pt-32 pb-6 shadow-2xl shadow-gray-900/20"
                         >
                           <div className="space-y-4 uppercase">
-                            <MobileNavLink href="#about">About</MobileNavLink>
+                            <MobileNavLink href="#about">
+                              {t('common:about')}
+                            </MobileNavLink>
                             <MobileNavLink href="#media">Media</MobileNavLink>
                             <MobileNavLink href="#sostrenehals">
                               Søstrene Hals
@@ -143,8 +148,8 @@ export function Header() {
                               Booking
                             </MobileNavLink>
                           </div>
-                          <div className="flex justify-center gap-4 mt-8">
-                            <div className="">
+                          <div className="mt-8 flex justify-center gap-4">
+                            <div>
                               <LanguageSwitcher />
                             </div>
                           </div>

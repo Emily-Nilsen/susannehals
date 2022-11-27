@@ -21,14 +21,17 @@ export function LanguageSwitcher() {
           passHref
           href={asPath}
         >
-          <p className="text-xs font-normal uppercase cursor-pointer sm:text-sm">
-            En
+          <p className="hidden font-normal uppercase cursor-pointer sm:text-sm lg:block">
+            en
+          </p>
+          <p className="font-normal uppercase cursor-pointer sm:text-sm lg:hidden">
+            english
           </p>
         </Link>
       </button>
 
       <button>
-        <p className="px-1 text-sm font-normal pointer-events-none text-eye-green sm:px-2">
+        <p className="px-3 text-sm font-normal pointer-events-none text-eye-green sm:px-2">
           |
         </p>
       </button>
@@ -42,7 +45,8 @@ export function LanguageSwitcher() {
           passHref
           href={asPath}
         >
-          <p className="text-xs font-normal uppercase sm:text-sm">no</p>
+          <p className="hidden font-normal uppercase sm:text-sm lg:block">no</p>
+          <p className="font-normal uppercase sm:text-sm lg:hidden">norsk</p>
         </Link>
       </button>
     </span>
