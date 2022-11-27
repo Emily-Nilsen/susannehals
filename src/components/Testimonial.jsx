@@ -35,12 +35,25 @@ export function Testimonial({ testimonial, author, lottie }) {
           >
             {author}
           </motion.p>
-          <div className="flex justify-center mb-4 opacity-90 sm:mb-16">
+          {/* Desktop */}
+          <div className="justify-center hidden mb-4 opacity-90 sm:mb-16 sm:flex">
             <div className="w-3/4 h-10">
               <LottieInteract
                 path={lottie}
                 interaction="play-on-show"
                 speed="0.7"
+                delay="500"
+              />
+            </div>
+          </div>
+          {/* Mobile */}
+          <div className="flex justify-center mb-10 opacity-90 sm:hidden">
+            <div className="w-3/4 h-10">
+              <LottieInteract
+                path={lottie}
+                autoplay
+                loop
+                speed="0.5"
                 delay="500"
               />
             </div>

@@ -113,7 +113,7 @@ export function Hero() {
         initial={{ opacity: 1 }}
         transition={{
           delay: 1.6,
-          duration: 0.1,
+          duration: 0.3,
           type: 'fade',
           ease: 'easeIn',
         }}
@@ -124,7 +124,7 @@ export function Hero() {
           initial={{ display: 'block' }}
           transition={{
             delay: 1.6,
-            duration: 0.1,
+            duration: 0.3,
             type: 'fade',
             ease: 'easeIn',
           }}
@@ -255,7 +255,7 @@ export function Hero() {
           <LottieInteract
             path="https://res.cloudinary.com/dt3k2apqd/raw/upload/v1669546413/Susanne%20Hals/gray900Transition1920x1080_tmsc0u.json"
             autoplay
-            speed="1"
+            speed="1.5"
             delay="1500"
             interaction="play-on-show"
           />
