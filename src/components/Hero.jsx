@@ -94,9 +94,30 @@ export function Hero() {
           />
         </div>
       </div>
+      {/* Mobile image */}
+      <motion.div
+        animate={{ x: '100vw' }}
+        initial={{ x: 0 }}
+        transition={{
+          delay: 1.6,
+          duration: 0.5,
+          type: 'fade',
+          ease: 'easeIn',
+        }}
+        className="absolute inset-0 w-full h-full md:hidden"
+      >
+        <Image
+          src="https://res.cloudinary.com/dt3k2apqd/image/upload/v1669270574/Susanne%20Hals/Susanne_img_2_centre_b_w_hzj2yx.webp"
+          alt="Susanne Hals"
+          sizes="100vw"
+          layout="fill"
+          objectPosition="13% 100%"
+          objectFit="cover"
+        />
+      </motion.div>
       {/* Large desktop */}
       <div className="absolute inset-0 hidden w-full h-full md:block">
-        <div className="relative w-full h-full">
+        <div className="relative w-full h-full z-1">
           <Image
             src="https://res.cloudinary.com/dt3k2apqd/q_auto/Susanne%20Hals/Susanne_img_3_v1_b8lfxy.webp"
             alt="Susanne Hals"
@@ -107,38 +128,7 @@ export function Hero() {
           />
         </div>
       </div>
-      {/* Mobile image */}
-      <div
-        animate={{ opacity: 0 }}
-        initial={{ opacity: 1 }}
-        transition={{
-          delay: 1.6,
-          duration: 0.3,
-          type: 'fade',
-          ease: 'easeIn',
-        }}
-        className="absolute inset-0 w-full h-full md:hidden"
-      >
-        <motion.div
-          animate={{ display: 'none' }}
-          initial={{ display: 'block' }}
-          transition={{
-            delay: 1.6,
-            duration: 0.3,
-            type: 'fade',
-            ease: 'easeIn',
-          }}
-        >
-          <Image
-            src="https://res.cloudinary.com/dt3k2apqd/image/upload/v1669270574/Susanne%20Hals/Susanne_img_2_centre_b_w_hzj2yx.webp"
-            alt="Susanne Hals"
-            sizes="100vw"
-            layout="fill"
-            objectPosition="13% 100%"
-            objectFit="cover"
-          />
-        </motion.div>
-      </div>
+
       {/* Desktop image */}
       <div
         animate={{ opacity: 0 }}
@@ -250,7 +240,7 @@ export function Hero() {
         </div>
       </motion.div>
       {/* Transition animation mobile */}
-      <div className="absolute inset-0 overflow-hidden md:hidden">
+      {/* <div className="absolute inset-0 overflow-hidden md:hidden">
         <div className="h-full w-[300%]">
           <LottieInteract
             path="https://res.cloudinary.com/dt3k2apqd/raw/upload/v1669546413/Susanne%20Hals/gray900Transition1920x1080_tmsc0u.json"
@@ -260,7 +250,7 @@ export function Hero() {
             interaction="play-on-show"
           />
         </div>
-      </div>
+      </div> */}
     </main>
   )
 }
