@@ -22,7 +22,7 @@ export default function Home() {
     <>
       <Head>
         <title>{t('common:title')}</title>
-        <meta name="description" content="" />
+        <meta name="description" content={t('common:description')} />
       </Head>
       <Header />
       <main>
