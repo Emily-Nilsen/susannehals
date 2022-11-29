@@ -23,6 +23,11 @@ export default function Home() {
       <Head>
         <title>{t('common:title')}</title>
         <meta name="description" content={t('common:description')} />
+        <link
+          rel="canonical"
+          href="https://www.susannehals.com/"
+          key="canonical"
+        />
       </Head>
       <Header />
       <main>

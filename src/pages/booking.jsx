@@ -24,6 +24,11 @@ export default function Booking() {
       <Head>
         <title>{t('booking:page_title')}</title>
         <meta name="description" content={t('booking:page_description')} />
+        <link
+          rel="canonical"
+          href="https://www.susannehals.com/booking/"
+          key="canonical"
+        />
       </Head>
       <AuthLayout
         title={t('booking:title')}
