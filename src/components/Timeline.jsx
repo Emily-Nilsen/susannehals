@@ -37,19 +37,19 @@ export function Timeline() {
           name: `${t('home:timelineTitle01')}`,
           role: `${t('home:timelineDesc01')}`,
           image:
-            'https://res.cloudinary.com/dt3k2apqd/image/upload/v1668948414/Susanne%20Hals/montpellier_opera_2_arnn2l.jpg',
+            'https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/montpellier_opera_2_arnn2l.jpg',
         },
         {
           name: `${t('home:timelineTitle02')}`,
           role: `${t('home:timelineDesc02')}`,
           image:
-            'https://res.cloudinary.com/dt3k2apqd/image/upload/v1668948414/Susanne%20Hals/os_kulturhus_2_fjdm1p.jpg',
+            'https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/os_kulturhus_2_fjdm1p.jpg',
         },
         {
           name: `${t('home:timelineTitle03')}`,
           role: `${t('home:timelineDesc03')}`,
           image:
-            'https://res.cloudinary.com/dt3k2apqd/image/upload/v1668948414/Susanne%20Hals/Oslo_2_gbqgrl.jpg',
+            'https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/Oslo_2_gbqgrl.jpg',
         },
       ],
     },
@@ -61,19 +61,19 @@ export function Timeline() {
           name: `${t('home:timelineTitle04')}`,
           role: `${t('home:timelineDesc04')}`,
           image:
-            'https://res.cloudinary.com/dt3k2apqd/image/upload/v1668948414/Susanne%20Hals/Bergen_2_f9cmbp.jpg',
+            'https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/Bergen_2_f9cmbp.jpg',
         },
         {
           name: `${t('home:timelineTitle05')}`,
           role: `${t('home:timelineDesc05')}`,
           image:
-            'https://res.cloudinary.com/dt3k2apqd/image/upload/v1669036829/Susanne%20Hals/Grieghallen_2_ikrolg.jpg',
+            'https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/Grieghallen_2_ikrolg.jpg',
         },
         {
           name: `${t('home:timelineTitle06')}`,
           role: `${t('home:timelineDesc06')}`,
           image:
-            'https://res.cloudinary.com/dt3k2apqd/image/upload/v1668948414/Susanne%20Hals/Copenhagen_2_y9mvtl.jpg',
+            'https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/Copenhagen_2_y9mvtl.jpg',
         },
       ],
     },
@@ -85,19 +85,19 @@ export function Timeline() {
           name: `${t('home:timelineTitle07')}`,
           role: `${t('home:timelineDesc07')}`,
           image:
-            'https://res.cloudinary.com/dt3k2apqd/image/upload/v1668948414/Susanne%20Hals/Malaga_2_junypw.jpg',
+            'https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/Malaga_2_junypw.jpg',
         },
         {
           name: `${t('home:timelineTitle08')}`,
           role: `${t('home:timelineDesc08')}`,
           image:
-            'https://res.cloudinary.com/dt3k2apqd/image/upload/v1669037976/Susanne%20Hals/all_in_pink_qpgf1x.webp',
+            'https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/all_in_pink_qpgf1x.webp',
         },
         {
           name: `${t('home:timelineTitle09')}`,
           role: `${t('home:timelineDesc09')}`,
           image:
-            'https://res.cloudinary.com/dt3k2apqd/image/upload/v1668183818/Susanne%20Hals/Susanne_img_1_c3qttj.webp',
+            'https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/Susanne_img_1_c3qttj.webp',
         },
       ],
     },

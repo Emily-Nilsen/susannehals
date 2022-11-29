@@ -54,7 +54,7 @@ export function Sisters() {
                       <div className="aspect-w-12 aspect-h-7 lg:aspect-none">
                         <div className="object-cover object-center">
                           <Image
-                            src="https://res.cloudinary.com/dt3k2apqd/image/upload/v1665483758/S%C3%B8strene%20Hals/goldCutout_fhrxem_ocomnj.webp"
+                            src="https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/S%C3%B8strene%20Hals/goldCutout_fhrxem_ocomnj.webp"
                             alt="Søstrene Hals - Kathrine og Susanne Hals"
                             width={1548}
                             height={2064}
@@ -71,7 +71,7 @@ export function Sisters() {
                             <div className="flex items-center">
                               <div className="relative z-10 w-full h-full pr-1">
                                 <Image
-                                  src="https://res.cloudinary.com/dt3k2apqd/image/upload/v1669124181/Susanne%20Hals/nutmegLogo_p5hobn.svg"
+                                  src="https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/nutmegLogo_p5hobn.svg"
                                   width={30}
                                   height={30}
                                   alt="Søstrene Hals logo"

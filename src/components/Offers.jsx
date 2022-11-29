@@ -28,7 +28,7 @@ export function Offers() {
               <p>{t('home:offerSent04')}</p>
               <div className="relative -mt-4 lg:mt-0">
                 <Image
-                  src="https://res.cloudinary.com/dt3k2apqd/image/upload/v1668168980/Susanne%20Hals/Susanne_favicon_htjila.svg"
+                  src="https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/Susanne_favicon_htjila.svg"
                   alt="SH initials"
                   width={100}
                   height={100}
@@ -46,7 +46,7 @@ export function Offers() {
                 <div className="relative flex justify-center w-full rounded-2xl">
                   <div className="relative h-[14rem] w-96 sm:h-[30rem] sm:w-[42rem] md:h-80 md:w-[40rem]">
                     <div className="absolute flex items-center justify-center w-full h-full overflow-hidden rounded-2xl">
-                      <VideoPlayer publicId="https://res.cloudinary.com/dt3k2apqd/video/upload/v1668357503/Susanne%20Hals/Pamina2021.Malaga_bjnlmi.mp4" />
+                      <VideoPlayer publicId="https://res.cloudinary.com/dt3k2apqd/video/upload/q_auto/Susanne%20Hals/Pamina2021.Malaga_bjnlmi.mp4" />
                     </div>
                   </div>
                 </div>
@@ -65,7 +65,7 @@ export function Offers() {
         <div className="absolute inset-0 w-full h-full">
           {/* <div className="absolute w-full h-full"> */}
           <Image
-            src="https://res.cloudinary.com/dt3k2apqd/image/upload/v1668973698/Susanne%20Hals/susanne_left_side_syd63h.webp"
+            src="https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/susanne_left_side_syd63h.webp"
             alt="Susanne Hals"
             sizes="100vw"
             layout="fill"
@@ -79,7 +79,7 @@ export function Offers() {
       {/* Mobile image */}
       <div className="relative h-[calc(100vw*1.6)] w-full object-cover lg:hidden">
         <Image
-          src="https://res.cloudinary.com/dt3k2apqd/image/upload/v1669395188/Susanne%20Hals/Susanne_img_4_v2_wefgzq.webp"
+          src="https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/Susanne_img_4_v2_wefgzq.webp"
           alt="Susanne Hals"
           sizes="100vw"
           layout="fill"
@@ -90,8 +90,4 @@ export function Offers() {
       </div>
     </div>
   )
-}
-
-{
-  /* <VideoPlayer publicId="Susanne Hals/Pamina2021.Malaga_bjnlmi" /> */
 }
