@@ -46,19 +46,22 @@ export function Media() {
       id: 'Norinas_Cavatina',
       title: `Norina’s Cavatina`,
       description: `Don Pasquale ${t('home:by')} Donizetti`,
-      promo: 'Susanne Hals/Norinas_Cavattina_minified_ih69gj',
+      promo:
+        'https://res.cloudinary.com/dt3k2apqd/video/upload/v1669194022/Susanne%20Hals/Norinas_Cavattina_minified_ih69gj.mp4',
     },
     {
       id: 'Deh_vieni',
       title: `Deh vieni, non tardar`,
       description: `Le Nozze di Figaro ${t('home:by')} Mozart`,
-      promo: 'Susanne Hals/Deh_vieni_-_minified_adnvav',
+      promo:
+        'https://res.cloudinary.com/dt3k2apqd/video/upload/v1669190764/Susanne%20Hals/Deh_vieni_-_minified_adnvav.mp4',
     },
     {
       id: 'Adinas_arie',
       title: `Adina’s arie`,
       description: `The Elixir of Love ${t('home:by')} Donizetti`,
-      promo: 'Susanne Hals/Adinas_arie_-_minified_poiwnf',
+      promo:
+        'https://res.cloudinary.com/dt3k2apqd/video/upload/v1669188162/Susanne%20Hals/Adinas_arie_-_minified_poiwnf.mp4',
     },
   ]
 
