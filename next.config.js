@@ -18,4 +18,20 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+;(module.exports = nextConfig),
+  {
+    async redirects() {
+      return [
+        {
+          source: 'http://susannehals.com/',
+          destination: 'https://susannehals.com/',
+          permanent: true,
+        },
+        {
+          source: 'http://www.susannehals.com/',
+          destination: 'https://susannehals.com/',
+          permanent: true,
+        },
+      ]
+    },
+  }
