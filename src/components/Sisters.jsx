@@ -58,6 +58,7 @@ export function Sisters() {
                             alt="Søstrene Hals - Kathrine og Susanne Hals"
                             width={1548}
                             height={2064}
+                            unoptimized
                           />
                         </div>
                       </div>
