@@ -3,10 +3,11 @@ import { Video, CloudinaryContext, Transformation } from 'cloudinary-react'
 
 export default function VideoPlayer({ publicId }) {
   const videoRef = useRef()
+  const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
 
   return (
-    <CloudinaryContext cloud_name="dt3k2apqd">
-      <div className="">
+    <CloudinaryContext cloud_name={cloudName}>
+      <div>
         <Video
           playsinline
           muted
