@@ -9,7 +9,7 @@ export default function VideoPlayer({ publicId }) {
     <CloudinaryContext cloud_name={cloudName}>
       <div>
         <Video
-          playsinline
+          playsInline
           muted
           loop
           autoPlay
@@ -17,11 +17,8 @@ export default function VideoPlayer({ publicId }) {
           width="100%"
           controls
           innerRef={videoRef}
-          fluid
-          // poster="https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/Susanne_img_1_c3qttj.webp"
-        >
-          {/* <Transformation quality="auto" videoCodec="auto" /> */}
-        </Video>
+          fluid="true"
+        ></Video>
       </div>
     </CloudinaryContext>
   )

@@ -13,34 +13,34 @@ export function LanguageSwitcher() {
     <span className="relative z-0 inline-flex shadow-none">
       <button
         type="button"
-        className="relative inline-flex items-center px-0 text-gray-500 transition duration-300 ease-in-out cursor-pointer bg-t border-y-0 hover:text-gray-900 focus:z-10 focus:outline-none focus:ring-0"
+        className="bg-t relative inline-flex cursor-pointer items-center border-y-0 px-0 text-gray-500 transition duration-300 ease-in-out hover:text-gray-900 focus:z-10 focus:outline-none focus:ring-0"
       >
         <Link
-          activeclassname={locale === 'en'}
+          activeclassname={locale === 'en' ? 'true' : ''}
           locale="en"
           passHref
           href={asPath}
         >
-          <p className="hidden font-normal uppercase cursor-pointer sm:text-sm lg:block">
+          <p className="hidden cursor-pointer font-normal uppercase sm:text-sm lg:block">
             en
           </p>
-          <p className="font-normal uppercase cursor-pointer sm:text-sm lg:hidden">
+          <p className="cursor-pointer font-normal uppercase sm:text-sm lg:hidden">
             english
           </p>
         </Link>
       </button>
 
       <button>
-        <p className="px-3 text-sm font-normal pointer-events-none text-eye-green sm:px-2">
+        <p className="pointer-events-none px-3 text-sm font-normal text-eye-green sm:px-2">
           |
         </p>
       </button>
       <button
         type="button"
-        className="relative inline-flex items-center px-0 text-gray-500 transition duration-300 ease-in-out bg-t border-y-0 hover:text-gray-900 focus:z-10 focus:outline-none focus:ring-0"
+        className="bg-t relative inline-flex items-center border-y-0 px-0 text-gray-500 transition duration-300 ease-in-out hover:text-gray-900 focus:z-10 focus:outline-none focus:ring-0"
       >
         <Link
-          activeclassname={locale === 'no'}
+          activeclassname={locale === 'no' ? 'true' : ''}
           locale="no"
           passHref
           href={asPath}

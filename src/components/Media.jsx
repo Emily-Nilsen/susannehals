@@ -47,21 +47,21 @@ export function Media() {
       title: `Norina’s Cavatina`,
       description: `Don Pasquale ${t('home:by')} Donizetti`,
       promo:
-        'https://res.cloudinary.com/dt3k2apqd/video/upload/q_auto/Susanne%20Hals/Norinas_Cavattina_minified_ih69gj.mp4',
+        'https://res.cloudinary.com/dt3k2apqd/video/upload/f_webm/q_auto/Susanne%20Hals/Norinas_Cavattina_minified_ih69gj.mp4',
     },
     {
       id: 'Deh_vieni',
       title: `Deh vieni, non tardar`,
       description: `Le Nozze di Figaro ${t('home:by')} Mozart`,
       promo:
-        'https://res.cloudinary.com/dt3k2apqd/video/upload/q_auto/Susanne%20Hals/Deh_vieni_-_minified_adnvav.mp4',
+        'https://res.cloudinary.com/dt3k2apqd/video/upload/f_webm/q_auto/Susanne%20Hals/Deh_vieni_-_minified_adnvav.mp4',
     },
     {
       id: 'Adinas_arie',
       title: `Adina’s arie`,
       description: `The Elixir of Love ${t('home:by')} Donizetti`,
       promo:
-        'https://res.cloudinary.com/dt3k2apqd/video/upload/q_auto/Susanne%20Hals/Adinas_arie_-_minified_poiwnf.mp4',
+        'https://res.cloudinary.com/dt3k2apqd/video/upload/f_webm/q_auto/Susanne%20Hals/Adinas_arie_-_minified_poiwnf.mp4',
     },
   ]
 
@@ -70,30 +70,19 @@ export function Media() {
       <section
         id="media"
         aria-labelledby="media-title"
-        className="relative w-full border-none border-gray-200 bg-gradient-to-br from-gray-800 to-gray-600 py-20 sm:pt-32 sm:pb-24"
+        className="relative w-full border-none border-gray-200 bg-white py-20 sm:pt-32 sm:pb-24"
       >
-        <div className="absolute inset-0">
-          <div className="relative h-full w-full object-cover object-center">
-            <Image
-              src="https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/abstract_background_grey_undeh8.webp"
-              alt="Media background"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
-            />
-          </div>
-        </div>
         <div className="relative z-0">
           <Container>
             {/* Text */}
             <div className="max-full mx-auto mb-10 sm:text-center lg:mx-0">
               <h1
                 id="faqs-title"
-                className="mt-2 pb-6 text-6xl leading-8 tracking-tight text-white sm:text-7xl"
+                className="mt-2 pb-6 text-6xl leading-8 tracking-tight text-gray-900 sm:text-7xl"
               >
                 Media
               </h1>
-              <p className="mx-auto mt-2 max-w-lg text-lg text-gray-300">
+              <p className="mx-auto mt-2 max-w-lg text-lg text-gray-600">
                 {t('home:mediaSubtitle')}
               </p>
             </div>
@@ -103,38 +92,36 @@ export function Media() {
 
           <div className="ml-0 flex space-x-3 overflow-x-auto px-1 pb-6 sm:space-x-8 md:space-x-10 md:p-10 lg:max-w-none">
             {promotions.map((site) => (
-              <>
-                <section key={site.id} id={site.id} className="flex-shrink-0">
-                  <div className="relative z-0 grid max-w-[100vw] grid-cols-1 gap-3 rounded-3xl bg-white bg-opacity-20 p-6 shadow-xl shadow-gray-900/5 backdrop-blur-sm md:max-w-[40rem] md:gap-8 md:p-8">
-                    <div className="sm:pt-2 md:pr-6 ">
-                      <div className="flex items-center pb-2">
-                        <div className="w-full pl-2">
-                          <h2 className="text-base font-semibold capitalize text-white">
-                            {site.title}
-                          </h2>
-                          <p className="max-w-xs text-sm leading-6 text-gray-300">
-                            {site.description}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="relative flex w-full rounded-2xl">
-                      <div className="relative h-[14rem] w-96">
-                        <div className="absolute flex h-full w-full items-center justify-center overflow-hidden rounded-2xl">
-                          <DynamicVideoPlayer publicId={site.promo} />
-                        </div>
+              <section key={site.id} id={site.id} className="flex-shrink-0">
+                <div className="relative z-0 grid max-w-[100vw] grid-cols-1 gap-3 rounded-3xl bg-gray-900 p-6 shadow-xl md:max-w-[40rem] md:gap-8 md:p-8">
+                  <div className="sm:pt-2 md:pr-6 ">
+                    <div className="flex items-center pb-2">
+                      <div className="w-full pl-2">
+                        <h2 className="text-base font-semibold capitalize text-white">
+                          {site.title}
+                        </h2>
+                        <p className="max-w-xs text-sm leading-6 text-gray-300">
+                          {site.description}
+                        </p>
                       </div>
                     </div>
                   </div>
-                </section>
-              </>
+
+                  <div className="relative flex w-full overflow-hidden rounded-2xl">
+                    <div className="relative h-[14rem] w-96">
+                      <div className="absolute flex h-full w-full items-center justify-center overflow-hidden rounded-2xl">
+                        <DynamicVideoPlayer publicId={site.promo} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
             ))}
           </div>
           {/* <Container> */}
           <div className="flex justify-end pr-6">
             <div className="flex items-center">
-              <p className="flex items-center text-sm font-normal text-gray-300">
+              <p className="flex items-center text-sm font-normal text-gray-500">
                 {t('home:scrollRight')}
               </p>
               <div className="ml-1 flex justify-center opacity-100">

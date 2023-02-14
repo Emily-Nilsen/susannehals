@@ -16,7 +16,6 @@ export function Lottie({
       id="firstLottie"
       ref={ref}
       autoplay
-      // controls
       loop
       mode="normal"
       src={lottieUrl}

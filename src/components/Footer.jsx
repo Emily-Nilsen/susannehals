@@ -61,9 +61,9 @@ function SocialLink({ className, href, children, icon: Icon }) {
         href={href}
         target="_blank"
         rel="noreferrer"
-        className="flex items-center text-xs font-medium text-gray-700 transition group hover:text-eye-green-light dark:text-gray-200 dark:hover:text-eye-green-light"
+        className="group flex items-center text-xs font-medium text-gray-700 transition hover:text-eye-green-light dark:text-gray-200 dark:hover:text-eye-green-light"
       >
-        <Icon className="flex-none w-6 h-6 transition fill-gray-500 group-hover:fill-eye-green-light" />
+        <Icon className="h-6 w-6 flex-none fill-gray-500 transition group-hover:fill-eye-green-light" />
         <span className="ml-4">{children}</span>
       </Link>
     </li>
@@ -88,11 +88,11 @@ export function Footer() {
     <>
       <footer className="relative min-h-[24rem] border-t border-gray-200 py-6">
         <Container>
-          <div className="relative z-10 flex flex-col items-start justify-between h-full lg:flex-row lg:items-center lg:py-16">
-            <div className="absolute top-0 left-0 flex mt-4">
+          <div className="relative z-10 flex h-full flex-col items-start justify-between lg:flex-row lg:items-center lg:py-16">
+            <div className="absolute top-0 left-0 mt-4 flex">
               <Link href="/" aria-label="Home">
                 <div className="h-full cursor-pointer">
-                  <div className="relative z-10 w-full h-full pr-1">
+                  <div className="relative z-10 h-full w-full pr-1">
                     <Image
                       src="https://res.cloudinary.com/dt3k2apqd/image/upload/v1668925083/Susanne%20Hals/Susanne_Logo_white_u8p8jb.svg"
                       width={70}
@@ -104,9 +104,10 @@ export function Footer() {
                 </div>
               </Link>
             </div>
+
             <div className="flex items-end"></div>
             {/* Testimonial */}
-            <div className="hidden my-32 lg:block">
+            <div className="my-32 hidden lg:block">
               <div className="prose prose-lg text-right lg:max-w-[290px] xl:max-w-xs">
                 <motion.p
                   whileInView={{ opacity: 1 }}
@@ -116,7 +117,7 @@ export function Footer() {
                     duration: 0.8,
                     type: 'fade',
                   }}
-                  className="italic font-light tracking-tight text-white/90 lg:text-base lg:leading-relaxed xl:text-lg"
+                  className="font-light italic tracking-tight text-white/90 lg:text-base lg:leading-relaxed xl:text-lg"
                 >
                   {t('home:testimonial04')}
                 </motion.p>
@@ -128,14 +129,16 @@ export function Footer() {
                     duration: 0.8,
                     type: 'fade',
                   }}
-                  className="w-full pl-12 mt-4 text-xs font-medium text-gray-400 uppercase sm:text-sm"
+                  className="mt-4 w-full pl-12 text-xs font-medium uppercase text-gray-400 sm:text-sm"
                 >
                   Eli K. Hanssveen / {t('home:author04')}
                 </motion.p>
               </div>
             </div>
           </div>
-          <div className="absolute bottom-0 left-0 z-10 flex justify-between w-full p-4 sm:px-6">
+
+          {/* Copyright */}
+          <div className="absolute bottom-0 left-0 z-10 flex w-full justify-between p-4 sm:px-6">
             <div className="flex items-center border-none border-gray-500/50 md:justify-start">
               <p className="text-xs text-gray-400 sm:text-sm">
                 &copy; Copyright Susanne Hals {new Date().getFullYear()}
@@ -150,29 +153,28 @@ export function Footer() {
                   className="text-gray-500 transition duration-300 ease-in-out hover:text-eye-green"
                 >
                   <span className="sr-only">{item.name}</span>
-                  <item.icon className="w-5 h-5" aria-hidden="true" />
+                  <item.icon className="h-5 w-5" aria-hidden="true" />
                 </a>
               ))}
             </div>
           </div>
         </Container>
         <div className="absolute inset-0">
-          <div className="relative w-full h-full">
+          <div className="relative h-full w-full">
             <Image
               src="https://res.cloudinary.com/dt3k2apqd/image/upload/e_art:zorro/Susanne%20Hals/Susanne_img_2_centre_b_w_hzj2yx.webp"
               alt="Susanne Hals"
               sizes="100vw"
-              layout="fill"
-              objectPosition="top"
-              objectFit="cover"
+              fill
+              className="object-cover"
             />
-            <div className="absolute bottom-0 left-0 w-full h-28 bg-gradient-to-t from-black"></div>
+            <div className="absolute bottom-0 left-0 h-28 w-full bg-gradient-to-t from-black"></div>
           </div>
         </div>
         {/* Animation */}
         <div className="absolute top-0 right-0 hidden lg:block">
           <div className="flex justify-center lg:m-12">
-            <div className="w-32 h-32">
+            <div className="h-32 w-32">
               <LottieInteract
                 path="https://res.cloudinary.com/dt3k2apqd/raw/upload/v1668970106/Susanne%20Hals/flower-decoration-850x850_fxzggu.json"
                 interaction="play-on-show"

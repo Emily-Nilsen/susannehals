@@ -35,11 +35,11 @@ export function Sisters() {
       <section id="sostrenehals" aria-labelledby="sostrenehals-title">
         <div className="overflow-hidden bg-white">
           <Container>
-            <div className="relative px-4 py-16 mx-auto max-w-7xl sm:px-6 md:py-32 lg:px-8">
-              <div className="absolute top-0 bottom-0 hidden w-screen left-3/4 bg-eye-green-light/20 lg:block" />
-              <div className="mx-auto text-base max-w-prose lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8">
+            <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-32 lg:px-8">
+              <div className="absolute top-0 bottom-0 left-3/4 hidden w-screen bg-eye-green-light/20 lg:block" />
+              <div className="mx-auto max-w-prose text-base lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8">
                 <div>
-                  <h2 className="pb-4 text-base text-gray-600 uppercase">
+                  <h2 className="pb-4 text-base uppercase text-gray-600">
                     {t('home:duoPerformers')}
                   </h2>
                   <h1 className="mt-2 text-6xl tracking-tight text-gray-900 sm:text-7xl">
@@ -49,7 +49,7 @@ export function Sisters() {
               </div>
               <div className="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
                 <div className="relative lg:col-start-2 lg:row-start-1">
-                  <div className="relative mx-auto text-base max-w-prose lg:max-w-none">
+                  <div className="relative mx-auto max-w-prose text-base lg:max-w-none">
                     <figure>
                       <div className="aspect-w-12 aspect-h-7 lg:aspect-none">
                         <div className="object-cover object-center">
@@ -62,7 +62,7 @@ export function Sisters() {
                           />
                         </div>
                       </div>
-                      <figcaption className="flex mt-3 text-sm text-gray-500 group lg:justify-end">
+                      <figcaption className="group mt-3 flex text-sm text-gray-500 lg:justify-end">
                         <div className="flex items-center">
                           <a
                             href="https://www.sostrenehals.com"
@@ -70,7 +70,7 @@ export function Sisters() {
                             rel="noreferrer"
                           >
                             <div className="flex items-center">
-                              <div className="relative z-10 w-full h-full pr-1">
+                              <div className="relative z-10 h-full w-full pr-1">
                                 <Image
                                   src="https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/nutmegLogo_p5hobn.svg"
                                   width={30}
@@ -90,15 +90,15 @@ export function Sisters() {
                     </figure>
                   </div>
                 </div>
-                <div className="grid mt-8 place-content-between lg:mt-0">
-                  <div className="mx-auto mt-0 prose text-gray-500 prose-gray lg:col-start-1 lg:row-start-1 lg:max-w-none">
+                <div className="mt-8 grid place-content-between lg:mt-0">
+                  <div className="prose prose-gray mx-auto mt-0 text-gray-500 lg:col-start-1 lg:row-start-1 lg:max-w-none">
                     <div>
                       <p>{t('home:sistersSent01')}</p>
                       <p>{t('home:sistersSent02')}</p>
                       <p>{t('home:sistersSent03')}</p>
                     </div>
                   </div>
-                  <div>
+                  {/* <div>
                     <div className="relative flex items-center self-stretch py-4 -mx-4 transition-colors group sm:self-auto sm:rounded-2xl lg:mx-0 lg:self-auto lg:py-6">
                       <div className="relative flex items-center justify-center flex-none w-24 h-24">
                         <QrCodeBorder className="absolute inset-0 w-full h-full transition-colors stroke-gray-300 group-hover:stroke-eye-green" />
@@ -129,7 +129,7 @@ export function Sisters() {
                         </p>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

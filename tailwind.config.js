@@ -67,10 +67,6 @@ module.exports = {
         'eye-green-light': '#c2beaa',
         'eye-green-dark': '#85876F',
       },
-      backgroundImage: {
-        'booking-bg':
-          "url('https://res.cloudinary.com/dt3k2apqd/image/upload/v1669445251/Susanne%20Hals/abstract_background_green_mvecyb.webp')",
-      },
     },
   },
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],

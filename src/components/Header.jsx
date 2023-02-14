@@ -74,7 +74,7 @@ export function Header() {
                   <Image
                     src={Logo}
                     width={100}
-                    height={100}
+                    height="auto"
                     alt="Susanne Halsen logo"
                     unoptimized
                   />
@@ -144,8 +144,8 @@ export function Header() {
                             <MobileNavLink href="#sostrenehals">
                               Søstrene Hals
                             </MobileNavLink>
-                            <MobileNavLink href="/booking">
-                              Booking
+                            <MobileNavLink href="#contact">
+                              {t('common:contact')}
                             </MobileNavLink>
                           </div>
                           <div className="mt-8 flex justify-center gap-4">
