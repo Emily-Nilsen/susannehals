@@ -1,20 +1,20 @@
 import { useRef } from 'react'
 import { Video, CloudinaryContext, Transformation } from 'cloudinary-react'
 
-export default function VideoPlayer({ publicId }) {
+export default function VideoPlayer({ publicId, poster }) {
   const videoRef = useRef()
   const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
 
   return (
     <CloudinaryContext cloud_name={cloudName}>
-      <div>
+      <div className="overflow-hidden rounded-2xl">
         <Video
           playsInline
-          muted
-          loop
-          autoPlay
+          // muted
+          // autoPlay
           publicId={publicId}
           width="100%"
+          poster={poster}
           controls
           innerRef={videoRef}
           fluid="true"

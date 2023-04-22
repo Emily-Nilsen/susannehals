@@ -1,7 +1,20 @@
 {
+  "latest": "nyheter",
   "about": "om",
   "contact": "kontakt",
   "title": "Susanne Hals | Sopran",
   "description": "Klassisk sopran og solist (operasangerinne) Susanne Hvinden Hals for å gi et tilsnitt av eleganse til bryllup, begravelser, bedrifts- og private arrangementer, eventer og konferanser i Oslo.",
-  "keywords": "Klassisk sopran, solist, operasangerinne, Susanne Hvinden Hals, Susanne Hals, Susanne Hvinden, bryllup, begravelser, bedrifts arrangementer, private arrangementer, eventer, konferanser, minnestund, Oslo, Norge, trenger solist, trenger sanger, opera, klassisk musikk, private sangtimer, private sangtimer i Oslo, private sanger, fest sanger, event sanger"
+  "keywords": "Klassisk sopran, solist, operasangerinne, Susanne Hvinden Hals, Susanne Hals, Susanne Hvinden, bryllup, begravelser, bedrifts arrangementer, private arrangementer, eventer, konferanser, minnestund, Oslo, Norge, trenger solist, trenger sanger, opera, klassisk musikk, private sangtimer, private sangtimer i Oslo, private sanger, fest sanger, event sanger",
+  "jan": "januar",
+  "feb": "februar",
+  "mar": "mars",
+  "apr": "april",
+  "may": "mai",
+  "jun": "juni",
+  "jul": "juli",
+  "aug": "august",
+  "sep": "september",
+  "oct": "oktober",
+  "nov": "november",
+  "dec": "december"
 }

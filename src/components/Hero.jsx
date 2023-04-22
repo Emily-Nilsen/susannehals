@@ -151,9 +151,9 @@ export function Hero() {
           type: 'fade',
           ease: 'easeIn',
         }}
-        class="absolute inset-0 hidden md:block"
+        className="absolute inset-0 hidden md:block"
       >
-        <div class="flex h-full w-full items-center p-32">
+        <div className="flex h-full w-full items-center p-32">
           <div className="relative z-10 text-7xl font-medium tracking-tight sm:text-8xl">
             <div className="z-0 -mb-10 pl-6">
               <h1 className="text-gray-800">Discover</h1>
@@ -177,9 +177,9 @@ export function Hero() {
           type: 'fade',
           ease: 'easeIn',
         }}
-        class="absolute inset-0 h-full w-full"
+        className="absolute inset-0 h-full w-full"
       >
-        <div class="mt-52 flex h-full w-full p-6 md:hidden">
+        <div className="mt-52 flex h-full w-full p-6 md:hidden">
           <div className="relative text-5xl font-medium tracking-tight sm:text-6xl">
             <div className="z-0 -mb-5 pl-6">
               <h1 className="text-gray-600">Discover</h1>

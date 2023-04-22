@@ -43,6 +43,13 @@ export function Media() {
 
   const promotions = [
     {
+      id: 'Kjærlighet',
+      title: `Kjærlighet`,
+      description: `Don Pasquale ${t('home:by')} Donizetti`,
+      promo:
+        'https://res.cloudinary.com/dt3k2apqd/video/upload/Susanne%20Hals/Kj%C3%A6rlighet_full_version_rviozs.mp4',
+    },
+    {
       id: 'Norinas_Cavatina',
       title: `Norina’s Cavatina`,
       description: `Don Pasquale ${t('home:by')} Donizetti`,
@@ -67,11 +74,7 @@ export function Media() {
 
   return (
     <main>
-      <section
-        id="media"
-        aria-labelledby="media-title"
-        className="relative w-full border-none border-gray-200 bg-white py-20 sm:pt-32 sm:pb-24"
-      >
+      <section className="relative w-full border-none border-gray-200 bg-white py-20 sm:pt-32 sm:pb-24">
         <div className="relative z-0">
           <Container>
             {/* Text */}
@@ -93,14 +96,14 @@ export function Media() {
           <div className="ml-0 flex space-x-3 overflow-x-auto px-1 pb-6 sm:space-x-8 md:space-x-10 md:p-10 lg:max-w-none">
             {promotions.map((site) => (
               <section key={site.id} id={site.id} className="flex-shrink-0">
-                <div className="relative z-0 grid max-w-[100vw] grid-cols-1 gap-3 rounded-3xl bg-gray-900 p-6 shadow-xl md:max-w-[40rem] md:gap-8 md:p-8">
+                <div className="relative z-0 grid max-w-[100vw] grid-cols-1 gap-3 rounded-3xl bg-white p-6 shadow-xl md:max-w-[40rem] md:gap-8 md:p-8">
                   <div className="sm:pt-2 md:pr-6 ">
                     <div className="flex items-center pb-2">
                       <div className="w-full pl-2">
-                        <h2 className="text-base font-semibold capitalize text-white">
+                        <h2 className="text-base font-semibold capitalize text-gray-900">
                           {site.title}
                         </h2>
-                        <p className="max-w-xs text-sm leading-6 text-gray-300">
+                        <p className="max-w-xs text-sm leading-6 text-gray-600">
                           {site.description}
                         </p>
                       </div>
@@ -108,7 +111,7 @@ export function Media() {
                   </div>
 
                   <div className="relative flex w-full overflow-hidden rounded-2xl">
-                    <div className="relative h-[14rem] w-96">
+                    <div className="relative h-[14rem] w-auto">
                       <div className="absolute flex h-full w-full items-center justify-center overflow-hidden rounded-2xl">
                         <DynamicVideoPlayer publicId={site.promo} />
                       </div>

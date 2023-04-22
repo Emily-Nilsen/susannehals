@@ -4,6 +4,8 @@ import Image from 'next/image'
 import qrCode from '@/images/QR-kode-julekonsert.svg'
 import useTranslation from 'next-translate/useTranslation'
 
+import { HalsSistersLogo } from './Logos'
+
 function QrCodeBorder(props) {
   return (
     <svg viewBox="0 0 96 96" fill="none" aria-hidden="true" {...props}>
@@ -36,10 +38,10 @@ export function Sisters() {
         <div className="overflow-hidden bg-white">
           <Container>
             <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-32 lg:px-8">
-              <div className="absolute top-0 bottom-0 left-3/4 hidden w-screen bg-eye-green-light/20 lg:block" />
+              <div className="absolute top-0 bottom-0 left-3/4 hidden w-screen bg-gold/20 lg:block" />
               <div className="mx-auto max-w-prose text-base lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8">
                 <div>
-                  <h2 className="pb-4 text-base uppercase text-gray-600">
+                  <h2 className="pb-4 text-base font-semibold uppercase tracking-wider text-gold">
                     {t('home:duoPerformers')}
                   </h2>
                   <h1 className="mt-2 text-6xl tracking-tight text-gray-900 sm:text-7xl">
@@ -62,29 +64,23 @@ export function Sisters() {
                           />
                         </div>
                       </div>
-                      <figcaption className="group mt-3 flex text-sm text-gray-500 lg:justify-end">
+                      <figcaption className="group mt-3 flex text-sm font-medium text-dark-beige lg:justify-end">
                         <div className="flex items-center">
-                          <a
+                          <Link
                             href="https://www.sostrenehals.com"
                             target="_blank"
                             rel="noreferrer"
                           >
                             <div className="flex items-center">
                               <div className="relative z-10 h-full w-full pr-1">
-                                <Image
-                                  src="https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/nutmegLogo_p5hobn.svg"
-                                  width={30}
-                                  height={30}
-                                  alt="Søstrene Hals logo"
-                                  unoptimized
-                                />
+                                <HalsSistersLogo className="w-7 fill-gold" />
                               </div>
 
-                              <span className="ml-2 transition duration-300 ease-in-out group-hover:text-gray-900">
+                              <span className="ml-2 transition duration-300 ease-in-out group-hover:text-gold">
                                 www.sostrenehals.com
                               </span>
                             </div>
-                          </a>
+                          </Link>
                         </div>
                       </figcaption>
                     </figure>

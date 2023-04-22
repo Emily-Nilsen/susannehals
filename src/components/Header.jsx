@@ -10,7 +10,7 @@ import { NavLinks } from '@/components/NavLinks'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import useTranslation from 'next-translate/useTranslation'
 
-import Logo from '@/images/logos/logoSH.svg'
+import { Logo } from '@/components/Logo'
 
 function MenuIcon(props) {
   return (
@@ -54,9 +54,9 @@ export function Header() {
   const { t } = useTranslation()
 
   return (
-    <header className="absolute w-full">
+    <header className="absolute w-full bg-gold">
       <nav>
-        <Container className="relative z-50 flex py-8 lg:justify-between">
+        <Container className="relative z-50 flex justify-between p-6 sm:py-8 lg:px-0">
           <motion.div
             animate={{ opacity: 1 }}
             initial={{ opacity: 0 }}
@@ -66,18 +66,12 @@ export function Header() {
               type: 'fade',
               ease: 'easeIn',
             }}
-            className="relative flex items-center gap-16"
+            className="relative flex gap-16 lg:items-center"
           >
             <Link href="/" aria-label="Home">
               <div className="h-full cursor-pointer">
                 <div className="relative h-full w-full pr-1">
-                  <Image
-                    src={Logo}
-                    width={100}
-                    height="auto"
-                    alt="Susanne Halsen logo"
-                    unoptimized
-                  />
+                  <Logo className="h-12 w-auto fill-wheat sm:h-16" />
                 </div>
               </div>
             </Link>
@@ -94,13 +88,13 @@ export function Header() {
               type: 'fade',
               ease: 'easeIn',
             }}
-            className="flex items-center gap-6"
+            className="flex items-center "
           >
             <Popover className="pl-6 lg:hidden">
               {({ open }) => (
                 <>
                   <Popover.Button
-                    className="relative z-10 -m-2 inline-flex items-center rounded-lg bg-white/20 stroke-gray-900 p-2 hover:bg-gray-200/50 hover:stroke-gray-600 active:stroke-gray-900 [&:not(:focus-visible)]:focus:outline-none"
+                    className="relative z-10 inline-flex items-center rounded-lg bg-light-beige/20 stroke-gold p-2 hover:bg-light-beige/50 active:stroke-gold [&:not(:focus-visible)]:focus:outline-none"
                     aria-label="Toggle site navigation"
                   >
                     {({ open }) =>
@@ -137,10 +131,13 @@ export function Header() {
                           className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pt-32 pb-6 shadow-2xl shadow-gray-900/20"
                         >
                           <div className="space-y-4 uppercase">
+                            <MobileNavLink href="#latest">
+                              {t('common:latest')}
+                            </MobileNavLink>
+                            <MobileNavLink href="#media">Media</MobileNavLink>
                             <MobileNavLink href="#about">
                               {t('common:about')}
                             </MobileNavLink>
-                            <MobileNavLink href="#media">Media</MobileNavLink>
                             <MobileNavLink href="#sostrenehals">
                               Søstrene Hals
                             </MobileNavLink>

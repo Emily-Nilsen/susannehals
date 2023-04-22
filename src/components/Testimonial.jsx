@@ -2,13 +2,24 @@ import { LottieInteract } from '@/components/LottieInteract'
 import { Container } from '@/components/Container'
 import { motion, useInView, useMotionValue } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export function Testimonial({ testimonial, author, lottie }) {
   return (
     <section
       id="testimonial"
-      className="relative overflow-hidden bg-eye-green py-12 sm:py-16 md:py-24"
+      className="relative overflow-hidden bg-gold/100 py-12 sm:py-16 md:py-24"
     >
+      <div className="absolute inset-0">
+        <Image
+          src="https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/gold_background_hjq8ux.webp"
+          fill
+          alt="Golden background"
+          className="blur-sm"
+        />
+        <div className="absolute inset-0 bg-light-beige mix-blend-multiply" />
+      </div>
+
       <Container className="relative">
         <div className="prose prose-lg mx-auto max-w-2xl text-center">
           <motion.h2
@@ -19,7 +30,7 @@ export function Testimonial({ testimonial, author, lottie }) {
               duration: 0.8,
               type: 'fade',
             }}
-            className="text-xl font-light italic tracking-tight text-white/90 sm:text-2xl md:text-3xl"
+            className="text-lg font-light italic tracking-tight text-light-beige sm:text-xl md:text-2xl"
           >
             {testimonial}
           </motion.h2>
@@ -31,7 +42,7 @@ export function Testimonial({ testimonial, author, lottie }) {
               duration: 0.8,
               type: 'fade',
             }}
-            className="mt-4 text-xs font-semibold uppercase text-black/80 sm:text-sm md:text-base"
+            className="mt-4 text-xs font-semibold uppercase text-tan sm:text-sm md:text-base"
           >
             {author}
           </motion.p>

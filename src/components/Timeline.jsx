@@ -125,7 +125,7 @@ export function Timeline() {
     <section
       id="about"
       aria-labelledby="about-title"
-      className="py-20 sm:py-32"
+      className="bg-white py-20 sm:py-32"
     >
       <ImageClipPaths id={id} />
       <Container>
@@ -136,7 +136,7 @@ export function Timeline() {
           >
             {t('home:timelineTitle')}
           </h1>
-          <div className="prose text-gray-500 lg:prose-lg">
+          <div className="prose text-dark-beige lg:prose-lg">
             <p className="mt-4">{t('home:timelineSent01')}</p>
             <p className="mt-2">{t('home:timelineSent02')}</p>
           </div>
@@ -147,7 +147,7 @@ export function Timeline() {
           vertical={tabOrientation === 'vertical'}
         >
           <div className="relative -mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:block sm:overflow-visible sm:pb-0">
-            <div className="absolute bottom-0 top-2 left-0.5 hidden w-px bg-gray-200 lg:block" />
+            <div className="absolute bottom-0 top-2 left-0.5 hidden w-px bg-wheat lg:block" />
             <Tab.List className="grid auto-cols-auto grid-flow-col justify-start gap-x-8 gap-y-10 whitespace-nowrap px-4 sm:mx-auto sm:max-w-2xl sm:grid-cols-3 sm:px-0 sm:text-center lg:grid-flow-row lg:grid-cols-1 lg:text-left">
               {({ selectedIndex }) =>
                 timeFrames.map((timeframe, timeframeIndex) => (
@@ -156,8 +156,8 @@ export function Timeline() {
                       className={clsx(
                         'absolute top-[0.5625rem] left-[-0.5px] hidden h-1.5 w-1.5 overflow-visible lg:block',
                         timeframeIndex === selectedIndex
-                          ? 'fill-gray-800 stroke-gray-800'
-                          : 'fill-transparent stroke-gray-400'
+                          ? 'fill-gold stroke-dark-beige'
+                          : 'fill-transparent stroke-tan'
                       )}
                     />
                     <div className="relative">
@@ -165,8 +165,8 @@ export function Timeline() {
                         className={clsx(
                           'text-lg font-medium tracking-tight lg:text-2xl lg:font-normal',
                           timeframeIndex === selectedIndex
-                            ? 'border-b-2 font-semibold text-gray-900 lg:border-none lg:font-semibold'
-                            : 'text-gray-400'
+                            ? 'border-b-2 font-semibold text-dark-beige lg:border-none lg:font-semibold'
+                            : 'text-gold'
                         )}
                       >
                         <Tab className="[&:not(:focus-visible)]:focus:outline-none">
@@ -193,15 +193,13 @@ export function Timeline() {
                       <div
                         className={clsx(
                           'absolute top-0 left-0 right-4 bottom-6 rounded-4xl border transition duration-300 group-hover:scale-95 xl:right-6',
-                          [
-                            'border-eye-green-light',
-                            'border-eye-green',
-                            'border-eye-green-dark',
-                          ][featureImageIndex % 3]
+                          ['border-gold/50', 'border-wheat', 'border-tan/80'][
+                            featureImageIndex % 3
+                          ]
                         )}
                       />
                       <div
-                        className="absolute inset-0 bg-indigo-50"
+                        className="absolute inset-0 bg-gray-900"
                         style={{
                           clipPath: `url(#${id}-${featureImageIndex % 3})`,
                         }}
@@ -219,7 +217,7 @@ export function Timeline() {
                     <h3 className="mt-8 text-lg font-semibold leading-6 text-gray-900">
                       {featureImage.name}
                     </h3>
-                    <p className="mt-4 text-sm text-gray-700">
+                    <p className="mt-4 text-sm text-dark-beige">
                       {featureImage.role}
                     </p>
                   </div>

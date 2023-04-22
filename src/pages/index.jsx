@@ -4,7 +4,10 @@ import { Testimonial } from '@/components/Testimonial'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
+import { VideoHero } from '@/components/VideoHero'
+import { Latest } from '@/components/Latest'
 import { Media } from '@/components/Media'
+import { MediaGallery } from '@/components/MediaGallery'
 import { Offers } from '@/components/Offers'
 import { Sisters } from '@/components/Sisters'
 import { Timeline } from '@/components/Timeline'
@@ -28,7 +31,9 @@ export default function Home() {
       </Head>
       <Header />
       <main>
-        <Hero />
+        <VideoHero />
+        <Latest />
+
         <Testimonial
           testimonial={t('home:testimonial01')}
           author={t('home:author01')}
@@ -40,13 +45,15 @@ export default function Home() {
           author="Trish McCaffrey / Voice Studio, New York"
           lottie="https://res.cloudinary.com/dt3k2apqd/raw/upload/v1668967853/Susanne%20Hals/decorative-border-01_sl1qth.json"
         />
-        <Timeline />
+        <MediaGallery />
+
         <Testimonial
           testimonial={t('home:testimonial03')}
           author={t('home:author03')}
           lottie="https://res.cloudinary.com/dt3k2apqd/raw/upload/v1668967853/Susanne%20Hals/decorative-border-01_sl1qth.json"
         />
-        <Media />
+        <Timeline />
+
         <Contact />
         <Sisters />
       </main>
