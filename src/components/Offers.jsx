@@ -8,7 +8,7 @@ export function Offers() {
   const { t } = useTranslation()
 
   return (
-    <div className="relative bg-white py-0 xl:pb-32 xl:pt-20">
+    <div className="relative bg-white pt-8 xl:pb-32 xl:pt-20">
       <div className="lg:absolute lg:inset-0">
         <div className="bg-white lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2"></div>
       </div>
