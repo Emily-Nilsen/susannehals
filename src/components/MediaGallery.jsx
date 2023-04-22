@@ -57,10 +57,10 @@ export function MediaGallery() {
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h1 className="mt-2 pb-6 text-6xl leading-8 tracking-tight text-gray-900 sm:text-7xl">
+          <h1 className="mt-2 text-6xl leading-8 tracking-tight text-gray-900 sm:text-7xl">
             Media
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-8 text-lg leading-8 text-gray-600">
             {t('home:mediaText')}
           </p>
         </div>

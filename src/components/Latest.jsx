@@ -46,11 +46,11 @@ export function Latest() {
     <section id="latest">
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-6xl font-bold tracking-tight text-gray-900 sm:text-7xl ">
+          <div className="mx-auto max-w-2xl lg:mx-0">
+            <h1 className="mt-2 text-6xl tracking-tight text-gray-900 sm:text-7xl">
               {t('home:latestTitle')}
             </h1>
-            <p className="mx-auto mt-2 max-w-lg text-lg leading-8 text-gray-600">
+            <p className="mt-8 text-lg leading-8 text-gray-600">
               {t('home:latestText')}
             </p>
           </div>

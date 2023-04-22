@@ -26,8 +26,8 @@ export function Testimonial({ testimonial, author, lottie }) {
             whileInView={{ opacity: 1 }}
             initial={{ opacity: 0 }}
             transition={{
-              delay: 1,
-              duration: 0.8,
+              delay: 0.1,
+              duration: 1.5,
               type: 'fade',
             }}
             className="text-lg font-light italic tracking-tight text-light-beige sm:text-xl md:text-2xl"
@@ -38,8 +38,8 @@ export function Testimonial({ testimonial, author, lottie }) {
             whileInView={{ opacity: 1 }}
             initial={{ opacity: 0 }}
             transition={{
-              delay: 1.5,
-              duration: 0.8,
+              delay: 0.3,
+              duration: 1.5,
               type: 'fade',
             }}
             className="mt-4 text-xs font-semibold uppercase text-tan sm:text-sm md:text-base"
