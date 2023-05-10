@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
+import { YoutubeVideo } from './YoutubeVideo'
 import useTranslation from 'next-translate/useTranslation'
 
 const DynamicVideoPlayer = dynamic(() => import('./VideoPlayer'), {
@@ -10,15 +11,6 @@ export function MediaGallery() {
   const { t } = useTranslation()
 
   const videos = [
-    {
-      id: 'Kjærlighet',
-      title: `Kjærlighet`,
-      description: `${t('home:kjærlighet')}`,
-      promo:
-        'https://res.cloudinary.com/dt3k2apqd/video/upload/Susanne%20Hals/Kj%C3%A6rlighet_full_version_rviozs.mp4',
-      poster:
-        'https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/Kj%C3%A6rlighet_poster_jsmifl.webp',
-    },
     {
       id: 'Norinas_Cavatina',
       title: `Norina’s Cavatina`,
@@ -68,6 +60,20 @@ export function MediaGallery() {
           role="list"
           className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-y-12 gap-x-8 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3"
         >
+          {/* Youtube */}
+          <div className="flex h-full w-full flex-col items-center justify-center pt-5">
+            <div className="aspect-video relative w-full rounded-2xl object-cover">
+              <YoutubeVideo publicId="https://www.youtube.com/watch?v=atdbe9jFw2g" />
+            </div>
+            <div className="flex h-full w-full flex-col justify-end">
+              <h3 className="mt-1 text-base font-semibold leading-8 tracking-tight text-gray-900 sm:mt-2">
+                Kjærlighet
+              </h3>
+              <p className="text-sm leading-7 text-gray-600">
+                {t('home:kjærlighet')}
+              </p>
+            </div>
+          </div>
           {videos.map((video) => (
             <li key={video.title}>
               <div className="relative aspect-[3/2] w-full rounded-2xl object-cover">

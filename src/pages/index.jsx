@@ -13,6 +13,8 @@ import { Timeline } from '@/components/Timeline'
 import { VideoFeature } from '@/components/VideoFeature'
 import { Contact } from '@/components/Contact'
 import useTranslation from 'next-translate/useTranslation'
+// import YouTube from '@/components/YoutubeVideo'
+import { YoutubeVideo } from '@/components/YoutubeVideo'
 
 export default function Home() {
   const { t } = useTranslation()
@@ -44,6 +46,7 @@ export default function Home() {
           author="Trish McCaffrey / Voice Studio, New York"
           lottie="https://res.cloudinary.com/dt3k2apqd/raw/upload/v1668967853/Susanne%20Hals/decorative-border-01_sl1qth.json"
         />
+
         <MediaGallery />
 
         <Testimonial

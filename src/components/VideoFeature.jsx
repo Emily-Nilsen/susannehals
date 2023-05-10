@@ -8,9 +8,9 @@ export function VideoFeature() {
   return (
     <section
       id="feature-video"
-      className="relative flex w-full my-24 ml-16 h-96"
+      className="relative my-24 ml-16 flex h-96 w-full"
     >
-      <div className="relative z-10 w-1/2 overflow-hidden rotate-90 h-96">
+      <div className="relative z-10 h-96 w-1/2 rotate-90 overflow-hidden">
         <Image
           src="https://res.cloudinary.com/dt3k2apqd/image/upload/v1669027031/Emily%20Nilsen/SVGs/frame-241x323_j4a9qu.svg"
           alt="Vintage photo frame"
