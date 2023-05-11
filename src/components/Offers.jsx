@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import useTranslation from 'next-translate/useTranslation'
 import { BackgroundVideo } from './BackgroundVideo'
+import { YoutubeVideo } from '@/components/YoutubeVideo'
 
 export function Offers() {
   const { t } = useTranslation()
@@ -37,17 +38,16 @@ export function Offers() {
             </div>
           </div>
           {/* <VideoFeature /> */}
-          <div className="py-16">
+          <div className="-mt-6 py-16">
             <div className="relative z-0 aspect-[7/4] w-full rounded-2xl object-cover lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2">
-              <div className="z-1 absolute flex h-auto w-full items-center justify-center overflow-hidden rounded-2xl">
-                <VideoPlayer
-                  poster="https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/malaga_clasica_susanne_mt6ywn.webp"
-                  publicId="https://res.cloudinary.com/dt3k2apqd/video/upload/q_auto/Susanne%20Hals/Pamina2021.Malaga_bjnlmi.mp4"
-                />
+              <div className="z-1 absolute flex h-auto w-full items-center justify-center overflow-hidden rounded-2xl pt-10">
+                <div className="aspect-video relative w-full rounded-2xl object-cover">
+                  <YoutubeVideo publicId="https://www.youtube.com/watch?v=cIEWg-XSqAI" />
+                </div>
               </div>
             </div>
           </div>
-          <p className="xl mx-auto max-w-sm pt-0 text-sm text-gray-500 sm:m-0 sm:max-w-lg sm:px-0 sm:pt-16 sm:text-base lg:max-w-none lg:prose lg:px-0 lg:pt-10 lg:text-gray-500">
+          <p className="xl max-w-sm pb-10 text-sm text-gray-500 sm:m-0 sm:max-w-lg sm:px-0 sm:text-base lg:mx-auto lg:max-w-none lg:prose lg:px-0 lg:pt-0 lg:text-gray-500">
             {t('home:unicaja')}
           </p>
         </div>
