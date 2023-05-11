@@ -12,15 +12,6 @@ export function MediaGallery() {
 
   const videos = [
     {
-      id: 'Norinas_Cavatina',
-      title: `Norina’s Cavatina`,
-      description: `Don Pasquale ${t('home:by')} Donizetti`,
-      promo:
-        'https://res.cloudinary.com/dt3k2apqd/video/upload/q_auto/Susanne%20Hals/Norinas_Cavattina_minified_ih69gj.mp4',
-      poster:
-        'https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/M%C3%A1laga%20Cl%C3%A1sica/noritas_cavatina_w45cwk.webp',
-    },
-    {
       id: 'Deh_vieni',
       title: `Deh vieni, non tardar`,
       description: `Le Nozze di Figaro ${t('home:by')} Mozart`,
