@@ -8,6 +8,7 @@ import { useRouter } from 'next/router'
 
 import { MalagaClasicaLogo } from './Logos'
 import { HalsSistersLogo } from './Logos'
+import { BakgardenkonsertLogo } from './Logos'
 
 const DynamicVideoPlayer = dynamic(() => import('./VideoPlayer'), {
   ssr: false,
@@ -19,6 +20,26 @@ export function Latest() {
   const { t } = useTranslation()
 
   const posts = [
+    // More posts...
+    {
+      id: 2,
+      title: 'Opera til Folket',
+      href: 'https://bakgardensandvika.no/arrangementer/opera-til-folket-9',
+      description: `${t('home:bakgårdskkonsertMai')}`,
+      promo:
+        'https://res.cloudinary.com/dt3k2apqd/video/upload/q_auto/Susanne%20Hals/BAKga%CC%8Ardskonsert_mai_-_video_size_em4cyi.mp4',
+      poster:
+        'https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/BAKga%CC%8Ardskonsert_poster_pfuxxt.webp',
+      date: `28${locale === 'en' ? '' : '.'} ${t('common:may')} , 2023`,
+      datetime: '2023-05-29',
+      category: { title: 'Konsert' },
+      venue: {
+        name: `BAKgårdskonsert i Sandvika`,
+        website: 'bakgardensandvika.no',
+
+        logo: <BakgardenkonsertLogo className="w-5" />,
+      },
+    },
     {
       id: 1,
       title: 'Málaga Clásica 2023 - Revoluciones',
@@ -35,11 +56,11 @@ export function Latest() {
       category: { title: 'Festival' },
       venue: {
         name: `${t('home:malagaClasica')}`,
-        website: 'www.malagaclasica.com',
+        website: 'malagaclasica.com',
+
         logo: <MalagaClasicaLogo className="w-7 fill-gold" />,
       },
     },
-    // More posts...
   ]
 
   return (
