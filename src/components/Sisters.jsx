@@ -1,7 +1,7 @@
 import { Container } from '@/components/Container'
 import Link from 'next/link'
 import Image from 'next/image'
-import qrCode from '@/images/QR-kode-julekonsert.svg'
+import qrCode from '@/images/julekonsert.svg'
 import useTranslation from 'next-translate/useTranslation'
 
 import { HalsSistersLogo } from './Logos'
@@ -53,8 +53,20 @@ export function Sisters() {
                 <div className="relative lg:col-start-2 lg:row-start-1">
                   <div className="relative mx-auto max-w-prose text-base lg:max-w-none">
                     <figure>
-                      <div className="aspect-w-12 aspect-h-7 lg:aspect-none">
-                        <div className="object-cover object-center">
+                      <div className="aspect-w-12 aspect-h-12 relative lg:aspect-none">
+                        {/* Mobile */}
+                        <div className="overflow-visible lg:hidden">
+                          <Image
+                            src="https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/S%C3%B8strene%20Hals/goldCutout_fhrxem_ocomnj.webp"
+                            alt="Søstrene Hals - Kathrine og Susanne Hals"
+                            width={1548}
+                            height={2064}
+                            unoptimized
+                            className="h-full overflow-visible object-cover object-center"
+                          />
+                        </div>
+                        {/* Desktop */}
+                        <div className="hidden object-cover object-center lg:block">
                           <Image
                             src="https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/S%C3%B8strene%20Hals/goldCutout_fhrxem_ocomnj.webp"
                             alt="Søstrene Hals - Kathrine og Susanne Hals"
@@ -64,7 +76,7 @@ export function Sisters() {
                           />
                         </div>
                       </div>
-                      <figcaption className="group mt-3 flex text-sm font-medium text-dark-beige lg:justify-end">
+                      <figcaption className="group mt-5 flex text-sm font-medium text-dark-beige lg:mt-3 lg:justify-end">
                         <div className="flex items-center">
                           <Link
                             href="https://www.sostrenehals.com"
@@ -92,31 +104,32 @@ export function Sisters() {
                       <p>{t('home:sistersSent01')}</p>
                       <p>{t('home:sistersSent02')}</p>
                       <p>{t('home:sistersSent03')}</p>
+                      <p>{t('home:sistersSent04')}</p>
                     </div>
                   </div>
-                  {/* <div>
-                    <div className="relative flex items-center self-stretch py-4 -mx-4 transition-colors group sm:self-auto sm:rounded-2xl lg:mx-0 lg:self-auto lg:py-6">
-                      <div className="relative flex items-center justify-center flex-none w-24 h-24">
-                        <QrCodeBorder className="absolute inset-0 w-full h-full transition-colors stroke-gray-300 group-hover:stroke-eye-green" />
+                  <div>
+                    <div className="group relative -mx-4 flex items-center self-stretch py-4 transition-colors sm:self-auto sm:rounded-2xl lg:mx-0 lg:self-auto lg:py-6">
+                      <div className="relative flex h-24 w-24 flex-none items-center justify-center">
+                        <QrCodeBorder className="group-hover:stroke-eye-green absolute inset-0 h-full w-full stroke-gray-300 transition-colors" />
                         <Image
                           src={qrCode}
                           alt="Julekonsert i Ris kirke med Søstrene Hals"
-                          className="p-1 overflow-hidden rounded-xl"
+                          className="overflow-hidden rounded-xl p-1"
                           unoptimized
                         />
                       </div>
                       <div className="ml-8 lg:w-64">
                         <a
                           className="group"
-                          href="https://www.ticketmaster.no/artist/sostrene-hals-tickets/1213834?gclid=CjwKCAiA7IGcBhA8EiwAFfUDseSyIimMkpNhCgwdnC6WRN4DerYjNaqtVHvU8kqwrwaJ2MhWTjbhrhoC6AMQAvD_BwE&gclsrc=aw.ds&language=en-us&utm_source=TM-google"
+                          href="https://www.ticketmaster.no/event/julekonsert-med-sostrene-hals-og-solvguttene-billetter/725651"
                           target="_blank"
                           rel="noreferrer"
                         >
-                          <p className="relative z-10 flex text-sm font-normal transition duration-300 ease-in-out text-zinc-500 group-hover:text-eye-green">
+                          <p className="group-hover:text-eye-green relative z-10 flex text-sm font-normal text-zinc-500 transition duration-300 ease-in-out">
                             <span className="mr-2 text-base font-semibold text-gray-900 group-hover:underline">
                               {t('home:julekonsert')}
                             </span>
-                            <LinkIcon className="flex-none w-6 h-6" />
+                            <LinkIcon className="h-6 w-6 flex-none" />
                           </p>
                         </a>
 
@@ -125,7 +138,7 @@ export function Sisters() {
                         </p>
                       </div>
                     </div>
-                  </div> */}
+                  </div>
                 </div>
               </div>
             </div>
