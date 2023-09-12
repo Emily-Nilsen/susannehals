@@ -37,7 +37,7 @@ export function Latest() {
         name: `Julekonsert med Søstrene Hals og Sølvguttene`,
         website: 'ticketmaster.no',
 
-        logo: <HalsSistersLogo className="w-5" />,
+        logo: <HalsSistersLogo className="w-5 fill-[#a19385]" />,
       },
     },
     // {
@@ -161,7 +161,7 @@ export function Latest() {
                     </div>
                     <Link href={post.href} target="_blank" rel="noreferrer">
                       <div className="group relative mt-8 flex items-center gap-x-4">
-                        <div className="flex h-9 w-9 items-center justify-center rounded-full bg-wheat/40">
+                        <div className="flex h-9 w-9 items-center justify-center rounded-full bg-wheat/20">
                           {post.venue.logo}
                         </div>
                         <div className="text-sm leading-6">
