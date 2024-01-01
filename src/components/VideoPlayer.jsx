@@ -10,8 +10,6 @@ export default function VideoPlayer({ publicId, poster }) {
       <div className="overflow-hidden rounded-2xl">
         <Video
           playsInline
-          // muted
-          // autoPlay
           publicId={publicId}
           width="100%"
           poster={poster}
