@@ -38,7 +38,7 @@ export function Sisters() {
         <div className="overflow-hidden bg-white">
           <Container>
             <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-32 lg:px-8">
-              <div className="absolute top-0 bottom-0 left-3/4 hidden w-screen bg-gold/20 lg:block" />
+              <div className="absolute bottom-0 left-3/4 top-0 hidden w-screen bg-gold/20 lg:block" />
               <div className="mx-auto max-w-prose text-base lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8">
                 <div>
                   <h2 className="pb-4 text-base font-semibold uppercase tracking-wider text-gold">
@@ -53,7 +53,7 @@ export function Sisters() {
                 <div className="relative lg:col-start-2 lg:row-start-1">
                   <div className="relative mx-auto max-w-prose text-base lg:max-w-none">
                     <figure>
-                      <div className="aspect-w-12 aspect-h-12 relative lg:aspect-none">
+                      <div className="aspect-h-12 aspect-w-12 relative lg:aspect-none">
                         {/* Mobile */}
                         <div className="overflow-visible lg:hidden">
                           <Image
@@ -104,17 +104,19 @@ export function Sisters() {
                       <p>{t('home:sistersSent01')}</p>
                       <p>{t('home:sistersSent02')}</p>
                       <p>{t('home:sistersSent03')}</p>
-                      <p>{t('home:sistersSent04')}</p>
+                      {/* This year's guests: */}
+                      {/* <p>{t('home:sistersSent04')}</p> */}
                     </div>
                   </div>
-                  <div>
-                    <div className="group relative -mx-4 flex items-center self-stretch py-4 transition-colors sm:self-auto sm:rounded-2xl lg:mx-0 lg:self-auto lg:py-6">
-                      <div className="relative flex h-24 w-24 flex-none items-center justify-center">
-                        <QrCodeBorder className="group-hover:stroke-eye-green absolute inset-0 h-full w-full stroke-gray-300 transition-colors" />
+                  {/* Christmas concert info */}
+                  {/* <div>
+                    <div className="relative flex items-center self-stretch py-4 -mx-4 transition-colors group sm:self-auto sm:rounded-2xl lg:mx-0 lg:self-auto lg:py-6">
+                      <div className="relative flex items-center justify-center flex-none w-24 h-24">
+                        <QrCodeBorder className="absolute inset-0 w-full h-full transition-colors group-hover:stroke-eye-green stroke-gray-300" />
                         <Image
                           src={qrCode}
                           alt="Julekonsert i Ris kirke med Søstrene Hals"
-                          className="overflow-hidden rounded-xl p-1"
+                          className="p-1 overflow-hidden rounded-xl"
                           unoptimized
                         />
                       </div>
@@ -125,11 +127,11 @@ export function Sisters() {
                           target="_blank"
                           rel="noreferrer"
                         >
-                          <p className="group-hover:text-eye-green relative z-10 flex text-sm font-normal text-zinc-500 transition duration-300 ease-in-out">
+                          <p className="relative z-10 flex text-sm font-normal transition duration-300 ease-in-out group-hover:text-eye-green text-zinc-500">
                             <span className="mr-2 text-base font-semibold text-gray-900 group-hover:underline">
                               {t('home:julekonsert')}
                             </span>
-                            <LinkIcon className="h-6 w-6 flex-none" />
+                            <LinkIcon className="flex-none w-6 h-6" />
                           </p>
                         </a>
 
@@ -138,7 +140,7 @@ export function Sisters() {
                         </p>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

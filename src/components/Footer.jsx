@@ -24,19 +24,6 @@ export function Footer() {
             </Link>
           ))}
         </div>
-        <div className="mt-8 md:mt-0">
-          <p className="text-center text-xs leading-5 text-wheat">
-            {t('home:utviklet')}{' '}
-            <a
-              href="https://norsknett.no"
-              target="_blank"
-              rel="noreferrer"
-              className="cursor-pointer hover:underline"
-            >
-              Norsk Nett
-            </a>
-          </p>
-        </div>
 
         <div className="mt-8 md:order-first md:mt-0">
           <p className="text-center text-xs leading-5 text-wheat">
