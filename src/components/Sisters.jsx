@@ -57,7 +57,7 @@ export function Sisters() {
                         {/* Mobile */}
                         <div className="overflow-visible lg:hidden">
                           <Image
-                            src="https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/S%C3%B8strene%20Hals/goldCutout_fhrxem_ocomnj.webp"
+                            src="images/goldCutout.webp"
                             alt="Søstrene Hals - Kathrine og Susanne Hals"
                             width={1548}
                             height={2064}
@@ -68,7 +68,7 @@ export function Sisters() {
                         {/* Desktop */}
                         <div className="hidden object-cover object-center lg:block">
                           <Image
-                            src="https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/S%C3%B8strene%20Hals/goldCutout_fhrxem_ocomnj.webp"
+                            src="images/goldCutout.webp"
                             alt="Søstrene Hals - Kathrine og Susanne Hals"
                             width={1548}
                             height={2064}

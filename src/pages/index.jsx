@@ -8,6 +8,7 @@ import { VideoHero } from '@/components/VideoHero'
 import { Latest } from '@/components/Latest'
 import { MediaGallery } from '@/components/MediaGallery'
 import { Offers } from '@/components/Offers'
+import { HvemErJeg } from '@/components/HvemErJeg'
 import { Sisters } from '@/components/Sisters'
 import { Timeline } from '@/components/Timeline'
 import { VideoFeature } from '@/components/VideoFeature'
@@ -33,7 +34,7 @@ export default function Home() {
       <Header />
       <main>
         <VideoHero />
-        <Latest />
+        <HvemErJeg />
 
         <Testimonial
           testimonial={t('home:testimonial01')}
