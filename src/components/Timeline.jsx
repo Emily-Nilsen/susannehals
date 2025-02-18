@@ -57,20 +57,17 @@ export function Timeline() {
         {
           name: `${t('home:timelineTitle04')}`,
           role: `${t('home:timelineDesc04')}`,
-          image:
-            'https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/Bergen_2_f9cmbp.jpg',
+          image: '/media/Bergen.jpg',
         },
         {
           name: `${t('home:timelineTitle05')}`,
           role: `${t('home:timelineDesc05')}`,
-          image:
-            'https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/Grieghallen_2_ikrolg.jpg',
+          image: '/media/Grieghallen.jpg',
         },
         {
           name: `${t('home:timelineTitle06')}`,
           role: `${t('home:timelineDesc06')}`,
-          image:
-            'https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/Copenhagen_2_y9mvtl.jpg',
+          image: '/media/Copenhagen.jpg',
         },
       ],
     },
