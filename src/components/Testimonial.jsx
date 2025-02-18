@@ -1,14 +1,12 @@
-import { LottieInteract } from '@/components/LottieInteract'
 import { Container } from '@/components/Container'
-import { motion, useInView, useMotionValue } from 'framer-motion'
-import Link from 'next/link'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 
-export function Testimonial({ testimonial, author, lottie }) {
+export function Testimonial({ testimonial, author }) {
   return (
     <section
       id="testimonial"
-      className="relative overflow-hidden bg-gold/100 py-12 sm:py-16 md:py-24"
+      className="relative py-12 overflow-hidden bg-gold/100 sm:py-16 md:py-24"
     >
       <div className="absolute inset-0">
         <Image
@@ -21,7 +19,7 @@ export function Testimonial({ testimonial, author, lottie }) {
       </div>
 
       <Container className="relative">
-        <div className="prose prose-lg mx-auto max-w-2xl text-center">
+        <div className="max-w-2xl mx-auto prose prose-lg text-center">
           <motion.h2
             whileInView={{ opacity: 1 }}
             initial={{ opacity: 0 }}
@@ -30,7 +28,7 @@ export function Testimonial({ testimonial, author, lottie }) {
               duration: 1.5,
               type: 'fade',
             }}
-            className="text-lg font-light italic tracking-tight text-light-beige sm:text-xl md:text-2xl"
+            className="text-lg italic font-light tracking-tight text-light-beige sm:text-xl md:text-2xl"
           >
             {testimonial}
           </motion.h2>
@@ -46,29 +44,6 @@ export function Testimonial({ testimonial, author, lottie }) {
           >
             {author}
           </motion.p>
-          {/* Desktop */}
-          <div className="mb-4 hidden justify-center opacity-90 sm:mb-16 sm:flex">
-            <div className="h-10 w-3/4">
-              <LottieInteract
-                path={lottie}
-                interaction="play-on-show"
-                speed="0.7"
-                delay="500"
-              />
-            </div>
-          </div>
-          {/* Mobile */}
-          <div className="mb-10 flex justify-center opacity-90 sm:hidden">
-            <div className="h-10 w-3/4">
-              <LottieInteract
-                path={lottie}
-                autoplay
-                loop
-                speed="0.5"
-                delay="500"
-              />
-            </div>
-          </div>
         </div>
       </Container>
     </section>

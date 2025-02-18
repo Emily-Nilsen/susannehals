@@ -1,8 +1,15 @@
+import { useEffect, useState } from 'react'
 import { BackgroundVideo } from './BackgroundVideo'
-import { motion, useInView, useMotionValue, useAnimation } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Container } from '@/components/Container'
 
 export function VideoHero() {
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
   return (
     <section>
       {/* Mobile */}
@@ -12,22 +19,27 @@ export function VideoHero() {
         </div>
         <div className="absolute inset-0 z-20">
           <Container className="h-full">
-            <div className="flex h-full w-full items-center pt-20">
+            <div className="flex items-center w-full h-full pt-20">
               <motion.div
+                key={
+                  isMounted ? 'mobile-first-mounted' : 'mobile-first-unmounted'
+                }
+                // On SSR (or before mount) we render the final state:
+                initial={
+                  isMounted ? { opacity: 0, x: '100vw' } : { opacity: 0, x: 0 }
+                }
                 animate={{ opacity: [1, 1, 1, 1, 0], x: 0 }}
-                initial={{ opacity: 0, x: '100vw' }}
                 transition={{
                   delay: 2,
                   duration: 13,
-                  type: 'fade',
                   ease: 'easeOut',
                 }}
-                className="w-fit text-center"
+                className="text-center w-fit"
               >
                 <h1 className="mt-2 text-6xl font-bold tracking-tight text-wheat">
                   Susanne Hals
                 </h1>
-                <p className="font-medium uppercase tracking-widest text-tan">
+                <p className="font-medium tracking-widest uppercase text-tan">
                   soprano
                 </p>
               </motion.div>
@@ -36,23 +48,29 @@ export function VideoHero() {
         </div>
         <div className="absolute inset-0 z-20">
           <Container className="h-full">
-            <div className="flex h-full w-full items-center pt-20">
+            <div className="flex items-center w-full h-full pt-20">
               <motion.div
+                key={
+                  isMounted
+                    ? 'mobile-second-mounted'
+                    : 'mobile-second-unmounted'
+                }
+                initial={
+                  isMounted ? { opacity: 0, x: '-100vw' } : { opacity: 1, x: 0 }
+                }
                 animate={{ opacity: 1, x: 0 }}
-                initial={{ opacity: 0, x: '-100vw' }}
                 transition={{
                   delay: 22,
                   duration: 6.3,
-                  type: 'fade',
                   ease: 'easeOut',
                 }}
-                className="w-fit text-left"
+                className="text-left w-fit"
               >
                 <h1 className="mt-2 text-6xl font-bold tracking-tight text-wheat">
                   Susanne
                   <br /> Hals
                 </h1>
-                <p className="font-medium uppercase tracking-widest text-tan">
+                <p className="font-medium tracking-widest uppercase text-tan">
                   soprano
                 </p>
               </motion.div>
@@ -70,22 +88,26 @@ export function VideoHero() {
           {/* Text 1 */}
           <div className="absolute inset-0 z-20">
             <Container className="h-full">
-              <div className="flex h-full w-full items-center">
+              <div className="flex items-center w-full h-full">
                 <motion.div
+                  key={
+                    isMounted
+                      ? 'desktop-text1-mounted'
+                      : 'desktop-text1-unmounted'
+                  }
+                  initial={isMounted ? { opacity: 1 } : { opacity: 0 }}
                   animate={{ opacity: 0 }}
-                  initial={{ opacity: 1 }}
                   transition={{
                     delay: 5,
                     duration: 1,
-                    type: 'fade',
                     ease: 'easeOut',
                   }}
-                  className="w-fit text-center"
+                  className="text-center w-fit"
                 >
                   <h1 className="mt-2 font-bold tracking-tight text-wheat sm:mt-6 sm:text-7xl">
                     Susanne Hals
                   </h1>
-                  <p className="font-medium uppercase tracking-widest text-tan">
+                  <p className="font-medium tracking-widest uppercase text-tan">
                     soprano
                   </p>
                 </motion.div>
@@ -95,22 +117,30 @@ export function VideoHero() {
           {/* Text 2 */}
           <div className="absolute inset-0 z-20">
             <Container className="h-full">
-              <div className="flex h-full w-full items-center justify-end">
+              <div className="flex items-center justify-end w-full h-full">
                 <motion.div
+                  key={
+                    isMounted
+                      ? 'desktop-text2-mounted'
+                      : 'desktop-text2-unmounted'
+                  }
+                  initial={
+                    isMounted
+                      ? { opacity: 1, x: '100vw' }
+                      : { opacity: 0, x: 0 }
+                  }
                   animate={{ opacity: [0, 1, 1, 1, 1, 1, 0], x: 0 }}
-                  initial={{ opacity: 1, x: '100vw' }}
                   transition={{
                     delay: 2,
                     duration: 10,
-                    type: 'fade',
                     ease: 'easeOut',
                   }}
-                  className="w-fit text-center"
+                  className="text-center w-fit"
                 >
-                  <h1 className="mt-2 text-7xl font-bold tracking-tight text-wheat">
+                  <h1 className="mt-2 font-bold tracking-tight text-7xl text-wheat">
                     Susanne Hals
                   </h1>
-                  <p className="font-medium uppercase tracking-widest text-tan">
+                  <p className="font-medium tracking-widest uppercase text-tan">
                     soprano
                   </p>
                 </motion.div>
@@ -120,29 +150,37 @@ export function VideoHero() {
           {/* Text 3 */}
           <div className="absolute inset-0 z-20">
             <Container className="h-full">
-              <div className="flex h-full w-full items-center">
+              <div className="flex items-center w-full h-full">
                 <motion.div
+                  key={
+                    isMounted
+                      ? 'desktop-text3-mounted'
+                      : 'desktop-text3-unmounted'
+                  }
+                  initial={
+                    isMounted
+                      ? { opacity: 0, x: '-100vw' }
+                      : { opacity: 1, x: 0 }
+                  }
                   animate={{ opacity: 1, x: 0 }}
-                  initial={{ opacity: 0, x: '-100vw' }}
                   transition={{
                     delay: 20,
                     duration: 10,
-                    type: 'fade',
                     ease: 'easeOut',
                   }}
-                  className="w-fit text-center"
+                  className="text-center w-fit"
                 >
                   <h1 className="mt-2 font-bold tracking-tight text-wheat sm:mt-6 sm:text-7xl">
                     Susanne Hals
                   </h1>
-                  <p className="font-medium uppercase tracking-widest text-tan">
+                  <p className="font-medium tracking-widest uppercase text-tan">
                     soprano
                   </p>
                 </motion.div>
               </div>
             </Container>
           </div>
-          <div className="absolute top-0 left-0 h-20 w-full bg-gradient-to-b from-gray-900 sm:h-40" />
+          <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-gray-900 sm:h-40" />
         </div>
       </div>
     </section>

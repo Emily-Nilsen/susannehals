@@ -1,10 +1,14 @@
 import dynamic from 'next/dynamic'
-import { Suspense } from 'react'
 import { YoutubeVideo } from './YoutubeVideo'
 import useTranslation from 'next-translate/useTranslation'
 
 const DynamicVideoPlayer = dynamic(() => import('./VideoPlayer'), {
   ssr: false,
+  loading: () => (
+    <div className="flex items-center justify-center w-full h-full">
+      Loading video...
+    </div>
+  ),
 })
 
 export function MediaGallery() {
@@ -36,11 +40,14 @@ export function MediaGallery() {
     <div
       id="media"
       aria-labelledby="media-title"
-      className="bg-white py-24 sm:py-32"
+      className="py-24 bg-white sm:py-32"
     >
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <h1 className="mt-2 text-6xl leading-8 tracking-tight text-gray-900 sm:text-7xl">
+      <div className="px-6 mx-auto max-w-7xl lg:px-8">
+        <div className="max-w-2xl mx-auto lg:mx-0">
+          <h1
+            id="media-title"
+            className="mt-2 text-6xl leading-8 tracking-tight text-gray-900 sm:text-7xl"
+          >
             Media
           </h1>
           <p className="mt-8 text-lg leading-8 text-gray-600">
@@ -49,14 +56,14 @@ export function MediaGallery() {
         </div>
         <ul
           role="list"
-          className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-y-12 gap-x-8 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+          className="grid max-w-2xl grid-cols-1 mx-auto mt-20 gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3"
         >
-          {/* Youtube */}
-          <div className="flex h-full w-full flex-col items-center justify-center pt-5">
-            <div className="aspect-video relative w-full rounded-2xl object-cover">
+          {/* Youtube Item */}
+          <li className="flex flex-col items-center justify-center w-full h-full pt-5">
+            <div className="relative object-cover w-full aspect-video rounded-2xl">
               <YoutubeVideo publicId="https://www.youtube.com/watch?v=atdbe9jFw2g" />
             </div>
-            <div className="flex h-full w-full flex-col justify-end">
+            <div className="flex flex-col justify-end w-full h-full">
               <h3 className="mt-1 text-base font-semibold leading-8 tracking-tight text-gray-900 sm:mt-2">
                 Kjærlighet
               </h3>
@@ -64,11 +71,12 @@ export function MediaGallery() {
                 {t('home:kjærlighet')}
               </p>
             </div>
-          </div>
+          </li>
+          {/* Dynamic Video Items */}
           {videos.map((video) => (
-            <li key={video.title}>
+            <li key={video.id}>
               <div className="relative aspect-[3/2] w-full rounded-2xl object-cover">
-                <div className="absolute flex h-full w-full items-center justify-center overflow-hidden rounded-2xl">
+                <div className="absolute flex items-center justify-center w-full h-full overflow-hidden rounded-2xl">
                   <DynamicVideoPlayer
                     publicId={video.promo}
                     poster={video.poster}

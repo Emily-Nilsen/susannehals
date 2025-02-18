@@ -1,10 +1,6 @@
 import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
-import {
-  EnvelopeIcon,
-  NewspaperIcon,
-  PhoneIcon,
-} from '@heroicons/react/20/solid'
+import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
 
 import navigation from './Socials'
@@ -22,13 +18,13 @@ export function Contact() {
 
   return (
     <section id="contact">
-      <div className="relative isolate overflow-hidden bg-gold py-24 sm:py-40">
+      <div className="relative py-24 overflow-hidden isolate bg-gold sm:py-40">
         <div className="sm:hidden">
           <Image
             src="https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/gold_Susanne_contact_mobile_gcbewk.webp"
             fill
             alt="Susanne Hvinden Hals"
-            className="absolute inset-0 -z-10 h-full w-full object-cover object-right"
+            className="absolute inset-0 object-cover object-right w-full h-full -z-10"
           />
           <div className="absolute inset-0 bg-dark-beige mix-blend-multiply" />
         </div>
@@ -37,7 +33,7 @@ export function Contact() {
             src="https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/gold_Susanne_bwvkvx.jpg"
             fill
             alt="Susanne Hvinden Hals"
-            className="absolute inset-0 -z-10 h-full w-full object-cover object-right"
+            className="absolute inset-0 object-cover object-right w-full h-full -z-10"
           />
           <div className="absolute inset-0 bg-dark-beige mix-blend-multiply" />
         </div>
@@ -68,7 +64,7 @@ export function Contact() {
         <svg
           viewBox="0 0 1097 845"
           aria-hidden="true"
-          className="absolute left-1/2 -top-52 -z-10 w-[68.5625rem] -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0"
+          className="absolute -top-52 left-1/2 -z-10 w-[68.5625rem] -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0"
         >
           <path
             fill="url(#49c00522-612e-41d3-bb32-ce7d1fa28850)"
@@ -89,8 +85,8 @@ export function Contact() {
             </linearGradient>
           </defs>
         </svg>
-        <div className="relative z-20 mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:mx-0">
+        <div className="relative z-20 px-6 mx-auto max-w-7xl lg:px-8">
+          <div className="max-w-2xl mx-auto lg:mx-0">
             <h1 className="text-4xl font-bold tracking-tight text-light-beige sm:text-6xl">
               {t('home:contactTitle')}
             </h1>
@@ -98,11 +94,11 @@ export function Contact() {
               {t('home:contactText')}
             </p>
           </div>
-          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
+          <div className="grid max-w-2xl grid-cols-1 gap-6 mx-auto mt-16 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
             <Link href="tel:+47 455 06 256">
-              <div className="flex gap-x-4 rounded-xl bg-white/5 p-6 ring-1 ring-inset ring-white/10 transition duration-300 ease-in-out hover:bg-white/10">
+              <div className="flex p-6 transition duration-300 ease-in-out gap-x-4 rounded-xl bg-white/5 ring-1 ring-inset ring-white/10 hover:bg-white/10">
                 <PhoneIcon
-                  className="h-7 w-5 flex-none text-wheat/50"
+                  className="flex-none w-5 h-7 text-wheat/50"
                   aria-hidden="true"
                 />
                 <div className="text-base leading-7">
@@ -116,10 +112,10 @@ export function Contact() {
             {cards.map((card) => (
               <div
                 key={card.name}
-                className="flex gap-x-4 rounded-xl bg-white/5 p-6 ring-1 ring-inset ring-white/10"
+                className="flex p-6 gap-x-4 rounded-xl bg-white/5 ring-1 ring-inset ring-white/10"
               >
                 <card.icon
-                  className="h-7 w-5 flex-none text-wheat/50"
+                  className="flex-none w-5 h-7 text-wheat/50"
                   aria-hidden="true"
                 />
                 <div className="text-base leading-7">
@@ -128,8 +124,8 @@ export function Contact() {
                 </div>
               </div>
             ))}
-            <div className="flex gap-x-4 rounded-xl bg-white/5 p-6 py-11 ring-1 ring-inset ring-white/10 lg:py-0">
-              <div className="mx-auto flex items-center">
+            <div className="flex p-6 gap-x-4 rounded-xl bg-white/5 py-11 ring-1 ring-inset ring-white/10 lg:py-0">
+              <div className="flex items-center mx-auto">
                 <div className="flex justify-center space-x-12 md:order-2">
                   {navigation.map((item) => (
                     <Link
@@ -140,7 +136,7 @@ export function Contact() {
                       className="text-wheat hover:text-light-beige"
                     >
                       <span className="sr-only">{item.name}</span>
-                      <item.icon className="h-6 w-6" aria-hidden="true" />
+                      <item.icon className="w-6 h-6" aria-hidden="true" />
                     </Link>
                   ))}
                 </div>

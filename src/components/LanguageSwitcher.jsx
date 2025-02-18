@@ -1,19 +1,14 @@
 import { useRouter } from 'next/router'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 export function LanguageSwitcher() {
-  const { locale, locales, defaultLocale, asPath } = useRouter()
-
-  function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-  }
+  const { locale, asPath } = useRouter()
 
   return (
     <span className="relative z-0 inline-flex shadow-none">
       <button
         type="button"
-        className="bg-t relative inline-flex cursor-pointer items-center border-y-0 px-0 text-gold transition duration-300 ease-in-out hover:text-gold focus:z-10 focus:outline-none focus:ring-0 lg:text-wheat"
+        className="relative inline-flex items-center px-0 transition duration-300 ease-in-out cursor-pointer bg-t border-y-0 text-gold hover:text-gold focus:z-10 focus:outline-none focus:ring-0 lg:text-wheat"
       >
         <Link
           activeclassname={locale === 'en' ? 'true' : ''}
@@ -21,23 +16,23 @@ export function LanguageSwitcher() {
           passHref
           href={asPath}
         >
-          <p className="hidden cursor-pointer font-normal uppercase sm:text-sm lg:block">
+          <p className="hidden font-normal uppercase cursor-pointer sm:text-sm lg:block">
             en
           </p>
-          <p className="cursor-pointer font-medium uppercase sm:text-sm lg:hidden">
+          <p className="font-medium uppercase cursor-pointer sm:text-sm lg:hidden">
             english
           </p>
         </Link>
       </button>
 
       <button>
-        <p className="pointer-events-none px-3 text-sm font-normal text-tan/50 sm:px-2">
+        <p className="px-3 text-sm font-normal pointer-events-none text-tan/50 sm:px-2">
           |
         </p>
       </button>
       <button
         type="button"
-        className="bg-t text-goldfocus:z-10 relative inline-flex items-center border-y-0 px-0 text-gold transition duration-300 ease-in-out hover:text-gold focus:outline-none focus:ring-0 lg:text-wheat"
+        className="relative inline-flex items-center px-0 transition duration-300 ease-in-out bg-t text-goldfocus:z-10 border-y-0 text-gold hover:text-gold focus:outline-none focus:ring-0 lg:text-wheat"
       >
         <Link
           activeclassname={locale === 'no' ? 'true' : ''}
