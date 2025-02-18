@@ -78,20 +78,17 @@ export function Timeline() {
         {
           name: `${t('home:timelineTitle07')}`,
           role: `${t('home:timelineDesc07')}`,
-          image:
-            'https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/Malaga_2_junypw.jpg',
+          image: '/media/Malaga.jpg',
         },
         {
           name: `${t('home:timelineTitle08')}`,
           role: `${t('home:timelineDesc08')}`,
-          image:
-            'https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/all_in_pink_qpgf1x.webp',
+          image: '/media/all_in_pink.webp',
         },
         {
           name: `${t('home:timelineTitle09')}`,
           role: `${t('home:timelineDesc09')}`,
-          image:
-            'https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/Susanne_img_1_c3qttj.webp',
+          image: '/media/Susanne_img_1.webp',
         },
       ],
     },
