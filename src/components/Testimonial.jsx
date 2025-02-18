@@ -6,11 +6,11 @@ export function Testimonial({ testimonial, author }) {
   return (
     <section
       id="testimonial"
-      className="relative py-12 overflow-hidden bg-gold/100 sm:py-16 md:py-24"
+      className="relative overflow-hidden bg-gold/100 py-12 sm:py-16 md:py-24"
     >
       <div className="absolute inset-0">
         <Image
-          src="https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/gold_background_hjq8ux.webp"
+          src="/media/gold_background.webp"
           fill
           alt="Golden background"
           className="blur-sm"
@@ -19,7 +19,7 @@ export function Testimonial({ testimonial, author }) {
       </div>
 
       <Container className="relative">
-        <div className="max-w-2xl mx-auto prose prose-lg text-center">
+        <div className="prose prose-lg mx-auto max-w-2xl text-center">
           <motion.h2
             whileInView={{ opacity: 1 }}
             initial={{ opacity: 0 }}
@@ -28,7 +28,7 @@ export function Testimonial({ testimonial, author }) {
               duration: 1.5,
               type: 'fade',
             }}
-            className="text-lg italic font-light tracking-tight text-light-beige sm:text-xl md:text-2xl"
+            className="text-lg font-light italic tracking-tight text-light-beige sm:text-xl md:text-2xl"
           >
             {testimonial}
           </motion.h2>
