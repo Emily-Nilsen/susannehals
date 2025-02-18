@@ -19,7 +19,7 @@ export function VideoHero() {
         </div>
         <div className="absolute inset-0 z-20">
           <Container className="h-full">
-            <div className="flex items-center w-full h-full pt-20">
+            <div className="flex h-full w-full items-center pt-20">
               <motion.div
                 key={
                   isMounted ? 'mobile-first-mounted' : 'mobile-first-unmounted'
@@ -34,12 +34,12 @@ export function VideoHero() {
                   duration: 13,
                   ease: 'easeOut',
                 }}
-                className="text-center w-fit"
+                className="w-fit text-center"
               >
                 <h1 className="mt-2 text-6xl font-bold tracking-tight text-wheat">
                   Susanne Hals
                 </h1>
-                <p className="font-medium tracking-widest uppercase text-tan">
+                <p className="font-medium uppercase tracking-widest text-tan">
                   soprano
                 </p>
               </motion.div>
@@ -48,7 +48,7 @@ export function VideoHero() {
         </div>
         <div className="absolute inset-0 z-20">
           <Container className="h-full">
-            <div className="flex items-center w-full h-full pt-20">
+            <div className="flex h-full w-full items-center pt-20">
               <motion.div
                 key={
                   isMounted
@@ -64,13 +64,13 @@ export function VideoHero() {
                   duration: 6.3,
                   ease: 'easeOut',
                 }}
-                className="text-left w-fit"
+                className="w-fit text-left"
               >
                 <h1 className="mt-2 text-6xl font-bold tracking-tight text-wheat">
                   Susanne
                   <br /> Hals
                 </h1>
-                <p className="font-medium tracking-widest uppercase text-tan">
+                <p className="font-medium uppercase tracking-widest text-tan">
                   soprano
                 </p>
               </motion.div>
@@ -83,12 +83,12 @@ export function VideoHero() {
       <div>
         <div className="relative z-20 hidden w-full bg-gold pt-[56.25%] sm:block sm:h-auto">
           <div className="absolute inset-0">
-            <BackgroundVideo src="https://res.cloudinary.com/dt3k2apqd/video/upload/v1682101960/Susanne%20Hals/Luxury_hero_4k_scj9w0.mp4" />
+            <BackgroundVideo src="/media/Luxury_hero_4k.mp4" />
           </div>
           {/* Text 1 */}
           <div className="absolute inset-0 z-20">
             <Container className="h-full">
-              <div className="flex items-center w-full h-full">
+              <div className="flex h-full w-full items-center">
                 <motion.div
                   key={
                     isMounted
@@ -102,12 +102,12 @@ export function VideoHero() {
                     duration: 1,
                     ease: 'easeOut',
                   }}
-                  className="text-center w-fit"
+                  className="w-fit text-center"
                 >
                   <h1 className="mt-2 font-bold tracking-tight text-wheat sm:mt-6 sm:text-7xl">
                     Susanne Hals
                   </h1>
-                  <p className="font-medium tracking-widest uppercase text-tan">
+                  <p className="font-medium uppercase tracking-widest text-tan">
                     soprano
                   </p>
                 </motion.div>
@@ -117,7 +117,7 @@ export function VideoHero() {
           {/* Text 2 */}
           <div className="absolute inset-0 z-20">
             <Container className="h-full">
-              <div className="flex items-center justify-end w-full h-full">
+              <div className="flex h-full w-full items-center justify-end">
                 <motion.div
                   key={
                     isMounted
@@ -135,12 +135,12 @@ export function VideoHero() {
                     duration: 10,
                     ease: 'easeOut',
                   }}
-                  className="text-center w-fit"
+                  className="w-fit text-center"
                 >
-                  <h1 className="mt-2 font-bold tracking-tight text-7xl text-wheat">
+                  <h1 className="mt-2 text-7xl font-bold tracking-tight text-wheat">
                     Susanne Hals
                   </h1>
-                  <p className="font-medium tracking-widest uppercase text-tan">
+                  <p className="font-medium uppercase tracking-widest text-tan">
                     soprano
                   </p>
                 </motion.div>
@@ -150,7 +150,7 @@ export function VideoHero() {
           {/* Text 3 */}
           <div className="absolute inset-0 z-20">
             <Container className="h-full">
-              <div className="flex items-center w-full h-full">
+              <div className="flex h-full w-full items-center">
                 <motion.div
                   key={
                     isMounted
@@ -168,19 +168,19 @@ export function VideoHero() {
                     duration: 10,
                     ease: 'easeOut',
                   }}
-                  className="text-center w-fit"
+                  className="w-fit text-center"
                 >
                   <h1 className="mt-2 font-bold tracking-tight text-wheat sm:mt-6 sm:text-7xl">
                     Susanne Hals
                   </h1>
-                  <p className="font-medium tracking-widest uppercase text-tan">
+                  <p className="font-medium uppercase tracking-widest text-tan">
                     soprano
                   </p>
                 </motion.div>
               </div>
             </Container>
           </div>
-          <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-gray-900 sm:h-40" />
+          <div className="absolute left-0 top-0 h-20 w-full bg-gradient-to-b from-gray-900 sm:h-40" />
         </div>
       </div>
     </section>
