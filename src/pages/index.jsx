@@ -34,13 +34,11 @@ export default function Home() {
         <Testimonial
           testimonial={t('home:testimonial01')}
           author={t('home:author01')}
-          lottie="https://res.cloudinary.com/dt3k2apqd/raw/upload/v1668967853/Susanne%20Hals/decorative-border-01_sl1qth.json"
         />
         <Offers />
         <Testimonial
           testimonial={t('home:testimonial02')}
           author="Trish McCaffrey / Voice Studio, New York"
-          lottie="https://res.cloudinary.com/dt3k2apqd/raw/upload/v1668967853/Susanne%20Hals/decorative-border-01_sl1qth.json"
         />
 
         <MediaGallery />
@@ -48,7 +46,6 @@ export default function Home() {
         <Testimonial
           testimonial={t('home:testimonial03')}
           author={t('home:author03')}
-          lottie="https://res.cloudinary.com/dt3k2apqd/raw/upload/v1668967853/Susanne%20Hals/decorative-border-01_sl1qth.json"
         />
         <Timeline />
 
