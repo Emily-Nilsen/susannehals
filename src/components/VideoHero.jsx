@@ -15,7 +15,7 @@ export function VideoHero() {
       {/* Mobile */}
       <div className="relative z-20 h-[100vw] overflow-hidden rounded-none object-cover sm:hidden">
         <div className="z-1 absolute flex h-[100vw] w-full items-center justify-center overflow-hidden rounded-none">
-          <BackgroundVideo src="https://res.cloudinary.com/dt3k2apqd/video/upload/v1682180650/Susanne%20Hals/Mobile_square_rqsibu.mp4" />
+          <BackgroundVideo src="/media/Mobile_square.mp4" />
         </div>
         <div className="absolute inset-0 z-20">
           <Container className="h-full">
