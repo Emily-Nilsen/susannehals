@@ -24,13 +24,13 @@ export function MediaGallery() {
       poster: '/media/deh_vieni.webp',
     },
     // Second video, now local
-    // {
-    //   id: 'Adinas_arie',
-    //   title: `Adina’s arie`,
-    //   description: `The Elixir of Love ${t('home:by')} Donizetti`,
-    //   promo: '/media/Adinas_arie.mp4',
-    //   poster: '/media/adinas_aria.webp',
-    // },
+    {
+      id: 'Adinas_arie',
+      title: `Adina’s arie`,
+      description: `The Elixir of Love ${t('home:by')} Donizetti`,
+      promo: '/media/Adinas_arie_-_minified.mp4',
+      poster: '/media/adinas_aria.webp',
+    },
     // More videos...
   ]
 
