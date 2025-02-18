@@ -36,20 +36,17 @@ export function Timeline() {
         {
           name: `${t('home:timelineTitle01')}`,
           role: `${t('home:timelineDesc01')}`,
-          image:
-            'https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/montpellier_opera_2_arnn2l.jpg',
+          image: '/media/montpellier_opera.jpg',
         },
         {
           name: `${t('home:timelineTitle02')}`,
           role: `${t('home:timelineDesc02')}`,
-          image:
-            'https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/os_kulturhus_2_fjdm1p.jpg',
+          image: '/media/os_kulturhus.jpg',
         },
         {
           name: `${t('home:timelineTitle03')}`,
           role: `${t('home:timelineDesc03')}`,
-          image:
-            'https://res.cloudinary.com/dt3k2apqd/image/upload/q_auto/Susanne%20Hals/Oslo_2_gbqgrl.jpg',
+          image: '/media/Oslo.jpg',
         },
       ],
     },
@@ -143,18 +140,18 @@ export function Timeline() {
         </div>
         <Tab.Group
           as="div"
-          className="mt-14 grid grid-cols-1 items-start gap-y-8 gap-x-8 sm:mt-16 sm:gap-y-16 lg:mt-24 lg:grid-cols-4"
+          className="mt-14 grid grid-cols-1 items-start gap-x-8 gap-y-8 sm:mt-16 sm:gap-y-16 lg:mt-24 lg:grid-cols-4"
           vertical={tabOrientation === 'vertical'}
         >
           <div className="relative -mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:block sm:overflow-visible sm:pb-0">
-            <div className="absolute bottom-0 top-2 left-0.5 hidden w-px bg-wheat lg:block" />
+            <div className="absolute bottom-0 left-0.5 top-2 hidden w-px bg-wheat lg:block" />
             <Tab.List className="grid auto-cols-auto grid-flow-col justify-start gap-x-8 gap-y-10 whitespace-nowrap px-4 sm:mx-auto sm:max-w-2xl sm:grid-cols-3 sm:px-0 sm:text-center lg:grid-flow-row lg:grid-cols-1 lg:text-left">
               {({ selectedIndex }) =>
                 timeFrames.map((timeframe, timeframeIndex) => (
                   <div key={timeframe.dateTime} className="relative lg:pl-8">
                     <DiamondIcon
                       className={clsx(
-                        'absolute top-[0.5625rem] left-[-0.5px] hidden h-1.5 w-1.5 overflow-visible lg:block',
+                        'absolute left-[-0.5px] top-[0.5625rem] hidden h-1.5 w-1.5 overflow-visible lg:block',
                         timeframeIndex === selectedIndex
                           ? 'fill-gold stroke-dark-beige'
                           : 'fill-transparent stroke-tan'
@@ -192,7 +189,7 @@ export function Timeline() {
                     <div className="group relative h-[17.5rem] transform overflow-hidden rounded-4xl">
                       <div
                         className={clsx(
-                          'absolute top-0 left-0 right-4 bottom-6 rounded-4xl border transition duration-300 group-hover:scale-95 xl:right-6',
+                          'absolute bottom-6 left-0 right-4 top-0 rounded-4xl border transition duration-300 group-hover:scale-95 xl:right-6',
                           ['border-gold/50', 'border-wheat', 'border-tan/80'][
                             featureImageIndex % 3
                           ]
