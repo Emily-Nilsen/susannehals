@@ -15,22 +15,22 @@ export function MediaGallery() {
   const { t } = useTranslation()
 
   const videos = [
+    // First video example (if you want to use local as well)
     {
       id: 'Deh_vieni',
       title: `Deh vieni, non tardar`,
       description: `Le Nozze di Figaro ${t('home:by')} Mozart`,
-      promo:
-        'https://res.cloudinary.com/dt3k2apqd/video/upload/q_auto/Susanne%20Hals/Deh_vieni_-_minified_adnvav.mp4',
+      promo: '/media/Deh_vieni_-_minified.mp4',
       poster: '/media/deh_vieni.webp',
     },
-    {
-      id: 'Adinas_arie',
-      title: `Adina’s arie`,
-      description: `The Elixir of Love ${t('home:by')} Donizetti`,
-      promo:
-        'https://res.cloudinary.com/dt3k2apqd/video/upload/q_auto/Susanne%20Hals/Adinas_arie_-_minified_poiwnf.mp4',
-      poster: '/media/adinas_aria.webp',
-    },
+    // Second video, now local
+    // {
+    //   id: 'Adinas_arie',
+    //   title: `Adina’s arie`,
+    //   description: `The Elixir of Love ${t('home:by')} Donizetti`,
+    //   promo: '/media/Adinas_arie.mp4',
+    //   poster: '/media/adinas_aria.webp',
+    // },
     // More videos...
   ]
 
