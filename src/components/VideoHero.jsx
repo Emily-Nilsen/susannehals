@@ -2,9 +2,12 @@ import { useEffect, useState } from 'react'
 import { BackgroundVideo } from './BackgroundVideo'
 import { motion } from 'framer-motion'
 import { Container } from '@/components/Container'
+import { useMediaQuery } from '@/lib/useMediaQuery'
 
 export function VideoHero() {
   const [isMounted, setIsMounted] = useState(false)
+  // Matches the `sm:` breakpoint the two hero variants switch on below.
+  const isDesktop = useMediaQuery('(min-width: 640px)')
 
   useEffect(() => {
     setIsMounted(true)
@@ -15,7 +18,11 @@ export function VideoHero() {
       {/* Mobile */}
       <div className="relative z-20 h-[100vw] overflow-hidden rounded-none object-cover sm:hidden">
         <div className="z-1 absolute flex h-[100vw] w-full items-center justify-center overflow-hidden rounded-none">
-          <BackgroundVideo src="/media/Mobile_square.mp4" />
+          <BackgroundVideo
+            src="/media/Mobile_square_opt.mp4"
+            poster="/media/Mobile_square_poster.webp"
+            active={isDesktop === false}
+          />
         </div>
         <div className="absolute inset-0 z-20">
           <Container className="h-full">
@@ -83,7 +90,11 @@ export function VideoHero() {
       <div>
         <div className="relative z-20 hidden w-full bg-gold pt-[56.25%] sm:block sm:h-auto">
           <div className="absolute inset-0">
-            <BackgroundVideo src="/media/Luxury_hero_4k.mp4" />
+            <BackgroundVideo
+              src="/media/Luxury_hero_1080p.mp4"
+              poster="/media/Luxury_hero_poster.webp"
+              active={isDesktop === true}
+            />
           </div>
           {/* Text 1 */}
           <div className="absolute inset-0 z-20">

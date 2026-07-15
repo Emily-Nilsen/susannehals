@@ -11,6 +11,7 @@ export default function VideoPlayer({ publicId, poster }) {
         poster={poster}
         controls
         playsInline
+        preload="none"
         className="w-full"
       />
     </div>
