@@ -57,10 +57,10 @@ export function Sisters() {
                         {/* Mobile */}
                         <div className="overflow-visible lg:hidden">
                           <Image
-                            src="images/goldCutout.webp"
+                            src="/images/pinkCutout.webp"
                             alt="Søstrene Hals - Kathrine og Susanne Hals"
-                            width={1548}
-                            height={2064}
+                            width={813}
+                            height={1361}
                             unoptimized
                             className="h-full overflow-visible object-cover object-center"
                           />
@@ -68,10 +68,10 @@ export function Sisters() {
                         {/* Desktop */}
                         <div className="hidden object-cover object-center lg:block">
                           <Image
-                            src="images/goldCutout.webp"
+                            src="/images/pinkCutout.webp"
                             alt="Søstrene Hals - Kathrine og Susanne Hals"
-                            width={1548}
-                            height={2064}
+                            width={813}
+                            height={1361}
                             unoptimized
                           />
                         </div>
