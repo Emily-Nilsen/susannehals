@@ -105,11 +105,26 @@ export function Sisters() {
                       <p>{t('home:sistersSent02')}</p>
                       <p>{t('home:sistersSent03')}</p>
                       {/* This year's guests: */}
-                      {/* <p>{t('home:sistersSent04')}</p> */}
+                      <p>{t('home:sistersSent04')}</p>
                     </div>
                   </div>
                   {/* Christmas concert info */}
                   <div>
+                    <a
+                      href="https://www.ticketmaster.no/event/-julekonsert-med-sostrene-hals-i-ullern-kirke-billetter/870111517"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="group mt-8 block w-full max-w-xs overflow-hidden rounded-2xl lg:mt-0"
+                    >
+                      <Image
+                        src="/images/Julekonsert_2026.webp"
+                        alt={t('home:julekonsert')}
+                        width={1500}
+                        height={2121}
+                        unoptimized
+                        className="h-auto w-full transition duration-300 ease-in-out group-hover:scale-[1.03]"
+                      />
+                    </a>
                     <div className="relative flex items-center self-stretch py-4 -mx-4 transition-colors group sm:self-auto sm:rounded-2xl lg:mx-0 lg:self-auto lg:py-6">
                       <div className="relative flex items-center justify-center flex-none w-24 h-24">
                         <QrCodeBorder className="absolute inset-0 w-full h-full transition-colors group-hover:stroke-eye-green stroke-gray-300" />
