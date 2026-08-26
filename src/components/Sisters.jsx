@@ -1,7 +1,7 @@
 import { Container } from '@/components/Container'
 import Link from 'next/link'
 import Image from 'next/image'
-import qrCode from '@/images/julekonsert.svg'
+import qrCode from '@/images/qr-code_2026.png'
 import useTranslation from 'next-translate/useTranslation'
 
 import { HalsSistersLogo } from './Logos'
@@ -109,13 +109,13 @@ export function Sisters() {
                     </div>
                   </div>
                   {/* Christmas concert info */}
-                  {/* <div>
+                  <div>
                     <div className="relative flex items-center self-stretch py-4 -mx-4 transition-colors group sm:self-auto sm:rounded-2xl lg:mx-0 lg:self-auto lg:py-6">
                       <div className="relative flex items-center justify-center flex-none w-24 h-24">
                         <QrCodeBorder className="absolute inset-0 w-full h-full transition-colors group-hover:stroke-eye-green stroke-gray-300" />
                         <Image
                           src={qrCode}
-                          alt="Julekonsert i Ris kirke med Søstrene Hals"
+                          alt="QR-kode: kjøp billetter til julekonsert i Ullern kirke med Søstrene Hals"
                           className="p-1 overflow-hidden rounded-xl"
                           unoptimized
                         />
@@ -123,7 +123,7 @@ export function Sisters() {
                       <div className="ml-8 lg:w-64">
                         <a
                           className="group"
-                          href="https://www.ticketmaster.no/event/julekonsert-med-sostrene-hals-og-solvguttene-billetter/725651"
+                          href="https://www.ticketmaster.no/event/-julekonsert-med-sostrene-hals-i-ullern-kirke-billetter/870111517"
                           target="_blank"
                           rel="noreferrer"
                         >
@@ -140,7 +140,7 @@ export function Sisters() {
                         </p>
                       </div>
                     </div>
-                  </div> */}
+                  </div>
                 </div>
               </div>
             </div>
